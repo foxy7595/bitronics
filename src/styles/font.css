@@ -1,0 +1,56 @@
+@font-face {
+  font-display: swap;
+  font-style: normal;
+  src: url("/fonts/UrbanistRomanMedium.ttf");
+  font-family: "Urbanist";
+  font-weight: 500;
+}
+@font-face {
+  font-display: swap;
+  font-style: normal;
+  src: url("/fonts/TrirongMediumItalic.ttf");
+  font-family: "Trirong";
+  font-weight: 500;
+}
+@font-face {
+  font-display: swap;
+  font-style: normal;
+  src: url("/fonts/UrbanistRomanSemiBold.ttf");
+  font-family: "Urbanist";
+  font-weight: 600;
+}
+@font-face {
+  font-display: swap;
+  font-style: normal;
+  src: url("/fonts/UrbanistRomanExtraBold.ttf");
+  font-family: "Urbanist";
+  font-weight: 800;
+}
+@font-face {
+  font-display: swap;
+  font-style: normal;
+  src: url("/fonts/UrbanistRomanBold.ttf");
+  font-family: "Urbanist";
+  font-weight: 700;
+}
+@font-face {
+  font-display: swap;
+  font-style: normal;
+  src: url("/fonts/TrirongSemiBoldItalic.ttf");
+  font-family: "Trirong";
+  font-weight: 600;
+}
+@font-face {
+  font-display: swap;
+  font-style: normal;
+  src: url("/fonts/NotoSansJavaneseBold.ttf");
+  font-family: "Noto Sans Javanese";
+  font-weight: 700;
+}
+@font-face {
+  font-display: swap;
+  font-style: normal;
+  src: url("/fonts/TrirongBoldItalic.ttf");
+  font-family: "Trirong";
+  font-weight: 700;
+}

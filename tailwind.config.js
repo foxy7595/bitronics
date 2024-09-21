@@ -1,0 +1,33 @@
+module.exports = {
+  mode: "jit",
+  content: ["./src/**/**/*.{js,ts,jsx,tsx,html,mdx}", "./src/**/*.{js,ts,jsx,tsx,html,mdx}"],
+  darkMode: "class",
+  theme: {
+    screens: { md: { max: "1050px" }, sm: { max: "550px" } },
+    extend: {
+      colors: {
+        blue: { 50: "var(--blue_50)", 800: "var(--blue_800)" },
+        blue_gray: { 400: "var(--blue_gray_400)" },
+        gray: { 50: "var(--gray_50)", 300: "var(--gray_300)", 900: "var(--gray_900)" },
+        indigo: { 100: "var(--indigo_100)" },
+        light_blue: { 400: "var(--light_blue_400)", a200: "var(--light_blue_a200)" },
+        white: { a700: "var(--white_a700)" },
+      },
+      boxShadow: {},
+      fontFamily: { notosanscjkjp: "Noto Sans CJK JP", urbanist: "Urbanist", trirong: "Trirong" },
+      backgroundImage: { gradient: "linear-gradient(270deg, #29b6f6,#1565c0)" },
+      keyframes: {
+        'slide-left': {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
+
+      },
+      animation: {
+        'slide-left': 'slide-left 360s linear infinite',
+        'slide-left-20': 'slide-left 20s linear infinite',
+      }
+    },
+  },
+  plugins: [require("@tailwindcss/forms")],
+};
