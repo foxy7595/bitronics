@@ -1,7 +1,7 @@
 import { Button, Img, Heading } from "../../components";
 import React from "react";
 
-export default function TopRowThree() {
+export default function Contact() {
   return (
     <div className="self-stretch">
       <div className="flex justify-center bg-gradient py-[54px] md:py-5">

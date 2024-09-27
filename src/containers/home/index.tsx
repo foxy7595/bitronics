@@ -2,8 +2,8 @@ import FluidContainer from "@/components/Layout/FluidContainer";
 import { Heading, Img, Text } from "../../components";
 import Footer from "../../components/Footer";
 import SystemDevelopmentComponent from "../../components/SystemDevelopment";
-import TopColumnTwo from "./TopColumnTwo";
-import TopRowThree from "./TopRowThree";
+import Works from "./Works";
+import Contact from "./Contact";
 import React, { Suspense } from "react";
 
 const data = [
@@ -130,11 +130,7 @@ export default function HomePage() {
         </div>
         <div className=" flex items-center justify-center self-stretch max-h-screen">
           <div className="w-full">
-            <div className="mx-[1162px] flex flex-wrap items-start gap-5 md:mx-0 md:flex-col">
 
-
-
-            </div>
             <div className="relative  flex items-center md:flex-col">
               <div className="flex flex-col items-start w-full  overflow-x-hidden  relative">
                 <img
@@ -263,7 +259,7 @@ export default function HomePage() {
             alt="Vector"
             className="h-[632px] w-[22%] object-contain"
           />
-          <TopColumnTwo />
+          <Works />
         </div>
 
         <div className="relative h-24 mt-20 overflow-hidden">
@@ -275,7 +271,7 @@ export default function HomePage() {
             Empower Your Growth with Advanced System Development.  Empower Your Growth with Advanced System Development. Empower Your Growth with Advanced System Development.  Empower Your Growth with Advanced System Development. Empower Your Growth with Advanced System Development.  Empower Your Growth with Advanced System Development. Empower Your Growth with Advanced System Development.  Empower Your Growth with Advanced System Development. Empower Your Growth with Advanced System Development.  Empower Your Growth with Advanced System Development. Empower Your Growth with Advanced System Development.  Empower Your Growth with Advanced System Development. Empower Your Growth with Advanced System Development.  Empower Your Growth with Advanced System Development. Empower Your Growth with Advanced System Development.  Empower Your Growth with Advanced System Development. Empower Your Growth with Advanced System Development.  Empower Your Growth with Advanced System Development.
           </Heading>
         </div>
-        <TopRowThree />
+        <Contact />
       </>
 
       <div className="mt-20">

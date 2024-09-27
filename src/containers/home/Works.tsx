@@ -41,7 +41,7 @@ const data = [
   },
 ];
 
-export default function TopColumnTwo() {
+export default function Works() {
   return (
     <div className="relative mt-[-518px] flex flex-col items-center self-stretch">
       <div className="container-xs flex flex-col gap-[60px] md:px-5 sm:gap-[30px]">
