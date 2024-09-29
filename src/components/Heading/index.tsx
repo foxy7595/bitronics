@@ -1,4 +1,6 @@
-import React from "react";
+"use client"
+import React, { useEffect, useState } from "react";
+import { take } from "lodash";
 
 const sizes = {
   texts: "text-[13px] font-medium",
@@ -18,6 +20,7 @@ export type HeadingProps = Partial<{
   className: string;
   as: any;
   size: keyof typeof sizes;
+  binary?: boolean;
 }> &
   React.DetailedHTMLProps<React.HTMLAttributes<HTMLSpanElement>, HTMLSpanElement>;
 
@@ -26,15 +29,48 @@ const Heading: React.FC<React.PropsWithChildren<HeadingProps>> = ({
   className = "",
   size = "headingxs",
   as,
+  binary,
   ...restProps
 }) => {
   const Component = as || "h6";
 
+  const [text, setText] = useState("");
+  const textValue = children as string;
+
+  useEffect(() => {
+    if (binary) {
+
+      let i = 0;
+      const interval = setInterval(() => {
+        if (i === textValue.length + 1) {
+          clearInterval(interval);
+        } else {
+          setText(textValue.slice(0, i));
+          i++;
+        }
+      }, 50);
+      return () => clearInterval(interval);
+    }
+  }, [children, binary]);
+
+
+  const mixStringCharacter = (text1: string): string => {
+    return take(text1.split(''), Math.min(textValue.length - text.length, 8)).map(char => {
+      return text1[Math.floor(Math.random() * text.length)];
+    }).join('');
+  };
+
+  const binaryText = (): string => {
+    const randomBinary = () => Math.random() < 0.5 ? '0' : '1';
+    return mixStringCharacter(Array(8).fill(0).map(() => randomBinary()).join(''));
+  };
   return (
     <Component className={`text-gray-900 font-notosanscjkjp ${className} ${sizes[size]}`} {...restProps}>
-      {children}
+      {binary ? text + binaryText() : children}
     </Component>
   );
 };
+
+
 
 export { Heading };

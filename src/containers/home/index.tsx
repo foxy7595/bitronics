@@ -5,6 +5,9 @@ import SystemDevelopmentComponent from "../../components/SystemDevelopment";
 import Works from "./Works";
 import Contact from "./Contact";
 import React, { Suspense } from "react";
+import Header from "../header";
+import MainContainer from "@/components/Layout/MainContainer";
+import Main from "./Main";
 
 const data = [
   {
@@ -116,88 +119,10 @@ const data = [
 
 export default function HomePage() {
   return (
-    <FluidContainer >
-      <>
-        <div className="flex items-center justify-between gap-5 bg-white-a700 self-stretch px-[30px] z-50 py-5 sm:px-5 sticky top-0">
-          <Img src="img_logo.png" width={182} height={30} alt="Logo" className="h-[30px] w-[12%] object-contain" />
-          <Img
-            src="img_tdesign_menu_application.svg"
-            width={50}
-            height={50}
-            alt="Tdesignmenu"
-            className="h-[50px] w-[50px]"
-          />
-        </div>
-        <div className=" flex items-center justify-center self-stretch max-h-screen">
-          <div className="w-full">
+    <MainContainer>
 
-            <div className="relative  flex items-center md:flex-col">
-              <div className="flex flex-col items-start w-full  overflow-x-hidden  relative">
-                <img
-                  src="/images/haft-logo.png"
-                  alt="logo haft"
-                  className="object-cover md:h-auto w-auto h-[calc(100vh-150px)] relative z-10 mt-[54px]"
-                />
-                <div className="absolute right-[20px] scale-75 ">
-                  <Heading
-                    size="headingxl"
-                    as="h1"
-                    className="w-[36px] self-center text-[12px] font-bold  leading-[38px] absolute right-[220px] text-gray-900 md:px-5 "
-                  >
-                    ビジネスを進化させよう
-                  </Heading>
-
-                  <Heading
-                    size="headingxl"
-                    as="h2"
-                    className="w-[36px] text-[36px] font-bold leading-[42px] text-gray-900 md:px-5 md:text-[34px]  absolute right-[170px]  sm:text-[32px]"
-                  >
-                    システム開発で
-                  </Heading>
-                  <Heading
-                    size="headingxl"
-                    as="h3"
-                    className="w-[36px] text-[36px] font-bold leading-[42px] text-gray-900 md:px-5 md:text-[34px] absolute right-[120px]  sm:text-[32px]"
-                  >
-                    革新的な
-                  </Heading>
-
-
-                </div>
-
-                <Heading
-                  size="heading4xl"
-                  as="h4"
-                  className=" !text-blue-800  !font-medium animate-slide-left absolute bottom-[calc(50%-100px)] left-[230px] whitespace-nowrap"
-                >
-                  Empower Your Growth with Advanced System Development.  Empower Your Growth with Advanced System Development. Empower Your Growth with Advanced System Development.  Empower Your Growth with Advanced System Development. Empower Your Growth with Advanced System Development.  Empower Your Growth with Advanced System Development. Empower Your Growth with Advanced System Development.  Empower Your Growth with Advanced System Development. Empower Your Growth with Advanced System Development.  Empower Your Growth with Advanced System Development. Empower Your Growth with Advanced System Development.  Empower Your Growth with Advanced System Development. Empower Your Growth with Advanced System Development.  Empower Your Growth with Advanced System Development. Empower Your Growth with Advanced System Development.  Empower Your Growth with Advanced System Development. Empower Your Growth with Advanced System Development.  Empower Your Growth with Advanced System Development.
-                </Heading>
-
-
-                <div className="flex flex-col items-center w-full bottom-0 gap-[50px] self-stretch  sm:gap-[47px] absolute">
-                  <Heading
-                    size="headingxl"
-                    as="h5"
-                    className="text-center text-[36px] font-bold  text-gray-900 md:text-[34px] sm:text-[32px]"
-                  >
-                    Bitronicsはデジタル領域の専門家です
-                  </Heading>
-                  <Heading
-                    size="heading3xl"
-                    as="h6"
-                    className="font-urbanist text-[90px] relative z-20 font-semibold tracking-[2.70px] text-light_blue-a200 md:text-[48px]"
-                  >
-                    Digital Domain Specialist
-                  </Heading>
-                </div>
-
-              </div>
-
-
-            </div>
-          </div>
-
-        </div>
+      <FluidContainer >
+        <Main />
         <div className="container-xs mt-[58px] flex flex-col items-center gap-[194px] md:gap-[145px] md:px-5 sm:gap-[97px]">
           <Text size="textxl" as="p" className="text-center text-[18px] font-normal leading-[200%] text-gray-900">
             <>
@@ -262,21 +187,10 @@ export default function HomePage() {
           <Works />
         </div>
 
-        <div className="relative h-24 mt-20 overflow-hidden">
-          <Heading
-            size="heading3xl"
-            as="h4"
-            className=" !text-blue-50  !font-medium animate-slide-left absolute bottom-[calc(50%-100px)] -top-4 left-[230px] whitespace-nowrap"
-          >
-            Empower Your Growth with Advanced System Development.  Empower Your Growth with Advanced System Development. Empower Your Growth with Advanced System Development.  Empower Your Growth with Advanced System Development. Empower Your Growth with Advanced System Development.  Empower Your Growth with Advanced System Development. Empower Your Growth with Advanced System Development.  Empower Your Growth with Advanced System Development. Empower Your Growth with Advanced System Development.  Empower Your Growth with Advanced System Development. Empower Your Growth with Advanced System Development.  Empower Your Growth with Advanced System Development. Empower Your Growth with Advanced System Development.  Empower Your Growth with Advanced System Development. Empower Your Growth with Advanced System Development.  Empower Your Growth with Advanced System Development. Empower Your Growth with Advanced System Development.  Empower Your Growth with Advanced System Development.
-          </Heading>
-        </div>
-        <Contact />
-      </>
 
-      <div className="mt-20">
-        <Footer />
-      </div>
-    </FluidContainer>
+
+
+      </FluidContainer>
+    </MainContainer>
   );
 }
