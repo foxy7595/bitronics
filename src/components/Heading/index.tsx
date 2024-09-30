@@ -15,12 +15,14 @@ const sizes = {
   heading3xl: "text-[90px] font-bold md:text-[48px]",
   heading4xl: "text-[150px] font-extrabold md:text-[48px]",
 };
-
+let interval: NodeJS.Timeout | undefined = undefined;
 export type HeadingProps = Partial<{
   className: string;
   as: any;
   size: keyof typeof sizes;
   binary?: boolean;
+  textAnimate?: boolean;
+  delay?: number;
 }> &
   React.DetailedHTMLProps<React.HTMLAttributes<HTMLSpanElement>, HTMLSpanElement>;
 
@@ -30,6 +32,8 @@ const Heading: React.FC<React.PropsWithChildren<HeadingProps>> = ({
   size = "headingxs",
   as,
   binary,
+  textAnimate,
+  delay,
   ...restProps
 }) => {
   const Component = as || "h6";
@@ -38,20 +42,40 @@ const Heading: React.FC<React.PropsWithChildren<HeadingProps>> = ({
   const textValue = children as string;
 
   useEffect(() => {
+    if (interval) {
+      clearInterval(interval);
+    }
     if (binary) {
 
       let i = 0;
-      const interval = setInterval(() => {
-        if (i === textValue.length + 1) {
-          clearInterval(interval);
-        } else {
-          setText(textValue.slice(0, i));
-          i++;
-        }
-      }, 50);
-      return () => clearInterval(interval);
+      setTimeout(() => {
+        const interval = setInterval(() => {
+          if (i === textValue.length + 1) {
+            clearInterval(interval);
+
+            return;
+          } else {
+            setText(textValue.slice(0, i));
+            i++;
+          }
+        }, 50);
+      }, delay || 0);
+    } else if (textAnimate) {
+      let i = 0;
+      setTimeout(() => {
+        const interval = setInterval(() => {
+          if (i === textValue.length + 1) {
+            clearInterval(interval);
+          } else {
+            setText(textValue.slice(0, i));
+            i++;
+          }
+        }, 100);
+      }, delay || 0);
     }
-  }, [children, binary]);
+
+    return () => clearInterval(interval);
+  }, [children, binary, textAnimate]);
 
 
   const mixStringCharacter = (text1: string): string => {
@@ -61,12 +85,12 @@ const Heading: React.FC<React.PropsWithChildren<HeadingProps>> = ({
   };
 
   const binaryText = (): string => {
-    const randomBinary = () => Math.random() < 0.5 ? '0' : '1';
+    const randomBinary = () => Math.floor(Math.random() * 2) + 1 == 1 ? '0' : '1';
     return mixStringCharacter(Array(8).fill(0).map(() => randomBinary()).join(''));
   };
   return (
     <Component className={`text-gray-900 font-notosanscjkjp ${className} ${sizes[size]}`} {...restProps}>
-      {binary ? text + binaryText() : children}
+      {binary ? text + binaryText() : textAnimate ? text : children}
     </Component>
   );
 };

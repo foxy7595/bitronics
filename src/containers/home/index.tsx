@@ -1,121 +1,15 @@
 import FluidContainer from "@/components/Layout/FluidContainer";
 import { Heading, Img, Text } from "../../components";
 import Footer from "../../components/Footer";
-import SystemDevelopmentComponent from "../../components/SystemDevelopment";
+import SystemDevelopmentComponent from "../../components/Services";
 import Works from "./Works";
 import Contact from "./Contact";
 import React, { Suspense } from "react";
 import Header from "../header";
 import MainContainer from "@/components/Layout/MainContainer";
 import Main from "./Main";
+import Service from "./Service";
 
-const data = [
-  {
-    headingText: "システム開発事業",
-    systemText: (
-      <>
-        SYSTEM
-        <br />
-        DEVELOPMENT
-      </>
-    ),
-    descriptionText: (
-      <>
-        Custom Software
-        <br />
-        Web App
-        <br />
-        Mobile App
-        <br />
-        Maintenance
-        <br />
-        Re-engineering
-      </>
-    ),
-    detailedDescriptionText: (
-      <>
-        ・カスタムソフトウェア開発
-        <br />
-        ・Webアプリケーション開発
-        <br />
-        ・モバイルアプリケーション開発
-        <br />
-        ・ソフトウェアメンテナンス／リエンジニアリング
-      </>
-    ),
-    serviceText: "Service",
-  },
-  {
-    headingText: "システム開発事業",
-    systemText: (
-      <>
-        SYSTEM
-        <br />
-        DEVELOPMENT
-      </>
-    ),
-    descriptionText: (
-      <>
-        Custom Software
-        <br />
-        Web App
-        <br />
-        Mobile App
-        <br />
-        Maintenance
-        <br />
-        Re-engineering
-      </>
-    ),
-    detailedDescriptionText: (
-      <>
-        ・カスタムソフトウェア開発
-        <br />
-        ・Webアプリケーション開発
-        <br />
-        ・モバイルアプリケーション開発
-        <br />
-        ・ソフトウェアメンテナンス／リエンジニアリング
-      </>
-    ),
-    serviceText: "Service",
-  },
-  {
-    headingText: "システム開発事業",
-    systemText: (
-      <>
-        SYSTEM
-        <br />
-        DEVELOPMENT
-      </>
-    ),
-    descriptionText: (
-      <>
-        Custom Software
-        <br />
-        Web App
-        <br />
-        Mobile App
-        <br />
-        Maintenance
-        <br />
-        Re-engineering
-      </>
-    ),
-    detailedDescriptionText: (
-      <>
-        ・カスタムソフトウェア開発
-        <br />
-        ・Webアプリケーション開発
-        <br />
-        ・モバイルアプリケーション開発
-        <br />
-        ・ソフトウェアメンテナンス／リエンジニアリング
-      </>
-    ),
-    serviceText: "Service",
-  },
-];
 
 export default function HomePage() {
   return (
@@ -133,38 +27,20 @@ export default function HomePage() {
               柔軟で革新的なアプローチでお客様のビジネスを未来へ導くパートナーです。
             </>
           </Text>
-          <div className="flex flex-col gap-[62px] self-stretch sm:gap-[31px]">
-            <div className="flex flex-col items-start gap-5">
-              <Heading
-                size="headingxl"
-                as="h2"
-                className="font-urbanist text-[36px] font-extrabold tracking-[1.08px] text-blue-800 md:text-[34px] sm:text-[32px]"
-              >
-                Service
-              </Heading>
-              <Heading size="headingmd" as="h3" className="text-[24px] font-bold text-gray-900 md:text-[22px]">
-                ビジネスを加速するソリューション
-              </Heading>
-            </div>
-            <div className="flex flex-col gap-[150px]">
-              <Suspense fallback={<div>Loading feed...</div>}>
-                {data.map((d, index) => (
-                  <SystemDevelopmentComponent {...d} key={"top" + index} />
-                ))}
-              </Suspense>
-            </div>
-          </div>
+
+          <Service />
+
         </div>
 
         <div className="h-[420px] relative mt-20 overflow-hidden">
           <div className="w-full h-[420px] left-0 top-0 absolute bg-[#f2faff]" />
-          <div className="w-full animate-slide-left-20 h-[105px] left-0 top-[315px] absolute justify-start items-center gap-[70px] inline-flex">
-            <div className="text-blue-50 text-[150px] font-extrabold font-urbanist tracking-[4.50px]">MISSON</div>
-            <div className="text-blue-50 text-[150px] font-bold font-['Trirong'] tracking-[4.50px]">MISSON</div>
-            <div className="text-blue-50 text-[150px] font-extrabold font-urbanist tracking-[4.50px]">MISSON</div>
-            <div className="text-blue-50 text-[150px] font-extrabold font-urbanist tracking-[4.50px]">MISSON</div>
-            <div className="text-blue-50 text-[150px] font-bold font-['Trirong'] tracking-[4.50px]">MISSON</div>
-            <div className="text-blue-50 text-[150px] font-extrabold font-urbanist tracking-[4.50px]">MISSON</div>
+          <div className="w-full group animate-slide-left-20 h-[105px] left-0 top-[315px] absolute justify-start items-center gap-[70px] inline-flex">
+            <div className="text-blue-50 group-hover:text-blue-200 text-[150px] font-extrabold font-urbanist tracking-[4.50px]">MISSON</div>
+            <div className="text-blue-50 group-hover:text-blue-200 text-[150px] font-bold font-['Trirong'] tracking-[4.50px]">MISSON</div>
+            <div className="text-blue-50 group-hover:text-blue-200 text-[150px] font-extrabold font-urbanist tracking-[4.50px]">MISSON</div>
+            <div className="text-blue-50 group-hover:text-blue-200 text-[150px] font-extrabold font-urbanist tracking-[4.50px]">MISSON</div>
+            <div className="text-blue-50 group-hover:text-blue-200 text-[150px] font-bold font-['Trirong'] tracking-[4.50px]">MISSON</div>
+            <div className="text-blue-50 group-hover:text-blue-200 text-[150px] font-extrabold font-urbanist tracking-[4.50px]">MISSON</div>
           </div>
           <div className="w-[960px] h-[279px] left-[242px] top-[71px] absolute flex-col justify-start items-start gap-[60px] inline-flex">
             <div className="h-[111px] flex-col justify-start items-start gap-5 flex">

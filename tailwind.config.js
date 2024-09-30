@@ -21,11 +21,15 @@ module.exports = {
           '0%': { transform: 'translateX(0)' },
           '100%': { transform: 'translateX(-100%)' },
         },
-
+        "slide-bottom": {
+          "0%": { transform: "translateY(-30px)", opacity: "0" },
+          "100%": { transform: "translateY(0px)", opacity: "1" },
+        },
       },
       animation: {
         'slide-left': 'slide-left 360s linear infinite',
         'slide-left-20': 'slide-left 20s linear infinite',
+        'slide-bottom': 'slide-bottom 0.3s linear',
       }
     },
   },

@@ -68,8 +68,13 @@ function Viewer3D({ modelPath }: { modelPath: string }) {
 
         camera.position.z = 8;
 
+        // Scale the model based on the modelPath
+        if (modelPath === "/models/service-3.glb") {
+          model.scale.set(1.6, 1.6, 1.6);
+        }
+
         // Rotate the camera 180 degrees around the y-axis and tilt it 30 degrees downward
-        camera.position.applyAxisAngle(new THREE.Vector3(0, 1, 0), Math.PI);
+        camera.position.applyAxisAngle(new THREE.Vector3(0, modelPath === "/models/service-2.glb" ? 1.05 : modelPath === "/models/service-3.glb" ? 1 : 1, 0), Math.PI);
         camera.position.applyAxisAngle(new THREE.Vector3(1, 0, 0), Math.PI / 8);
         camera.position.applyAxisAngle(
           new THREE.Vector3(0, 0, 1),
@@ -164,15 +169,10 @@ function Viewer3D({ modelPath }: { modelPath: string }) {
     <div>
       <div
         ref={containerRef}
-        style={{ width: "800px", height: "800px", border: "1px solid red" }}
+        className={`${modelPath === "/models/service-2.glb" ? "ml-8" : modelPath === "/models/service-3.glb" ? "ml-[-80px] pt-[90px] " : ""}`}
+        style={{ width: "714px", height: "620px" }}
       />
-      <input
-        type="range"
-        onChange={onRotate}
-        min={-20}
-        max={20}
-        value={rotate}
-      />
+
     </div>
   );
 }

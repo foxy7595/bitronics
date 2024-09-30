@@ -1,5 +1,9 @@
-import { Button, Img, Heading } from "./..";
-import React from "react";
+"use client"
+
+import { useInView } from "react-hook-inview";
+import { Button, Img, Heading } from "..";
+import React, { useEffect, useState } from "react";
+import Viewer3D from "../3dViewer";
 
 interface Props {
   className?: string;
@@ -8,9 +12,10 @@ interface Props {
   descriptionText?: React.ReactNode;
   detailedDescriptionText?: React.ReactNode;
   serviceText?: React.ReactNode;
+  modelPath: string;
 }
 
-export default function SystemDevelopmentComponent({
+export default function Services({
   headingText = "システム開発事業",
   systemText = (
     <>
@@ -36,29 +41,39 @@ export default function SystemDevelopmentComponent({
   serviceText = "Service",
   ...props
 }: Props) {
+  const [ref1, inView1] = useInView({ threshold: 0.7 });
+  const [show, setShow] = useState(false)
+
+  useEffect(() => {
+    if (inView1) {
+      setShow(true)
+    }
+  }, [inView1])
+
+
   return (
     <div {...props} className={`${props.className} flex flex-col items-center flex-1 container-xs`}>
       <div className="relative h-[978px] self-stretch">
-        <div className="absolute bottom-[7%] left-0 right-0 m-auto w-[74%] bg-gradient py-[34px] sm:py-5">
-          <Img
-            src="img_1_2.png"
-            width={714}
-            height={620}
-            alt="Image"
-            className="mb-[30px] h-[620px] w-full object-cover sm:h-auto"
-          />
+        <div ref={ref1} className="absolute bottom-[7%] left-0 right-0 m-auto w-[74%] bg-gradient py-[34px] sm:py-5">
+
+          <Viewer3D modelPath={props.modelPath} />
+
         </div>
-        <Heading
+        {show && <Heading
+
           size="headinglg"
           as="h2"
+          textAnimate
+          delay={200}
           className="absolute right-0 top-[20%] m-auto w-[4%] text-[32px] font-bold leading-[38px] text-gray-900 sm:w-[4%] sm:text-[27px]"
         >
           {headingText}
-        </Heading>
+        </Heading>}
+
         <Heading
           size="heading3xl"
           as="h1"
-          className="absolute left-0 top-0 m-auto w-[68%] font-urbanist text-[90px] font-bold leading-[108px] tracking-[2.70px] text-light_blue-a200 sm:w-[68%] sm:text-[48px]"
+          className={`  ${show ? "animate-slide-bottom" : " opacity-0 "} absolute   left-0 top-0 m-auto w-[68%] font-urbanist text-[90px] font-bold leading-[108px] tracking-[2.70px] text-light_blue-a200 sm:w-[68%] sm:text-[48px]`}
         >
           {systemText}
         </Heading>
@@ -76,29 +91,7 @@ export default function SystemDevelopmentComponent({
           as="h5"
           className="w-[48%] font-notosanscjkjp text-[20px] font-bold leading-[200%] text-gray-900 sm:w-[48%] sm:text-[17px]"
         >
-          <span>・カスタム</span>
-          <span>
-            <>
-              ソフトウェア開発
-              <br />
-            </>
-          </span>
-          <span>・</span>
-          <span>
-            <>
-              Webアプリケーション開発
-              <br />
-            </>
-          </span>
-          <span>・</span>
-          <span>
-            <>
-              モバイルアプリケーション開発
-              <br />
-            </>
-          </span>
-          <span>・</span>
-          <span>ソフトウェアメンテナンス／リエンジニアリング</span>
+          {detailedDescriptionText}
         </Heading>
         <div className="flex flex-1 items-center justify-end gap-[31px] self-end">
           <Heading
