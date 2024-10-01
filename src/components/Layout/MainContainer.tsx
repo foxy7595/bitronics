@@ -25,7 +25,7 @@ const MainContainer: React.FC<MainContainerProps> = ({ children }) => {
                 <Heading
                     size="heading3xl"
                     as="h4"
-                    className=" !text-blue-50  !font-medium animate-slide-left absolute bottom-[calc(50%-100px)] -top-4 left-[230px] whitespace-nowrap"
+                    className=" !text-blue-50 hover:!text-blue-200  !font-medium animate-slide-left absolute bottom-[calc(50%-100px)] -top-4 left-[230px] whitespace-nowrap"
                 >
                     Empower Your Growth with Advanced System Development.  Empower Your Growth with Advanced System Development. Empower Your Growth with Advanced System Development.  Empower Your Growth with Advanced System Development. Empower Your Growth with Advanced System Development.  Empower Your Growth with Advanced System Development. Empower Your Growth with Advanced System Development.  Empower Your Growth with Advanced System Development. Empower Your Growth with Advanced System Development.  Empower Your Growth with Advanced System Development. Empower Your Growth with Advanced System Development.  Empower Your Growth with Advanced System Development. Empower Your Growth with Advanced System Development.  Empower Your Growth with Advanced System Development. Empower Your Growth with Advanced System Development.  Empower Your Growth with Advanced System Development. Empower Your Growth with Advanced System Development.  Empower Your Growth with Advanced System Development.
                 </Heading>
