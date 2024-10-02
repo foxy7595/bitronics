@@ -33,7 +33,7 @@ export default function Footer({ ...props }: Props) {
                     Service
                   </Heading>
                 </div>
-                <Text as="p" className="text-[14px] font-medium text-gray-900">
+                <Text as="p" className="text-[14px] font-medium text-gray-900 whitespace-nowrap">
                   システム開発事業 / 先端技術開発事業 / ソフトウェア品質保証
                 </Text>
               </div>

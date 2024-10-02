@@ -13,24 +13,12 @@ const data = [
         headingText: "システム開発事業",
         modelPath: "/models/service-1.glb",
         systemText: (
-            <>
-                SYSTEM
-                <br />
-                DEVELOPMENT
-            </>
+
+            "SYSTEM\nDEVELOPMENT"
+
         ),
         descriptionText: (
-            <>
-                Custom Software
-                <br />
-                Web App
-                <br />
-                Mobile App
-                <br />
-                Maintenance
-                <br />
-                Re-engineering
-            </>
+            "Custom Software\nWeb App\nMobile App\nMaintenance\nRe-engineering"
         ),
         detailedDescriptionText: (
             <>
@@ -46,27 +34,13 @@ const data = [
         serviceText: "Service",
     },
     {
-        modelPath: "/models/service-2.glb",
-        headingText: "システム開発事業",
+        modelPath: "/models/service-3.glb",
+        headingText: "先端技術開発事業",
         systemText: (
-            <>
-                ADVANCED
-                <br />
-                TECHNOLOGY
-                <br />
-                DEVELOPMENT
-            </>
+            "ADVANCED\nTECHNOLOGY\nDEVELOPMENT"
         ),
         descriptionText: (
-            <>
-                Artificial Intelligence
-                <br />
-                Internet of Things
-                <br />
-                Blockchain
-                <br />
-                AR/VR/MR
-            </>
+            "Artificial Intelligence\nInternet of Things\nBlockchain\nAR/VR/MR"
         ),
         detailedDescriptionText: (
             <>
@@ -83,25 +57,13 @@ const data = [
         serviceText: "Service",
     },
     {
-        modelPath: "/models/service-3.glb",
-        headingText: "システム開発事業",
+        modelPath: "/models/service-2.glb",
+        headingText: "ソフトウェア品質保証",
         systemText: (
-            <>
-                SOFTWARE QUALITY
-                <br />
-                ASSURANCE
-            </>
+            "SOFTWARE QUALITY\nASSURANCE"
         ),
         descriptionText: (
-            <>
-                Manual testing
-                <br />
-                Test automation
-                <br />
-                Software QA
-                <br />
-                Testing
-            </>
+            "Manual testing\nTest automation\nSoftware QA\nTesting"
         ),
         detailedDescriptionText: (
             <>
@@ -125,13 +87,12 @@ const Service: React.FC<ServiceProps> = ({
                 <Heading
                     size="headingxl"
                     as="h2"
-                    delay={100}
-                    binary={inView}
-                    className="font-urbanist text-[36px] font-extrabold tracking-[1.08px] text-blue-800 md:text-[34px] sm:text-[32px]"
+
+                    className="font-urbanist text-[#1565C0] text-[36px] font-extrabold tracking-[1.08px] text-blue-800 md:text-[34px] sm:text-[32px]"
                 >
                     Service
                 </Heading>
-                <Heading binary={inView} delay={500} size="headingmd" as="h3" className="text-[24px] font-bold text-gray-900 md:text-[22px]">
+                <Heading size="headingmd" as="h3" className="text-[24px] font-bold text-gray-900 md:text-[22px]">
                     ビジネスを加速するソリューション
                 </Heading>
             </div>

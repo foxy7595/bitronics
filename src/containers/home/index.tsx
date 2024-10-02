@@ -14,9 +14,9 @@ import Service from "./Service";
 export default function HomePage() {
   return (
     <MainContainer>
+
       <Main />
       <FluidContainer >
-
         <div className="container-xs mt-[58px] flex flex-col items-center gap-[194px] md:gap-[145px] md:px-5 sm:gap-[97px]">
           <Text size="textxl" as="p" className="text-center text-[18px] font-normal leading-[200%] text-gray-900">
             <>
@@ -35,12 +35,12 @@ export default function HomePage() {
       <div className="h-[420px] relative mt-20 overflow-hidden">
         <div className="w-full h-[420px] left-0 top-0 absolute bg-[#f2faff]" />
         <div className="w-full group animate-slide-left-20 h-[105px] left-0 top-[315px] absolute justify-start items-center gap-[70px] inline-flex">
-          <div className="text-blue-50 group-hover:text-blue-200 text-[150px] font-extrabold font-urbanist tracking-[4.50px]">MISSON</div>
-          <div className="text-blue-50 group-hover:text-blue-200 text-[150px] font-bold font-['Trirong'] tracking-[4.50px]">MISSON</div>
-          <div className="text-blue-50 group-hover:text-blue-200 text-[150px] font-extrabold font-urbanist tracking-[4.50px]">MISSON</div>
-          <div className="text-blue-50 group-hover:text-blue-200 text-[150px] font-extrabold font-urbanist tracking-[4.50px]">MISSON</div>
-          <div className="text-blue-50 group-hover:text-blue-200 text-[150px] font-bold font-['Trirong'] tracking-[4.50px]">MISSON</div>
-          <div className="text-blue-50 group-hover:text-blue-200 text-[150px] font-extrabold font-urbanist tracking-[4.50px]">MISSON</div>
+          <div className="text-blue-50  text-[150px] font-extrabold font-urbanist tracking-[4.50px]">MISSON</div>
+          <div className="text-blue-50  text-[150px] font-bold font-['Trirong'] tracking-[4.50px]">MISSON</div>
+          <div className="text-blue-50  text-[150px] font-extrabold font-urbanist tracking-[4.50px]">MISSON</div>
+          <div className="text-blue-50  text-[150px] font-extrabold font-urbanist tracking-[4.50px]">MISSON</div>
+          <div className="text-blue-50  text-[150px] font-bold font-['Trirong'] tracking-[4.50px]">MISSON</div>
+          <div className="text-blue-50  text-[150px] font-extrabold font-urbanist tracking-[4.50px]">MISSON</div>
         </div>
         <div className="w-full flex justify-center items-center">
           <div className="w-[960px] h-[279px]   top-[71px] absolute flex-col justify-start items-start gap-[60px] inline-flex">
@@ -59,7 +59,7 @@ export default function HomePage() {
           width={316}
           height={632}
           alt="Vector"
-          className="h-[632px] w-[22%] object-contain mr-[-52px]"
+          className="h-[632px]  w-[22%] object-contain mr-[-52px]"
         />
         <Works />
       </div>

@@ -70,20 +70,24 @@ export default function Services({
           {headingText}
         </Heading>}
 
-        <Heading
+        {show && <Heading
           size="heading3xl"
           as="h1"
-          className={`  ${show ? "animate-slide-bottom" : " opacity-0 "} absolute   left-0 top-0 m-auto w-[68%] font-urbanist text-[90px] font-bold leading-[108px] tracking-[2.70px] text-light_blue-a200 sm:w-[68%] sm:text-[48px]`}
+          binary={true}
+          delay={200}
+          className={` absolute   left-0 top-0 m-auto w-[68%] font-urbanist text-[90px] font-bold leading-[108px] tracking-[2.70px] text-light_blue-a200 sm:w-[68%] sm:text-[48px]`}
         >
           {systemText}
-        </Heading>
-        <Heading
+        </Heading>}
+        {show && <Heading
           size="heading2xl"
-          as="h1"
-          className="absolute bottom-0 right-px m-auto w-[42%] font-trirong text-[48px] font-semibold italic leading-[70px] tracking-[1.44px] text-light_blue-a200 sm:w-[42%] sm:text-[40px]"
+          as="pre"
+          binary={true}
+          delay={200}
+          className="absolute bottom-0 right-px m-auto w-[55%] font-trirong text-[48px] font-semibold italic leading-[70px] tracking-[1.44px] text-light_blue-a200 sm:w-[42%] sm:text-[40px]"
         >
           {descriptionText}
-        </Heading>
+        </Heading>}
       </div>
       <div className="flex items-center self-stretch">
         <Heading
