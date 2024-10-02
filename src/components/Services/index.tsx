@@ -56,7 +56,7 @@ export default function Services({
       <div className="relative h-[978px] self-stretch">
         <div ref={ref1} className="absolute bottom-[7%] left-0 right-0 m-auto w-[74%] bg-gradient py-[34px] sm:py-5">
 
-          <Viewer3D modelPath={props.modelPath} />
+          <Viewer3D modelPath={props.modelPath} show={show} />
 
         </div>
         {show && <Heading

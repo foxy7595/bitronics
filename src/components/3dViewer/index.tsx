@@ -5,13 +5,48 @@ import * as THREE from "three";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 
-function Viewer3D({ modelPath }: { modelPath: string }) {
+function Viewer3D({ modelPath, show }: { modelPath: string, show: boolean }) {
   const [rotate, setRotate] = useState(-20);
   const containerRef = useRef<HTMLDivElement>(null);
   const sceneRef = useRef<THREE.Scene>(new THREE.Scene());
   const cameraRef = useRef<THREE.PerspectiveCamera | null>(null);
   const controlsRef = useRef<OrbitControls | null>(null);
   const rendererRef = useRef<THREE.WebGLRenderer | null>(null);
+
+  let _rotate = -20
+  const handleScroll = () => {
+    if (!cameraRef.current) return;
+
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY > (window as any)[modelPath]) {
+      // Scrolling down
+      if (_rotate < 21) {
+
+        _rotate += 0.4;
+
+      }
+    } else {
+      // Scrolling up
+      if (_rotate > -20) {
+        _rotate -= 0.4;
+      }
+    }
+    (window as any)[modelPath] = currentScrollY;
+
+
+
+    onRotate(_rotate);
+  };
+
+  useEffect(() => {
+    if (show) {
+      window.addEventListener('scroll', handleScroll);
+    }
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [show]);
+
+
 
   useEffect(() => {
     if (!containerRef.current) return;
@@ -52,6 +87,15 @@ function Viewer3D({ modelPath }: { modelPath: string }) {
         const model = gltf.scene;
         scene.add(model);
 
+        // Add white color to the model
+        // model.traverse((child) => {
+        //   if (child instanceof THREE.Mesh) {
+        //     child.material.color.setHex(0xFFFFFF); // Set color to white
+        //   }
+        // });
+
+
+
         const controls = new OrbitControls(camera, renderer.domElement);
         controlsRef.current = controls;
 
@@ -75,7 +119,7 @@ function Viewer3D({ modelPath }: { modelPath: string }) {
 
         // Rotate the camera 180 degrees around the y-axis and tilt it 30 degrees downward
         camera.position.applyAxisAngle(new THREE.Vector3(0, modelPath === "/models/service-2.glb" ? 1.05 : modelPath === "/models/service-3.glb" ? 1 : 1, 0), Math.PI);
-        camera.position.applyAxisAngle(new THREE.Vector3(1, 0, 0), Math.PI / 8);
+        camera.position.applyAxisAngle(new THREE.Vector3(modelPath === "/models/service-2.glb" ? 0.6 : 1, 0, 0), Math.PI / 8);
         camera.position.applyAxisAngle(
           new THREE.Vector3(0, 0, 1),
           Math.PI / 12
@@ -137,8 +181,8 @@ function Viewer3D({ modelPath }: { modelPath: string }) {
     };
   }, [modelPath]);
 
-  const onRotate = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = Number(e.target.value);
+  const onRotate = (value: number) => {
+
     setRotate(value);
 
     const camera = cameraRef.current;

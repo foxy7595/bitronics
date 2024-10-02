@@ -49,6 +49,7 @@ export default function Works() {
           <Heading
             size="headingxl"
             as="h2"
+
             className="font-urbanist text-[36px] font-extrabold tracking-[1.08px] text-blue-800 md:text-[34px] sm:text-[32px]"
           >
             Works
