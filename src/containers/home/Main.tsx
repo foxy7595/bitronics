@@ -49,7 +49,7 @@ const Main: React.FC = () => {
                         <Heading
                             size="heading4xl"
                             as="h4"
-                            className="  !text-blue-800  !font-medium animate-slide-left absolute bottom-[calc(50%-100px)] font-urbanist left-[230px] whitespace-nowrap"
+                            className="  !text-blue-800  !font-medium animate-slide-left absolute bottom-[calc(50%-140px)] font-urbanist left-[230px] whitespace-nowrap"
                         >
                             Empower Your <i className=' font-trirong'>Growth</i> with <i className='font-trirong'> Advanced</i> System Development.  Empower Your <i className=' font-trirong'>Growth</i> with <i className='font-trirong'> Advanced</i> System Development. Empower Your <i className=' font-trirong'>Growth</i> with <i className='font-trirong'> Advanced</i> System Development.  Empower Your <i className=' font-trirong'>Growth</i> with <i className='font-trirong'> Advanced</i> System Development. Empower Your <i className=' font-trirong'>Growth</i> with <i className='font-trirong'> Advanced</i> System Development.  Empower Your <i className=' font-trirong'>Growth</i> with <i className='font-trirong'> Advanced</i> System Development. Empower Your <i className=' font-trirong'>Growth</i> with <i className='font-trirong'> Advanced</i> System Development.  Empower Your <i className=' font-trirong'>Growth</i> with <i className='font-trirong'> Advanced</i> System Development. Empower Your <i className=' font-trirong'>Growth</i> with <i className='font-trirong'> Advanced</i> System Development.  Empower Your <i className=' font-trirong'>Growth</i> with <i className='font-trirong'> Advanced</i> System Development. Empower Your <i className=' font-trirong'>Growth</i> with <i className='font-trirong'> Advanced</i> System Development.  Empower Your <i className=' font-trirong'>Growth</i> with <i className='font-trirong'> Advanced</i> System Development. Empower Your <i className=' font-trirong'>Growth</i> with <i className='font-trirong'> Advanced</i> System Development.  Empower Your <i className=' font-trirong'>Growth</i> with <i className='font-trirong'> Advanced</i> System Development. Empower Your <i className=' font-trirong'>Growth</i> with <i className='font-trirong'> Advanced</i> System Development.  Empower Your <i className=' font-trirong'>Growth</i> with <i className='font-trirong'> Advanced</i> System Development. Empower Your <i className=' font-trirong'>Growth</i> with <i className='font-trirong'> Advanced</i> System Development.  Empower Your <i className=' font-trirong'>Growth</i> with <i className='font-trirong'> Advanced</i> System Development.
                         </Heading>
@@ -67,7 +67,7 @@ const Main: React.FC = () => {
                                 size="heading3xl"
                                 as="h6"
                                 binary
-                                className="font-urbanist w-[1150px] text-[90px] relative z-20 font-semibold tracking-[2.70px] text-light_blue-a200 md:text-[48px]"
+                                className="font-urbanist  text-[90px] relative z-20 font-semibold tracking-[2.70px] text-light_blue-a200 md:text-[48px]"
                             >
                                 Digital Domain Specialist
                             </Heading>
