@@ -99,8 +99,8 @@ export default function Footer({ ...props }: Props) {
                   Contact
                 </Heading>
               </div>
-              <div className="flex flex-wrap items-center gap-5">
-                <Heading as="h6" className="text-[18px] font-bold text-gray-900">
+              <div className="flex  items-center gap-5">
+                <Heading as="h6" className="text-[18px] font-bold text-gray-900 whitespace-nowrap">
                   プライバシーポリシー
                 </Heading>
                 <Link href="Privacy" target="_blank" rel="noreferrer">
