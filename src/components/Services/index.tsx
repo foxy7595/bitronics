@@ -84,7 +84,7 @@ export default function Services({
           as="pre"
           binary={true}
           delay={200}
-          className="absolute bottom-0 right-px m-auto w-[55%] font-trirong text-[48px] font-semibold italic leading-[70px] tracking-[1.44px] text-light_blue-a200 sm:w-[42%] sm:text-[40px]"
+          className="absolute bottom-0 right-px m-auto w-[55%] !font-trirong text-[48px] font-semibold  leading-[70px] tracking-[1.44px] text-light_blue-a200 sm:w-[42%] sm:text-[40px]"
         >
           {descriptionText}
         </Heading>}
