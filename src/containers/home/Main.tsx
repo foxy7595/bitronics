@@ -3,7 +3,7 @@ import { Heading } from '@/components';
 
 const Main: React.FC = () => {
     return (
-        <div className=" flex items-center justify-center self-stretch max-h-screen">
+        <div className=" flex items-center justify-center self-stretch ">
             <div className="w-full">
 
                 <div className="relative  flex items-center md:flex-col">
@@ -11,7 +11,7 @@ const Main: React.FC = () => {
                         <img
                             src="/images/haft-logo.png"
                             alt="logo haft"
-                            className="object-cover md:h-auto w-auto h-[calc(100vh-150px)] relative z-10 mt-[54px]"
+                            className="object-cover md:h-auto w-auto h-[calc(200vh-450px)] relative z-10 mt-[54px]"
                         />
                         <div className="absolute right-[20px] scale-75 ">
                             <Heading
