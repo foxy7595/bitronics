@@ -1,11 +1,7 @@
 import FluidContainer from "@/components/Layout/FluidContainer";
-import { Heading, Img, Text } from "../../components";
-import Footer from "../../components/Footer";
-import SystemDevelopmentComponent from "../../components/Services";
+import { Img, Text } from "../../components";
 import Works from "./Works";
-import Contact from "./Contact";
-import React, { Suspense } from "react";
-import Header from "../header";
+import React from "react";
 import MainContainer from "@/components/Layout/MainContainer";
 import Main from "./Main";
 import Service from "./Service";

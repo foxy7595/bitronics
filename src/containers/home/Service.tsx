@@ -88,7 +88,7 @@ const Service: React.FC<ServiceProps> = ({
                     size="headingxl"
                     as="h2"
 
-                    className="font-urbanist text-[#1565C0] text-[36px] font-extrabold tracking-[1.08px] text-blue-800 md:text-[34px] sm:text-[32px]"
+                    className="font-urbanist !text-[#1565C0] text-[36px] font-extrabold tracking-[1.08px] text-blue-800 md:text-[34px] sm:text-[32px]"
                 >
                     Service
                 </Heading>
