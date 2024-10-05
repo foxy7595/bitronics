@@ -90,7 +90,7 @@ const Main: React.FC = () => {
               <Heading
                 size="headingxl"
                 as="h5"
-                className="text-center text-[36px] font-bold  text-gray-900 md:text-[36px] sm:text-[26px]"
+                className="text-center text-[36px] font-bold  text-gray-900 md:text-[36px] sm:text-[22px] whitespace-nowrap"
               >
                 <span className="block sm:hidden md:hidden">
                   {" "}
