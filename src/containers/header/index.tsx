@@ -165,7 +165,7 @@ const Header: React.FC = () => {
                 <Heading
                   size="headingxs"
                   as="h2"
-                  className="text-[32px] font-bold text-gray-900 md:text-[28px] sm:text-[20px]"
+                  className="text-[32px] font-bold text-gray-900 md:text-[28px] sm:text-[18px] whitespace-nowrap"
                 >
                   プライバシーポリシー
                 </Heading>
