@@ -68,80 +68,90 @@ export default function Services({
   }, [inView1, mobileRatio]);
 
   return (
-    <div
-      {...props}
-      className={`${props.className} flex flex-col items-center flex-1 container-xs`}
-    >
-      <div className="relative h-[850px] sm:h-[calc(100vw+100px)] md:h-[calc(100vw+100px)] md:max-h-[760px] max-h-none  self-stretch">
-        <div
-          ref={ref1}
-          className="absolute bottom-[7%] left-0 right-0 m-auto w-[74%] sm:w-full bg-gradient "
+    <>
+
+      <div
+        {...props}
+        className={`${props.className} flex flex-col items-center flex-1 container-xs`}
+      >
+        <Heading
+          size="headingmd"
+          as="h3"
+          className="!text-[16px] font-bold text-gray-900 w-full text-left mb-2"
         >
-          <Viewer3D
-            modelPath={props.modelPath}
-            show={show}
-            width={714}
-            height={620}
-            mobileRatio={mobileRatio}
-          />
+          ビジネスを加速するソリューション
+        </Heading>
+        <div className="relative h-[850px] sm:h-[calc(100vw+100px)] md:h-[calc(100vw+100px)] md:max-h-[760px] max-h-none  self-stretch">
+          <div
+            ref={ref1}
+            className="absolute bottom-[7%] left-0 right-0 m-auto w-[74%] sm:w-full bg-gradient "
+          >
+            <Viewer3D
+              modelPath={props.modelPath}
+              show={show}
+              width={714}
+              height={620}
+              mobileRatio={mobileRatio}
+            />
+          </div>
+          {show && mobileRatio === 1 && (
+            <Heading
+              size="headinglg"
+              as="h2"
+              textAnimate
+              delay={200}
+              className="absolute right-0 md:right-8 top-[20%] m-auto w-[4%] text-[32px] font-bold leading-[38px] text-gray-900  sm:leading-normal sm:text-[27px]"
+            >
+              {headingText}
+            </Heading>
+          )}
+
+          {show && (
+            <Heading
+              size="heading3xl"
+              as="pre"
+              binary={true}
+              delay={200}
+              className={` absolute   left-0 top-0 m-auto w-[68%] font-urbanist text-[90px] font-bold leading-[108px] sm:leading-[50px] md:leading-[74px] tracking-[2.70px] text-light_blue-a200 sm:w-[68%] md:text-[70px] sm:text-[40px]`}
+            >
+              {systemText}
+            </Heading>
+          )}
+          {show && (
+            <Heading
+              size="heading2xl"
+              as="pre"
+              binary={true}
+              delay={200}
+              className="absolute bottom-0 !z-40 not-italic right-px m-auto   !font-trirong text-[48px] font-semibold  leading-[70px] tracking-[1.44px] text-light_blue-a200  sm:text-[16px] sm:scale-[0.8] transform origin-top-right  sm:leading-[50px] "
+            >
+              {descriptionText}
+            </Heading>
+          )}
         </div>
-        {show && mobileRatio === 1 && (
+        <div className="flex items-center self-stretch">
           <Heading
-            size="headinglg"
-            as="h2"
-            textAnimate
-            delay={200}
-            className="absolute right-0 md:right-8 top-[20%] m-auto w-[4%] text-[32px] font-bold leading-[38px] text-gray-900  sm:leading-normal sm:text-[27px]"
+            size="headings"
+            as="h5"
+            className="w-[48%] sm:w-full md:w-full font-notosanscjkjp text-[20px] font-bold leading-[200%] text-gray-900  sm:text-[17px]"
           >
-            {headingText}
+            {detailedDescriptionText}
           </Heading>
-        )}
+        </div>
 
-        {show && (
+        <div className="flex flex-1 items-center justify-end gap-[31px] self-end">
           <Heading
-            size="heading3xl"
-            as="pre"
-            binary={true}
-            delay={200}
-            className={` absolute   left-0 top-0 m-auto w-[68%] font-urbanist text-[90px] font-bold leading-[108px] sm:leading-[50px] md:leading-[74px] tracking-[2.70px] text-light_blue-a200 sm:w-[68%] md:text-[70px] sm:text-[40px]`}
+            size="headings"
+            as="h5"
+            className=" text-[20px] font-bold text-gray-900 underline sm:text-[17px]"
           >
-            {systemText}
+            {serviceText}
           </Heading>
-        )}
-        {show && (
-          <Heading
-            size="heading2xl"
-            as="pre"
-            binary={true}
-            delay={200}
-            className="absolute bottom-0 !z-40 not-italic right-px m-auto   !font-trirong text-[48px] font-semibold  leading-[70px] tracking-[1.44px] text-light_blue-a200  sm:text-[16px] sm:scale-[0.8] transform origin-top-right  sm:leading-[50px] "
-          >
-            {descriptionText}
-          </Heading>
-        )}
+          <Button className="flex h-[40px] w-[40px] items-center justify-center rounded-[20px] bg-gray-900 px-3">
+            <Img src="img_tdesign_swap_right.svg" width={16} height={4} />
+          </Button>
+        </div>
       </div>
-      <div className="flex items-center self-stretch">
-        <Heading
-          size="headings"
-          as="h5"
-          className="w-[48%] sm:w-full md:w-full font-notosanscjkjp text-[20px] font-bold leading-[200%] text-gray-900  sm:text-[17px]"
-        >
-          {detailedDescriptionText}
-        </Heading>
-      </div>
-
-      <div className="flex flex-1 items-center justify-end gap-[31px] self-end">
-        <Heading
-          size="headings"
-          as="h5"
-          className=" text-[20px] font-bold text-gray-900 underline sm:text-[17px]"
-        >
-          {serviceText}
-        </Heading>
-        <Button className="flex h-[40px] w-[40px] items-center justify-center rounded-[20px] bg-gray-900 px-3">
-          <Img src="img_tdesign_swap_right.svg" width={16} height={4} />
-        </Button>
-      </div>
-    </div>
+    </>
   );
 }

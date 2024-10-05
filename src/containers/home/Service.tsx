@@ -4,7 +4,7 @@ import { Heading } from "@/components";
 import Services from "@/components/Services";
 import { useInView } from "react-hook-inview";
 
-interface ServiceProps {}
+interface ServiceProps { }
 
 const data = [
   {
@@ -54,7 +54,7 @@ const data = [
     serviceText: "Service",
   },
 ];
-const Service: React.FC<ServiceProps> = ({}) => {
+const Service: React.FC<ServiceProps> = ({ }) => {
   const [ref, inView] = useInView({
     threshold: 0.8,
   });
@@ -63,21 +63,20 @@ const Service: React.FC<ServiceProps> = ({}) => {
     <div className="flex flex-col min-h-[300px] gap-[62px] self-stretch sm:gap-[31px]">
       <div
         ref={ref}
-        className={`flex flex-col items-start gap-5 ${
-          inView ? "opacity-100" : "opacity-0"
-        }`}
+        className={`flex flex-col items-start gap-5 ${inView ? "opacity-100" : "opacity-0"
+          }`}
       >
         <Heading
           size="headingxl"
           as="h2"
-          className="font-urbanist !text-[#1565C0] text-[36px] font-extrabold tracking-[1.08px] text-blue-800 md:text-[34px] sm:text-[32px]"
+          className="font-urbanist !text-[#1565C0] text-[36px] font-extrabold tracking-[1.08px] text-blue-800 md:text-[34px] sm:text-[24px]"
         >
           Service
         </Heading>
         <Heading
           size="headingmd"
           as="h3"
-          className="text-[24px] font-bold text-gray-900 md:text-[22px]"
+          className="text-[24px] sm:text-[16px] font-bold text-gray-900 md:text-[22px]"
         >
           ビジネスを加速するソリューション
         </Heading>

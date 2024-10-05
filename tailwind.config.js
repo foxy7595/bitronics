@@ -56,6 +56,7 @@ module.exports = {
       animation: {
         "slide-left": "slide-left 360s linear infinite",
         "slide-left-20": "slide-left 20s linear infinite",
+        "slide-left-5": "slide-left 5s linear infinite",
         "slide-bottom": "slide-bottom 0.3s linear",
         "show-menu": "show-menu 0.3s linear",
         "show-menu-item": "show-menu-item 1s linear",

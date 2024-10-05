@@ -26,41 +26,41 @@ export default function HomePage() {
             </>
           </Text>
 
-          {/* <Service /> */}
+          <Service />
         </div>
       </FluidContainer>
       <div className="h-[420px] relative sm:h-auto md:h-auto py-[71px] mt-20 overflow-hidden  bg-[#f2faff]">
-        <div className="w-full group animate-slide-left-20 h-[105px] left-0 bottom-2 z-30 absolute justify-start items-center gap-[70px] inline-flex">
-          <div className="text-blue-50  text-[150px] font-extrabold font-urbanist tracking-[4.50px]">
+        <div className="w-full group animate-slide-left-20 sm:animate-slide-left-5 h-[105px] left-0 bottom-2 z-30 absolute justify-start items-center gap-[70px] inline-flex">
+          <div className="text-blue-50  text-[150px] font-extrabold  font-urbanist tracking-[4.50px]">
             MISSON
           </div>
-          <div className="text-blue-50  text-[150px] font-bold font-['Trirong'] tracking-[4.50px]">
+          <div className="text-blue-50  text-[150px] sm:text-[120px] font-bold font-['Trirong'] not-italic tracking-[4.50px]">
             MISSON
           </div>
-          <div className="text-blue-50  text-[150px] font-extrabold font-urbanist tracking-[4.50px]">
+          <div className="text-blue-50  text-[150px] sm:text-[120px]  font-extrabold font-urbanist tracking-[4.50px]">
             MISSON
           </div>
-          <div className="text-blue-50  text-[150px] font-extrabold font-urbanist tracking-[4.50px]">
+          <div className="text-blue-50  text-[150px] sm:text-[120px]  font-extrabold font-urbanist tracking-[4.50px]">
             MISSON
           </div>
-          <div className="text-blue-50  text-[150px] font-bold font-['Trirong'] tracking-[4.50px]">
+          <div className="text-blue-50  text-[150px] sm:text-[120px]  font-bold font-['Trirong'] not-italic tracking-[4.50px]">
             MISSON
           </div>
-          <div className="text-blue-50  text-[150px] font-extrabold font-urbanist tracking-[4.50px]">
+          <div className="text-blue-50  text-[150px] sm:text-[120px]  font-extrabold font-urbanist tracking-[4.50px]">
             MISSON
           </div>
         </div>
         <div className="w-full flex justify-center items-center relative z-40 ">
-          <div className="w-[960px] sm:w-full md:w-full max-w-[960px] sm:px-4 md:px-4   flex-col justify-start items-start gap-[60px] inline-flex">
+          <div className="w-[960px] sm:w-full md:w-full max-w-[960px] sm:px-4 md:px-4   flex-col justify-start items-start gap-[30px] inline-flex">
             <div className="h-[111px] flex-col justify-start items-start gap-5 flex">
-              <div className="self-stretch text-blue-800 text-4xl font-extrabold font-urbanist tracking-wide">
+              <div className="self-stretch text-blue-800 text-4xl font-extrabold font-urbanist tracking-wide sm:text-[24px] md:text-[32px]">
                 Misson
               </div>
-              <div className="self-stretch text-gray-900 text-2xl font-bold font-notosanscjkjp leading-[48px]">
+              <div className="self-stretch text-gray-900 text-2xl sm:text-[16px] font-bold font-notosanscjkjp leading-[48px] sm:leading-normal">
                 先進テクノロジーを駆使した新たな可能性の提供
               </div>
             </div>
-            <div className="self-stretch text-gray-900 text-lg font-normal font-notosanscjkjp leading-9">
+            <div className="self-stretch text-gray-900 text-lg sm:text-[14px] font-normal font-notosanscjkjp leading-9">
               クライアント様のパフォーマンス向上と成功の保証が、私たちの最優先のミッションです。
               <br />
               Bitronicsはどんな厳しい状況にも柔軟に対応し、ビジネスの可能性を広げ、強力な代替案を提供します。デジタルITサービスを丁寧に管理し、リスクをコントロールすることで、変革を円滑かつ安心して実現します。
