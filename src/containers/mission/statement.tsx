@@ -32,7 +32,7 @@ export default function MissionStatement({
                         <Heading
                             size="heading2xl"
                             as="h1"
-                            className="text-[64px] font-semibold  text-gray-900 md:text-[48px]"
+                            className="text-[64px] not-italic font-semibold  text-gray-900 md:text-[48px]"
                         >
                             {missionTitle}
                         </Heading>
