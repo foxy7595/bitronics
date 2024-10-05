@@ -128,18 +128,19 @@ export default function Services({
         >
           {detailedDescriptionText}
         </Heading>
-        <div className="flex flex-1 items-center justify-end gap-[31px] self-end">
-          <Heading
-            size="headings"
-            as="h5"
-            className=" text-[20px] font-bold text-gray-900 underline sm:text-[17px]"
-          >
-            {serviceText}
-          </Heading>
-          <Button className="flex h-[40px] w-[40px] items-center justify-center rounded-[20px] bg-gray-900 px-3">
-            <Img src="img_tdesign_swap_right.svg" width={16} height={4} />
-          </Button>
-        </div>
+      </div>
+
+      <div className="flex flex-1 items-center justify-end gap-[31px] self-end">
+        <Heading
+          size="headings"
+          as="h5"
+          className=" text-[20px] font-bold text-gray-900 underline sm:text-[17px]"
+        >
+          {serviceText}
+        </Heading>
+        <Button className="flex h-[40px] w-[40px] items-center justify-center rounded-[20px] bg-gray-900 px-3">
+          <Img src="img_tdesign_swap_right.svg" width={16} height={4} />
+        </Button>
       </div>
     </div>
   );
