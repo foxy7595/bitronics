@@ -15,7 +15,11 @@ export default function Contact() {
               >
                 Contact
               </Heading>
-              <Heading size="headings" as="h3" className="text-[20px] font-bold leading-[200%] text-white-a700">
+              <Heading
+                size="headings"
+                as="h3"
+                className="text-[20px] font-bold leading-[200%] text-white-a700"
+              >
                 <>
                   Bitronicsの専門サービスを体験してみませんか？
                   <br />
@@ -23,12 +27,20 @@ export default function Contact() {
                 </>
               </Heading>
             </div>
-            <div className="flex items-center gap-[31px] self-end md:self-auto">
-              <Heading size="headings" as="h4" className="self-end text-[20px] font-bold text-white-a700 underline">
+            <div className="flex items-center gap-[31px] self-end ">
+              <Heading
+                size="headings"
+                as="h4"
+                className=" text-[20px] font-bold text-white-a700 underline"
+              >
                 Contact
               </Heading>
               <Button className="flex h-[40px] w-[40px] items-center justify-center rounded-[20px] bg-white-a700 px-3">
-                <Img src="img_tdesign_swap_right_gray_900.svg" width={16} height={4} />
+                <Img
+                  src="img_tdesign_swap_right_gray_900.svg"
+                  width={16}
+                  height={4}
+                />
               </Button>
             </div>
           </div>

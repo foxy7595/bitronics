@@ -49,7 +49,6 @@ export default function Works() {
           <Heading
             size="headingxl"
             as="h2"
-
             className="font-urbanist !text-[#1565C0] text-[36px] font-extrabold tracking-[1.08px] text-blue-800 md:text-[34px] sm:text-[32px]"
           >
             Works
@@ -74,7 +73,11 @@ export default function Works() {
           </Suspense>
         </div>
         <div className="flex items-center justify-end gap-[30px]">
-          <Heading size="headings" as="h4" className="self-end text-[20px] font-bold text-gray-900 underline">
+          <Heading
+            size="headings"
+            as="h4"
+            className="self-end text-[20px] font-bold text-gray-900 underline"
+          >
             Works
           </Heading>
           <Button className="flex h-[40px] w-[40px] items-center justify-center rounded-[20px] bg-gray-900 px-3">

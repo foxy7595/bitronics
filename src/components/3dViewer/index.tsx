@@ -5,15 +5,26 @@ import * as THREE from "three";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 
-function Viewer3D({ modelPath, show }: { modelPath: string, show: boolean }) {
-  const [rotate, setRotate] = useState(-20);
+function Viewer3D({
+  modelPath,
+  show,
+  width,
+  height,
+  mobileRatio,
+}: {
+  modelPath: string;
+  show: boolean;
+  width: number;
+  height: number;
+  mobileRatio: number;
+}) {
   const containerRef = useRef<HTMLDivElement>(null);
   const sceneRef = useRef<THREE.Scene>(new THREE.Scene());
   const cameraRef = useRef<THREE.PerspectiveCamera | null>(null);
   const controlsRef = useRef<OrbitControls | null>(null);
   const rendererRef = useRef<THREE.WebGLRenderer | null>(null);
 
-  let _rotate = -20
+  let _rotate = -20;
   const handleScroll = () => {
     if (!cameraRef.current) return;
 
@@ -22,9 +33,7 @@ function Viewer3D({ modelPath, show }: { modelPath: string, show: boolean }) {
     if (currentScrollY > (window as any)[modelPath]) {
       // Scrolling down
       if (_rotate < 21) {
-
         _rotate += 0.4;
-
       }
     } else {
       // Scrolling up
@@ -34,19 +43,15 @@ function Viewer3D({ modelPath, show }: { modelPath: string, show: boolean }) {
     }
     (window as any)[modelPath] = currentScrollY;
 
-
-
     onRotate(_rotate);
   };
 
   useEffect(() => {
     if (show) {
-      window.addEventListener('scroll', handleScroll);
+      window.addEventListener("scroll", handleScroll);
     }
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [show]);
-
-
 
   useEffect(() => {
     if (!containerRef.current) return;
@@ -94,8 +99,6 @@ function Viewer3D({ modelPath, show }: { modelPath: string, show: boolean }) {
         //   }
         // });
 
-
-
         const controls = new OrbitControls(camera, renderer.domElement);
         controlsRef.current = controls;
 
@@ -118,8 +121,26 @@ function Viewer3D({ modelPath, show }: { modelPath: string, show: boolean }) {
         }
 
         // Rotate the camera 180 degrees around the y-axis and tilt it 30 degrees downward
-        camera.position.applyAxisAngle(new THREE.Vector3(0, modelPath === "/models/service-2.glb" ? 1.05 : modelPath === "/models/service-3.glb" ? 1 : 1, 0), Math.PI);
-        camera.position.applyAxisAngle(new THREE.Vector3(modelPath === "/models/service-2.glb" ? 0.6 : 1, 0, 0), Math.PI / 8);
+        camera.position.applyAxisAngle(
+          new THREE.Vector3(
+            0,
+            modelPath === "/models/service-2.glb"
+              ? 1.05
+              : modelPath === "/models/service-3.glb"
+              ? 1
+              : 1,
+            0
+          ),
+          Math.PI
+        );
+        camera.position.applyAxisAngle(
+          new THREE.Vector3(
+            modelPath === "/models/service-2.glb" ? 0.6 : 1,
+            0,
+            0
+          ),
+          Math.PI / 8
+        );
         camera.position.applyAxisAngle(
           new THREE.Vector3(0, 0, 1),
           Math.PI / 12
@@ -182,9 +203,6 @@ function Viewer3D({ modelPath, show }: { modelPath: string, show: boolean }) {
   }, [modelPath]);
 
   const onRotate = (value: number) => {
-
-    setRotate(value);
-
     const camera = cameraRef.current;
     const scene = sceneRef.current;
     const controls = controlsRef.current;
@@ -210,13 +228,22 @@ function Viewer3D({ modelPath, show }: { modelPath: string, show: boolean }) {
   };
 
   return (
-    <div>
+    <div className=" sm:h-[calc(100vw-32px)] md:h-[calc(100vw+100px)] md:w-full md:max-h-[620px] max-h-none sm:w-full">
       <div
         ref={containerRef}
-        className={`${modelPath === "/models/service-2.glb" ? "ml-8" : modelPath === "/models/service-3.glb" ? "ml-[-80px] pt-[90px] " : ""}`}
-        style={{ width: "714px", height: "620px" }}
+        className={`${
+          modelPath === "/models/service-2.glb"
+            ? "ml-8 "
+            : modelPath === "/models/service-3.glb"
+            ? "ml-[-40px] sm:ml-[-40px] pt-[90px] "
+            : ""
+        }   transform origin-top-left`}
+        style={{
+          width: `${720}px`,
+          height: `${620}px`,
+          transform: `scale(${mobileRatio})`,
+        }}
       />
-
     </div>
   );
 }

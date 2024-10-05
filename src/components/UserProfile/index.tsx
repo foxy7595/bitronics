@@ -17,9 +17,16 @@ export default function UserProfile({
   ...props
 }: Props) {
   return (
-    <div {...props} className={`${props.className} flex flex-col items-start w-full gap-5`}>
-      <div className="flex justify-center self-stretch bg-gray-300 px-14 py-24 md:p-5">
-        <Text size="textlg" as="p" className="text-[16px] font-normal text-blue_gray-400">
+    <div
+      {...props}
+      className={`${props.className} flex flex-col items-start w-full gap-5`}
+    >
+      <div className="flex justify-center self-stretch bg-gray-300 w-full h-[218px] sm:h-[300px] md:h-[250px] items-center">
+        <Text
+          size="textlg"
+          as="p"
+          className="text-[16px] font-normal text-blue_gray-400"
+        >
           {userImage}
         </Text>
       </div>
