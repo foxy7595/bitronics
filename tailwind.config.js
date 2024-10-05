@@ -13,6 +13,7 @@ module.exports = {
         blue_gray: { 400: "var(--blue_gray_400)" },
         gray: {
           50: "var(--gray_50)",
+          100: "var(--gray_100)",
           300: "var(--gray_300)",
           900: "var(--gray_900)",
         },
@@ -55,6 +56,7 @@ module.exports = {
       },
       animation: {
         "slide-left": "slide-left 360s linear infinite",
+        "slide-left-10": "slide-left 10s linear infinite",
         "slide-left-20": "slide-left 20s linear infinite",
         "slide-left-5": "slide-left 5s linear infinite",
         "slide-bottom": "slide-bottom 0.3s linear",
