@@ -26,7 +26,7 @@ export default function HomePage() {
             </>
           </Text>
 
-          <Service />
+          {/* <Service /> */}
         </div>
       </FluidContainer>
       <div className="h-[420px] relative sm:h-auto md:h-auto py-[71px] mt-20 overflow-hidden  bg-[#f2faff]">
