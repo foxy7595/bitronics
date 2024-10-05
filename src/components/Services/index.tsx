@@ -114,7 +114,7 @@ export default function Services({
             as="pre"
             binary={true}
             delay={200}
-            className="absolute bottom-0 !z-40 right-px m-auto   !font-trirong text-[48px] font-semibold  leading-[70px] tracking-[1.44px] text-light_blue-a200  sm:text-[16px] sm:leading-[50px] "
+            className="absolute bottom-0 !z-40 italic right-px m-auto   !font-trirong text-[48px] font-semibold  leading-[70px] tracking-[1.44px] text-light_blue-a200  sm:text-[16px] sm:scale-[0.8] transform origin-top-right  sm:leading-[50px] "
           >
             {descriptionText}
           </Heading>
@@ -132,7 +132,7 @@ export default function Services({
           <Heading
             size="headings"
             as="h5"
-            className="self-end text-[20px] font-bold text-gray-900 underline sm:text-[17px]"
+            className=" text-[20px] font-bold text-gray-900 underline sm:text-[17px]"
           >
             {serviceText}
           </Heading>
