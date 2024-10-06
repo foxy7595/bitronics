@@ -57,7 +57,9 @@ export default function HomePage() {
                 Misson
               </div>
               <div className="self-stretch text-gray-900 text-2xl sm:text-[16px] font-bold font-notosanscjkjp leading-[48px] sm:leading-normal">
-                先進テクノロジーを駆使した新たな可能性の提供
+                先進テクノロジーを駆使した
+                <br className="hidden sm:block" />
+                新たな可能性の提供
               </div>
             </div>
             <div className="self-stretch text-gray-900 text-lg sm:text-[14px] font-normal font-notosanscjkjp leading-9">
