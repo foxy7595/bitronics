@@ -6,6 +6,9 @@ import { Heading, Button, Img } from "@/components";
 import Services from "./services";
 
 
+
+
+
 export default function ServicePage() {
     return (
         <MainContainer>
@@ -15,7 +18,7 @@ export default function ServicePage() {
                 <div className="flex flex-col  gap-[100px] md:gap-[75px] sm:gap-[50px]">
                     <div className="flex flex-col gap-8 ">
                         <div className="flex flex-col items-start gap-1">
-                            <div className="flex items-center gap-[30px] self-stretch md:flex-col">
+                            <div className="flex items-center gap-[30px] self-stretch md:flex-col md:items-start">
                                 <Heading
                                     size="heading2xl"
                                     as="h2"
@@ -30,7 +33,7 @@ export default function ServicePage() {
                             </Heading>
                         </div>
                         <div className="mx-[210px] flex  justify-center md:mx-0 md:flex-col">
-                            <div className="flex w-full max-w-[1240px] justify-between">
+                            <div className="flex w-full max-w-[818px] min-w-[700px] justify-between sm:flex-col sm:gap-2">
                                 <div className="flex items-center gap-5 ">
                                     <Heading as="h4" className="text-[18px] font-bold text-gray-900 underline">
                                         システム開発事業
