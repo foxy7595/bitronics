@@ -25,7 +25,7 @@ module.exports = {
       },
       boxShadow: {},
       fontFamily: {
-        notosanscjkjp: "Noto Sans CJK JP",
+        notosanscjkjp: "Noto Sans Javanese",
         urbanist: "Urbanist",
         trirong: "Trirong",
       },
