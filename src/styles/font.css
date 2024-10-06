@@ -47,6 +47,14 @@
   font-family: "Noto Sans Javanese";
   font-weight: 700;
 }
+
+@font-face {
+  font-display: swap;
+  font-style: normal;
+  src: url("/fonts/NotoSansJP-Medium.ttf");
+  font-family: "Noto Sans Javanese";
+  font-weight: 500;
+}
 @font-face {
   font-display: swap;
   font-style: normal;

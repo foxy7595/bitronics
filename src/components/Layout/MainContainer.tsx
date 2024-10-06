@@ -25,7 +25,7 @@ const MainContainer: React.FC<MainContainerProps> = ({ children }) => {
         <Heading
           size="heading3xl"
           as="h4"
-          className=" !text-blue-50  sm:text-[60px] md:text-[80px]  !font-medium animate-slide-left absolute bottom-[calc(50%-100px)] -top-8 sm:-top-0 md:-top-4 left-[230px] whitespace-nowrap"
+          className=" !text-blue-50  sm:!text-[60px] md:!text-[80px]   !font-medium animate-slide-left absolute bottom-[calc(50%-100px)] -top-8 sm:-top-0 md:-top-4 left-[230px] whitespace-nowrap"
         >
           Empower Your <i className=" !font-trirong not-italic">Growth</i> with{" "}
           <i className="!font-trirong not-italic"> Advanced</i> System Development. Empower
