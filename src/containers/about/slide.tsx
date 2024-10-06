@@ -1,5 +1,6 @@
 "use client";
 
+import useIsMobile from "@/hooks/useIsMobile";
 import React from "react";
 import Swiper from "react-id-swiper";
 import a from "swiper";
@@ -16,10 +17,11 @@ const data = [
   { modernequipped: "img_short_haired_bu.png" },
 ];
 
-const Slide: React.FC = () => {
+const Slide: React.FC<{ slidesPerView: number }> = ({ slidesPerView }) => {
+
   const params = {
     // slidesPerView: "auto",
-    slidesPerView: 3,
+    slidesPerView: slidesPerView,
     autoplay: {
       delay: 2500,
       disableOnInteraction: false,
@@ -34,6 +36,7 @@ const Slide: React.FC = () => {
     navigation: {},
     modules: [Autoplay],
   };
+
   return (
     <Swiper {...params}>
       {data.map((d, index) => (
@@ -41,7 +44,7 @@ const Slide: React.FC = () => {
           key={"about1" + index}
           src={"/images/" + d.modernequipped}
           alt={d.modernequipped}
-          //   className="!h-[250px] !w-[30%] object-contain "
+        //   className="!h-[250px] !w-[30%] object-contain "
         />
       ))}
     </Swiper>
