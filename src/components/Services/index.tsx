@@ -79,7 +79,7 @@ export default function Services({
             as="h3"
             className="!text-[16px] font-bold text-gray-900 w-full text-left mb-2"
           >
-            ビジネスを加速するソリューション
+            {headingText}
           </Heading>
         )}
         <div className="relative h-[850px] sm:h-[calc(100vw+100px)] md:h-[calc(100vw+100px)] md:max-h-[760px] max-h-none  self-stretch">

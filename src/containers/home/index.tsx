@@ -32,22 +32,22 @@ export default function HomePage() {
       <div className="h-[420px] relative sm:h-auto md:h-auto py-[71px] mt-20 overflow-hidden  bg-[#f2faff]">
         <div className="w-full group animate-slide-left-20 sm:animate-slide-left-5 h-[105px] left-0 bottom-2 z-30 absolute justify-start items-center gap-[70px] inline-flex">
           <div className="text-blue-50  text-[150px] font-extrabold  font-urbanist tracking-[4.50px]">
-            MISSON
+            MISSION
           </div>
           <div className="text-blue-50  text-[150px] sm:text-[120px] font-bold font-['Trirong'] not-italic tracking-[4.50px]">
-            MISSON
+            MISSION
           </div>
           <div className="text-blue-50  text-[150px] sm:text-[120px]  font-extrabold font-urbanist tracking-[4.50px]">
-            MISSON
+            MISSION
           </div>
           <div className="text-blue-50  text-[150px] sm:text-[120px]  font-extrabold font-urbanist tracking-[4.50px]">
-            MISSON
+            MISSION
           </div>
           <div className="text-blue-50  text-[150px] sm:text-[120px]  font-bold font-['Trirong'] not-italic tracking-[4.50px]">
-            MISSON
+            MISSION
           </div>
           <div className="text-blue-50  text-[150px] sm:text-[120px]  font-extrabold font-urbanist tracking-[4.50px]">
-            MISSON
+            MISSION
           </div>
         </div>
         <div className="w-full flex justify-center items-center relative z-40 ">
