@@ -113,7 +113,7 @@ export default function Services({
               as="pre"
               binary={true}
               delay={200}
-              className={` absolute   left-0 top-0 m-auto w-[68%] font-urbanist text-[90px] font-bold leading-[108px] sm:leading-[50px] md:leading-[74px] tracking-[2.70px] text-light_blue-a200 sm:w-[68%] md:text-[70px] sm:text-[40px]`}
+              className={` absolute   left-0 top-3 m-auto w-[68%] font-urbanist text-[90px] font-bold leading-[108px] sm:leading-[50px] md:leading-[74px] tracking-[2.70px] text-light_blue-a200 sm:w-[68%] md:text-[70px] sm:text-[40px]`}
             >
               {systemText}
             </Heading>
