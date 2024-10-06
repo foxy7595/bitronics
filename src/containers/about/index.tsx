@@ -3,6 +3,9 @@ import MainContainer from "@/components/Layout/MainContainer";
 
 import AboutHeader from "./header";
 import { Heading, Img } from "@/components";
+import Slide from "./slide";
+import Profile from "./profile";
+import Access from "./access";
 
 export default function ServicePage() {
   return (
@@ -35,20 +38,20 @@ export default function ServicePage() {
         </div>
       </div>
 
-      <div className="container-xs flex flex-col items-end gap-[100px] md:gap-[75px] md:px-5 sm:gap-[50px]">
+      <div className="px-[100px] flex flex-col items-end gap-[100px] md:gap-[75px] md:px-5 sm:gap-[50px]">
         <div className="flex flex-col gap-[30px] self-stretch">
           <Img
             src="img_young_colleague.png"
             width={1240}
             height={500}
             alt="Youngcolleague"
-            className="h-[500px] object-cover"
+            className="!w-full object-cover"
           />
           <div className="flex flex-col items-start gap-[22px]">
             <Heading
               size="heading2xl"
               as="h4"
-              className="text-[28px] !font-bold !font-notosanscjkjp leading-[40px] not-italic text-gray-900 md:text-[34px] sm:text-[20px]"
+              className="!text-[36px] !font-bold !font-notosanscjkjp leading-[53px] not-italic text-gray-900 md:!text-[34px] sm:!text-[32px]"
             >
               <>
                 Bitronicsはデジタルハイテクソリューションの
@@ -82,6 +85,12 @@ export default function ServicePage() {
             信頼と協力のもと、お客様のビジネスに価値を提供し続けることをお約束します。
           </>
         </Heading>
+
+        <div className="w-full relative overflow-hidden ">
+          <Slide />
+        </div>
+        <Profile />
+        <Access />
       </div>
     </MainContainer>
   );
