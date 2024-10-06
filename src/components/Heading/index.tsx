@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useEffect, useState } from "react";
 import { take } from "lodash";
 
@@ -24,7 +24,10 @@ export type HeadingProps = Partial<{
   textAnimate?: boolean;
   delay?: number;
 }> &
-  React.DetailedHTMLProps<React.HTMLAttributes<HTMLSpanElement>, HTMLSpanElement>;
+  React.DetailedHTMLProps<
+    React.HTMLAttributes<HTMLSpanElement>,
+    HTMLSpanElement
+  >;
 
 const Heading: React.FC<React.PropsWithChildren<HeadingProps>> = ({
   children,
@@ -46,7 +49,6 @@ const Heading: React.FC<React.PropsWithChildren<HeadingProps>> = ({
       clearInterval(interval);
     }
     if (binary) {
-
       let i = 0;
       setTimeout(() => {
         const interval = setInterval(() => {
@@ -77,24 +79,32 @@ const Heading: React.FC<React.PropsWithChildren<HeadingProps>> = ({
     return () => clearInterval(interval);
   }, [children, binary, textAnimate]);
 
-
   const mixStringCharacter = (text1: string): string => {
-    return take(text1.split(''), Math.min(textValue.length - text.length, 8)).map(char => {
-      return text1[Math.floor(Math.random() * text.length)];
-    }).join('');
+    return take(text1.split(""), Math.min(textValue.length - text.length, 8))
+      .map((char) => {
+        return text1[Math.floor(Math.random() * text.length)];
+      })
+      .join("");
   };
 
   const binaryText = (): string => {
-    const randomBinary = () => Math.floor(Math.random() * 2) + 1 == 1 ? '0' : '1';
-    return mixStringCharacter(Array(8).fill(0).map(() => randomBinary()).join(''));
+    const randomBinary = () =>
+      Math.floor(Math.random() * 2) + 1 == 1 ? "0" : "1";
+    return mixStringCharacter(
+      Array(8)
+        .fill(0)
+        .map(() => randomBinary())
+        .join("")
+    );
   };
   return (
-    <Component className={`text-gray-900 font-notosanscjkjp ${className} ${sizes[size]}`} {...restProps}>
+    <Component
+      className={`text-gray-900 font-notosanscjkjp  ${className} ${sizes[size]}`}
+      {...restProps}
+    >
       {binary ? text + binaryText() : textAnimate ? text : children}
     </Component>
   );
 };
-
-
 
 export { Heading };

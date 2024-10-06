@@ -4,7 +4,7 @@ import { Heading } from "@/components";
 import Services from "@/components/Services";
 import { useInView } from "react-hook-inview";
 
-interface ServiceProps { }
+interface ServiceProps {}
 
 const data = [
   {
@@ -54,7 +54,7 @@ const data = [
     serviceText: "Service",
   },
 ];
-const Service: React.FC<ServiceProps> = ({ }) => {
+const Service: React.FC<ServiceProps> = ({}) => {
   const [ref, inView] = useInView({
     threshold: 0.8,
   });
@@ -63,8 +63,9 @@ const Service: React.FC<ServiceProps> = ({ }) => {
     <div className="flex flex-col min-h-[300px] gap-[62px] self-stretch sm:gap-[31px]">
       <div
         ref={ref}
-        className={`flex flex-col items-start gap-5 ${inView ? "opacity-100" : "opacity-0"
-          }`}
+        className={`flex flex-col items-start gap-5 ${
+          inView ? "opacity-100" : "opacity-0"
+        }`}
       >
         <Heading
           size="headingxl"
@@ -81,7 +82,7 @@ const Service: React.FC<ServiceProps> = ({ }) => {
           ビジネスを加速するソリューション
         </Heading>
       </div>
-      <div className="flex flex-col gap-[150px] sm:gap-[50px]">
+      <div className="flex flex-col gap-[150px] sm:gap-[50px] sm:mt-[50px]">
         <Suspense fallback={<div>Loading feed...</div>}>
           {data.map((d, index) => (
             <Services {...d} key={"top" + index} />
