@@ -77,7 +77,7 @@ export default function Services({
           <Heading
             size="headingmd"
             as="h3"
-            className="!text-[16px] font-bold text-gray-900 w-full text-left mb-2"
+            className="!text-[16px] font-bold text-gray-900 w-full text-left -mb-1"
           >
             {headingText}
           </Heading>

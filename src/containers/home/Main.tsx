@@ -46,7 +46,7 @@ const Main: React.FC = () => {
             <Heading
               size="heading4xl"
               as="h4"
-              className="  !text-blue-800  !font-medium sm:text-[120px] md:!text-[150px] animate-slide-left absolute bottom-[calc(50%-140px)] sm:bottom-0 sm:top-[calc(100vh-330px)]  md:bottom-[calc(50%-140px)] md:top-none font-urbanist left-[230px] whitespace-nowrap"
+              className="  !text-blue-800  !font-medium sm:text-[120px] md:!text-[150px] animate-slide-left absolute bottom-[calc(50%_-_140px)] sm:bottom-0 sm:top-[calc(100vh-410px)]  md:bottom-[calc(50%-140px)] md:top-none font-urbanist left-[230px] whitespace-nowrap"
             >
               Empower Your <i className=" !font-trirong not-italic">Growth</i>{" "}
               with <i className="!font-trirong not-italic"> Advanced</i> System

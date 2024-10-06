@@ -36,7 +36,7 @@ export default function UserProfile({
       <div className="flex flex-col items-start gap-2.5 self-stretch">
         <Text
           as="p"
-          className="flex items-center justify-center bg-light_blue-a200 px-1.5 text-[14px] font-normal text-gray-900"
+          className="flex items-center justify-center bg-light_blue-a200 px-1.5 text-[14px] font-normal pt-1 text-gray-900"
         >
           {systemDevelopmentBusiness}
         </Text>
