@@ -54,7 +54,7 @@ export default function ServicePage() {
                         <Heading
                             size="heading2xl"
                             as="h4"
-                            className="!text-[36px] !font-bold !font-notosanscjkjp leading-[53px] not-italic text-gray-900 md:!text-[34px] sm:!text-[32px]"
+                            className="!text-[36px] !font-bold !font-notosanscjkjp leading-[53px] not-italic text-gray-900 md:!text-[28px] sm:!text-[20px]"
                         >
                             <>
                                 Bitronicsはデジタルハイテクソリューションの

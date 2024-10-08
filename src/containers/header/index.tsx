@@ -53,11 +53,11 @@ const Header: React.FC = () => {
               : isOpen == 1
                 ? "animate-show-menu"
                 : ""
-              } overflow-hidden left-0 right-0 top-0 m-auto flex flex-1 flex-col items-center gap-[50px] sm:gap-[26px] px-14 md:px-5`}
+              } overflow-x-hidden overflow-y-auto  left-0 right-0 top-0 m-auto flex flex-1 flex-col items-center gap-[50px] sm:gap-[26px] px-14 md:px-5`}
           >
-            <div className="container-xs animate-show-menu-item flex flex-col gap-[52px] sm:gap-[26px]">
+            <div className="container-xs relative z-20  animate-show-menu-item flex flex-col gap-[52px] sm:gap-[26px]">
               <div className="flex flex-col items-start gap-1">
-                <div className="flex flex-wrap items-center gap-5 self-stretch">
+                <Link href="/service" onClick={handleClose} > <div className="flex flex-wrap items-center gap-5 self-stretch">
                   <Heading
                     size="headingxs"
                     as="h1"
@@ -72,67 +72,77 @@ const Header: React.FC = () => {
                     Service
                   </Heading>
                 </div>
-                <Heading
-                  as="h3"
-                  className="text-[20px] sm:text-[16px] font-medium text-gray-900"
-                >
-                  <span className="block sm:hidden">
-                    システム開発事業 / 先端技術開発事業 / ソフトウェア品質保証
-                  </span>
-                  <span className="hidden sm:block">
-                    システム開発事業 <br />
-                    先端技術開発事業 <br />
-                    ソフトウェア品質保証
-                  </span>
-                </Heading>
+                </Link>
+                <Link href="/service" onClick={handleClose}  >
+                  <Heading
+                    as="h3"
+                    className="text-[20px] sm:text-[16px] font-medium text-gray-900"
+                  >
+                    <span className="block sm:hidden">
+                      システム開発事業 / 先端技術開発事業 / ソフトウェア品質保証
+                    </span>
+                    <span className="hidden sm:block">
+                      システム開発事業 <br />
+                      先端技術開発事業 <br />
+                      ソフトウェア品質保証
+                    </span>
+                  </Heading>
+                </Link>
               </div>
-              <div className="flex flex-wrap items-center gap-5">
-                <Heading
-                  size="headingxs"
-                  as="h4"
-                  className="text-[32px] font-bold text-gray-900 md:text-[28px] sm:text-[20px]"
-                >
-                  企業理念
-                </Heading>
-                <Heading
-                  as="h5"
-                  className="font-urbanist text-[20px] font-medium tracking-[0.60px] text-indigo-100"
-                >
-                  Misson
-                </Heading>
-              </div>
-              <div className="flex flex-wrap items-start gap-5">
-                <Heading
-                  size="headingxs"
-                  as="h6"
-                  className="self-center text-[32px] font-bold text-gray-900 md:text-[28px] sm:text-[20px]"
-                >
-                  制作実績
-                </Heading>
-                <Heading
-                  as="p"
-                  className="mt-3.5 font-urbanist text-[20px] font-medium tracking-[0.60px] text-indigo-100"
-                >
-                  Works
-                </Heading>
-              </div>
+              <Link href="/mission" onClick={handleClose} >
+                <div className="flex flex-wrap items-center gap-5">
+                  <Heading
+                    size="headingxs"
+                    as="h4"
+                    className="text-[32px] font-bold text-gray-900 md:text-[28px] sm:text-[20px]"
+                  >
+                    企業理念
+                  </Heading>
+                  <Heading
+                    as="h5"
+                    className="font-urbanist text-[20px] font-medium tracking-[0.60px] text-indigo-100"
+                  >
+                    Misson
+                  </Heading>
+                </div>
+              </Link>
+              <Link href="/works" onClick={handleClose} >
+                <div className="flex flex-wrap items-start gap-5">
+                  <Heading
+                    size="headingxs"
+                    as="h6"
+                    className="self-center text-[32px] font-bold text-gray-900 md:text-[28px] sm:text-[20px]"
+                  >
+                    制作実績
+                  </Heading>
+                  <Heading
+                    as="p"
+                    className="mt-3.5 font-urbanist text-[20px] font-medium tracking-[0.60px] text-indigo-100"
+                  >
+                    Works
+                  </Heading>
+                </div>
+              </Link>
             </div>
-            <div className="container-xs animate-show-menu-item flex flex-col gap-[50px] sm:gap-[26px]">
-              <div className="flex flex-wrap items-start gap-5">
-                <Heading
-                  size="headingxs"
-                  as="h2"
-                  className="self-center text-[32px] font-bold text-gray-900 md:text-[28px] sm:text-[20px]"
-                >
-                  会社概要
-                </Heading>
-                <Heading
-                  as="p"
-                  className="mt-3.5 font-urbanist text-[20px] font-medium tracking-[0.60px] text-indigo-100"
-                >
-                  About
-                </Heading>
-              </div>
+
+            <div className="container-xs pb-5 relative z-20 animate-show-menu-item flex flex-col gap-[50px] sm:gap-[26px]">
+              <Link href="/about" onClick={handleClose} >
+                <div className="flex flex-wrap items-start gap-5">
+                  <Heading
+                    size="headingxs"
+                    as="h2"
+                    className="self-center text-[32px] font-bold text-gray-900 md:text-[28px] sm:text-[20px]"
+                  >
+                    会社概要
+                  </Heading>
+                  <Heading
+                    as="p"
+                    className="mt-3.5 font-urbanist text-[20px] font-medium tracking-[0.60px] text-indigo-100"
+                  >
+                    About
+                  </Heading>
+                </div>
+              </Link>
               <div className="flex flex-wrap items-start gap-5">
                 <Heading
                   size="headingxs"
@@ -189,8 +199,9 @@ const Header: React.FC = () => {
             />
           </div>
         </div>
-      )}
-    </div>
+      )
+      }
+    </div >
   );
 };
 
