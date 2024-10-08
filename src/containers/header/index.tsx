@@ -1,3 +1,4 @@
+"use client";
 import { Heading, Img } from "@/components";
 import Link from "next/link";
 import React, { useState } from "react";
@@ -8,11 +9,13 @@ const Header: React.FC = () => {
 
   const handleOpen = () => {
     setIsOpen(1);
+    document.body.style.overflow = 'hidden';
   };
   const handleClose = () => {
     setIsOpen(2);
     setTimeout(() => {
       setIsOpen(0);
+      document.body.style.overflow = 'auto';
     }, 300);
   };
   return (
@@ -45,13 +48,12 @@ const Header: React.FC = () => {
       {isOpen !== 0 && (
         <div className=" relative z-40">
           <div
-            className={`absolute  bg-white-a700 pt-[30px] h-[calc(100vh_-_80px)]  ${
-              isOpen == 2
-                ? " animate-hide-menu"
-                : isOpen == 1
+            className={`absolute  bg-white-a700 pt-[30px] h-[calc(100vh_-_80px)]  ${isOpen == 2
+              ? " animate-hide-menu"
+              : isOpen == 1
                 ? "animate-show-menu"
                 : ""
-            } overflow-hidden left-0 right-0 top-0 m-auto flex flex-1 flex-col items-center gap-[50px] sm:gap-[26px] px-14 md:px-5`}
+              } overflow-hidden left-0 right-0 top-0 m-auto flex flex-1 flex-col items-center gap-[50px] sm:gap-[26px] px-14 md:px-5`}
           >
             <div className="container-xs animate-show-menu-item flex flex-col gap-[52px] sm:gap-[26px]">
               <div className="flex flex-col items-start gap-1">

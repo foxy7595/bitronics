@@ -14,6 +14,9 @@ const sizes = {
   heading2xl: "text-[48px] font-semibold italic md:text-[44px] sm:text-[38px]",
   heading3xl: "text-[90px] font-bold md:text-[48px]",
   heading4xl: "text-[150px] font-extrabold md:text-[48px]",
+  textxs: "text-[12px] font-normal not-italic",
+  textlg: "text-[16px] font-normal not-italic",
+  textxl: "text-[18px] font-normal not-italic",
 };
 let interval: NodeJS.Timeout | undefined = undefined;
 export type HeadingProps = Partial<{
