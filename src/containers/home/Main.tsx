@@ -6,7 +6,7 @@ import { useInView } from "react-hook-inview";
 
 const Main: React.FC = () => {
   const [ref, inView] = useInView({
-    threshold: 0.8,
+    threshold: 0.99,
   });
 
   return (
@@ -131,12 +131,20 @@ const Main: React.FC = () => {
                   はデジタル領域の専門家です
                 </span>
               </Heading>
-              {inView && (
+              {inView ? (
                 <Heading
                   size="heading3xl"
                   as="h6"
                   binary
                   className="font-urbanist  text-[90px] relative z-20 font-semibold tracking-[2.70px] text-light_blue-a200 md:text-[48px] text-center sm:mb-3"
+                >
+                  Digital Domain Specialist
+                </Heading>
+              ) : (
+                <Heading
+                  size="heading3xl"
+                  as="h6"
+                  className="font-urbanist !text-transparent  text-[90px] relative z-20 font-semibold tracking-[2.70px]  md:text-[48px] text-center sm:mb-3"
                 >
                   Digital Domain Specialist
                 </Heading>
