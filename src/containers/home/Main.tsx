@@ -1,7 +1,14 @@
+"use client";
+
 import React from "react";
 import { Heading } from "@/components";
+import { useInView } from "react-hook-inview";
 
 const Main: React.FC = () => {
+  const [ref, inView] = useInView({
+    threshold: 0.8,
+  });
+
   return (
     <div className=" flex items-center justify-center self-stretch ">
       <div className="w-full">
@@ -104,7 +111,10 @@ const Main: React.FC = () => {
               Development.
             </Heading>
 
-            <div className="flex flex-col items-center w-full bottom-0 gap-[50px] self-stretch sm:bottom-[-20px]  md:bottom-[8vh]  sm:gap-[47px] z-40 absolute">
+            <div
+              ref={ref}
+              className="flex flex-col items-center w-full bottom-0 gap-[50px] self-stretch sm:bottom-[-20px]  md:bottom-[8vh]  sm:gap-[47px] z-40 absolute"
+            >
               <Heading
                 size="headingxl"
                 as="h5"
@@ -121,14 +131,16 @@ const Main: React.FC = () => {
                   はデジタル領域の専門家です
                 </span>
               </Heading>
-              <Heading
-                size="heading3xl"
-                as="h6"
-                binary
-                className="font-urbanist  text-[90px] relative z-20 font-semibold tracking-[2.70px] text-light_blue-a200 md:text-[48px] text-center sm:mb-3"
-              >
-                Digital Domain Specialist
-              </Heading>
+              {inView && (
+                <Heading
+                  size="heading3xl"
+                  as="h6"
+                  binary
+                  className="font-urbanist  text-[90px] relative z-20 font-semibold tracking-[2.70px] text-light_blue-a200 md:text-[48px] text-center sm:mb-3"
+                >
+                  Digital Domain Specialist
+                </Heading>
+              )}
             </div>
           </div>
         </div>
