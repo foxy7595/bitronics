@@ -30,7 +30,6 @@ function Viewer3D({
 
     const currentScrollY = window.scrollY;
 
-    console.log(currentScrollY)
     if (modelPath === "/models/service-3.glb") {
 
       if (currentScrollY < 2700) {
@@ -139,7 +138,7 @@ function Viewer3D({
     light.position.set(10, 10, 10);
     scene.add(light);
 
-    const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+    const ambientLight = new THREE.AmbientLight(0xffffff, 1);
     scene.add(ambientLight);
 
     // Load GLTF model
