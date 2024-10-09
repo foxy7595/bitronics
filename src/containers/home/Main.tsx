@@ -3,11 +3,15 @@
 import React from "react";
 import { Heading } from "@/components";
 import { useInView } from "react-hook-inview";
-
+let show = false;
 const Main: React.FC = () => {
   const [ref, inView] = useInView({
-    threshold: 0.99,
+    threshold: 0.9,
   });
+
+  if (inView) {
+    show = true;
+  }
 
   return (
     <div className=" flex items-center justify-center self-stretch ">
@@ -144,7 +148,7 @@ const Main: React.FC = () => {
                 <Heading
                   size="heading3xl"
                   as="h6"
-                  className="font-urbanist !text-transparent  text-[90px] relative z-20 font-semibold tracking-[2.70px]  md:text-[48px] text-center sm:mb-3"
+                  className={`font-urbanist ${show ? "!text-transparent" : "text-light_blue-a200"}  text-[90px] relative z-20 font-semibold tracking-[2.70px]  md:text-[48px] text-center sm:mb-3`}
                 >
                   Digital Domain Specialist
                 </Heading>

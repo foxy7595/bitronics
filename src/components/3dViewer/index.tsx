@@ -30,20 +30,78 @@ function Viewer3D({
 
     const currentScrollY = window.scrollY;
 
-    if (currentScrollY > (window as any)[modelPath]) {
-      // Scrolling down
-      if (_rotate < 21) {
-        _rotate += 0.4;
+    console.log(currentScrollY)
+    if (modelPath === "/models/service-3.glb") {
+
+      if (currentScrollY < 2700) {
+        _rotate = -20;
+      } else if (currentScrollY > 3700) {
+        _rotate = 20;
+      } else {
+        if (currentScrollY > (window as any)[modelPath]) {
+          // Scrolling down
+          if (_rotate < 21) {
+            _rotate += 0.4;
+          }
+        } else {
+          // Scrolling up
+          if (_rotate > -20) {
+            _rotate -= 0.4;
+          }
+        }
+        (window as any)[modelPath] = currentScrollY;
+
+        onRotate(_rotate);
       }
-    } else {
-      // Scrolling up
-      if (_rotate > -20) {
-        _rotate -= 0.4;
+
+
+    } else if (modelPath === "/models/service-2.glb") {
+      if (currentScrollY < 3700) {
+        _rotate = -20;
+      } else if (currentScrollY > 4700) {
+        _rotate = 20;
+      } else {
+        if (currentScrollY > (window as any)[modelPath]) {
+          // Scrolling down
+          if (_rotate < 21) {
+            _rotate += 0.4;
+          }
+        } else {
+          // Scrolling up
+          if (_rotate > -20) {
+            _rotate -= 0.4;
+          }
+        }
+        (window as any)[modelPath] = currentScrollY;
+
+        onRotate(_rotate);
       }
     }
-    (window as any)[modelPath] = currentScrollY;
+    else if (modelPath === "/models/service-1.glb") {
 
-    onRotate(_rotate);
+      if (currentScrollY < 1600) {
+        _rotate = -20;
+      } else if (currentScrollY > 2600) {
+        _rotate = 20;
+      } else {
+        if (currentScrollY > (window as any)[modelPath]) {
+          // Scrolling down
+          if (_rotate < 21) {
+            _rotate += 0.4;
+          }
+        } else {
+          // Scrolling up
+          if (_rotate > -20) {
+            _rotate -= 0.4;
+          }
+        }
+        (window as any)[modelPath] = currentScrollY;
+
+        onRotate(_rotate);
+      }
+    }
+
+
   };
 
   useEffect(() => {
@@ -127,8 +185,8 @@ function Viewer3D({
             modelPath === "/models/service-2.glb"
               ? 1.05
               : modelPath === "/models/service-3.glb"
-              ? 1
-              : 1,
+                ? 1
+                : 1,
             0
           ),
           Math.PI
@@ -231,13 +289,12 @@ function Viewer3D({
     <div className=" sm:h-[calc(100vw-32px)] md:h-[calc(100vw+100px)] md:w-full md:max-h-[620px] max-h-none sm:w-full">
       <div
         ref={containerRef}
-        className={`${
-          modelPath === "/models/service-2.glb"
-            ? "ml-8 "
-            : modelPath === "/models/service-3.glb"
+        className={`${modelPath === "/models/service-2.glb"
+          ? "ml-8 "
+          : modelPath === "/models/service-3.glb"
             ? "ml-[-40px] sm:ml-[-40px] pt-[90px] "
             : ""
-        }   transform origin-top-left`}
+          }   transform origin-top-left`}
         style={{
           width: `${720}px`,
           height: `${620}px`,
