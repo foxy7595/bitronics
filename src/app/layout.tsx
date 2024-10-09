@@ -4,8 +4,6 @@ import "../styles/index.css";
 import "../styles/font.css";
 
 function RootLayout({ children }: { children: ReactNode }) {
-
-
   return (
     <html lang="en">
       <head>

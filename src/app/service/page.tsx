@@ -1,4 +1,4 @@
-import Page from "@/containers/about";
+import Page from "@/containers/service";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
