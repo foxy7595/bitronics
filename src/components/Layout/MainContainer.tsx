@@ -21,7 +21,7 @@ const MainContainer: React.FC<MainContainerProps> = ({ children }) => {
       <Header />
       <div className="w-screen overflow-x-hidden">{children}</div>
 
-      <div className="relative h-24 mt-20  overflow-hidden">
+      <div className="relative h-24 mt-8  overflow-hidden">
         <Heading
           size="heading3xl"
           as="h4"

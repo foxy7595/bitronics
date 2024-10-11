@@ -71,7 +71,7 @@ export default function HomePage() {
         </div>
       </div>
 
-      <div className="relative mt-[-2px] flex flex-col items-end self-stretch ">
+      <div className="relative mt-[-2px] flex flex-col items-end self-stretch mb-8 ">
         <Img
           src="img_vector_blue_800_632x316.png"
           width={316}

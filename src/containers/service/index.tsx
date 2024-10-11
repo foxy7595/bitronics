@@ -14,7 +14,7 @@ export default function ServicePage() {
         <MainContainer>
             <ServiceHeader />
 
-            <div className="flex flex-col gap-[90px] mt-[80px] mx-[100px] sm:mx-6 md:mx-6 ">
+            <div className="flex flex-col gap-[90px] mt-[80px] mx-[100px] sm:mx-6 md:mx-6 mb-8 ">
                 <div className="flex flex-col  gap-[100px] md:gap-[75px] sm:gap-[50px]">
                     <div className="flex flex-col gap-8 ">
                         <div className="flex flex-col items-start gap-1">
