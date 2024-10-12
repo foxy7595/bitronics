@@ -2,8 +2,8 @@ import Page from "@/containers/about";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Bitronics",
-  description: "Mission page",
+  title: "About | Bitronics",
+  description: "About page",
   //ogTitle:'...'
 };
 

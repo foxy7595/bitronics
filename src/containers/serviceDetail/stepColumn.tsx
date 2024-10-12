@@ -3,14 +3,14 @@ import React from "react";
 
 interface Props {
     className?: string;
-    hearingTitle?: React.ReactNode;
-    customerVisionText?: React.ReactNode;
+    title?: React.ReactNode;
+    description?: React.ReactNode;
     index: number;
 }
 
 export default function StepColumn({
-    hearingTitle = "ヒアリング",
-    customerVisionText = "お客様のビジョンと要件を共有し、プロジェクトを理解",
+    title = "ヒアリング",
+    description = "お客様のビジョンと要件を共有し、プロジェクトを理解",
     index,
     ...props
 }: Props) {
@@ -33,10 +33,10 @@ export default function StepColumn({
             </div>
             <div className="flex flex-col items-start gap-2.5 sm:gap-2.5">
                 <Heading size="headings" as="h6" className="text-[16px] font-bold text-black-900 sm:text-[13px]">
-                    {hearingTitle}
+                    {title}
                 </Heading>
                 <Heading size="headingmd" as="h6" className="text-[16px] font-normal text-black-900 sm:text-[13px]">
-                    {customerVisionText}
+                    {description}
                 </Heading>
             </div>
         </div>

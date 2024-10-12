@@ -3,13 +3,13 @@ import React from "react";
 
 interface Props {
     className?: string;
-    industryHeading?: React.ReactNode;
-    industryDescription?: React.ReactNode;
+    title?: React.ReactNode;
+    description?: React.ReactNode;
 }
 
 export default function Industry({
-    industryHeading = "業界特有のニーズに合わせたい方",
-    industryDescription = "カスタムソフトウェア開発は、各企業に特有の業界要件にスムーズに適応し、最適なソリューションを提供します。",
+    title = "業界特有のニーズに合わせたい方",
+    description = "カスタムソフトウェア開発は、各企業に特有の業界要件にスムーズに適応し、最適なソリューションを提供します。",
     ...props
 }: Props) {
     return (
@@ -28,11 +28,11 @@ export default function Industry({
 
                 <div>
                     <Heading as="h6" className="text-[18px] font-bold text-gray-900 sm:!text-[15px]">
-                        {industryHeading}
+                        {title}
                     </Heading>
                     <div className="flex justify-center self-stretch">
                         <Heading size="headingmd" as="h6" className=" text-[16px] sm:!text-[15px] font-normal leading-[200%] text-gray-900">
-                            {industryDescription}
+                            {description}
                         </Heading>
                     </div>
 
