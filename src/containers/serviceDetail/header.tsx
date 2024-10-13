@@ -70,7 +70,7 @@ const MissionHeader: React.FC<ServicePageProps> = ({ slug }) => {
                     <BreadcrumbItem >
                         <BreadcrumbLink href={`/service/${slug}`} as={Link}>
                             <Heading size="headingxs" as="h2" className="font-notosanscjkjp text-[14px] font-bold text-gray-900">
-                                {slug}
+                                Insight: {slug}
                             </Heading>
                         </BreadcrumbLink>
                     </BreadcrumbItem>

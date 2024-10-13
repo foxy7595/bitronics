@@ -6,9 +6,6 @@ import { Heading, Button, Img } from "@/components";
 import Services from "./services";
 
 
-
-
-
 export default function ServicePage() {
     return (
         <MainContainer>

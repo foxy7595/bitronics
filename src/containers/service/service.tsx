@@ -63,16 +63,16 @@ export default function Service({
                                 </Heading>
                             </div>
                         </div>
-                        <div className="flex items-center justify-end gap-5">
-                            <Link href="#">
-                                <Heading as="h6" className="text-[18px] font-bold text-gray-900 underline">
-                                    View More
-                                </Heading>
-                            </Link>
+                        <Link href={`/service/0${service.id}`} className="flex items-center justify-end gap-5">
+
+                            <Heading as="h6" className="text-[18px] font-bold text-gray-900 underline">
+                                View More
+                            </Heading>
+
                             <Button className="flex h-[40px] w-[40px] items-center justify-center rounded-[20px] bg-gray-900 px-3">
                                 <Img src="img_tdesign_swap_right.svg" width={16} height={4} />
                             </Button>
-                        </div>
+                        </Link>
 
                     </div>
                 ))}

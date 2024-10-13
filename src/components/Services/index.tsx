@@ -4,6 +4,7 @@ import { useInView } from "react-hook-inview";
 import { Button, Img, Heading } from "..";
 import React, { useEffect, useState } from "react";
 import Viewer3D from "../3dViewer";
+import Link from "next/link";
 
 interface Props {
   className?: string;
@@ -12,6 +13,7 @@ interface Props {
   descriptionText?: React.ReactNode;
   detailedDescriptionText?: React.ReactNode;
   serviceText?: React.ReactNode;
+  link?: string;
   modelPath: string;
 }
 
@@ -39,6 +41,7 @@ export default function Services({
   ),
   detailedDescriptionText,
   serviceText = "Service",
+  link,
   ...props
 }: Props) {
   const [ref1, inView1] = useInView({ threshold: 0.7 });
@@ -139,19 +142,22 @@ export default function Services({
             {detailedDescriptionText}
           </Heading>
         </div>
+        {link && (
+          <Link href={link} className="flex flex-1 items-center justify-end gap-[31px] self-end">
 
-        <div className="flex flex-1 items-center justify-end gap-[31px] self-end">
-          <Heading
-            size="headings"
-            as="h5"
-            className=" text-[20px] font-bold text-gray-900 underline sm:text-[17px]"
-          >
-            {serviceText}
-          </Heading>
-          <Button className="flex h-[40px] w-[40px] items-center justify-center rounded-[20px] bg-gray-900 px-3">
-            <Img src="img_tdesign_swap_right.svg" width={16} height={4} />
-          </Button>
-        </div>
+            <Heading
+              size="headings"
+              as="h5"
+              className=" text-[20px] font-bold text-gray-900 underline sm:text-[17px]"
+            >
+              {serviceText}
+            </Heading>
+            <Button className="flex h-[40px] w-[40px] items-center justify-center rounded-[20px] bg-gray-900 px-3">
+              <Img src="img_tdesign_swap_right.svg" width={16} height={4} />
+            </Button>
+
+          </Link>
+        )}
       </div>
     </>
   );

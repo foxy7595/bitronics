@@ -4,7 +4,7 @@ import { Heading } from "@/components";
 import Services from "@/components/Services";
 import { useInView } from "react-hook-inview";
 
-interface ServiceProps {}
+interface ServiceProps { }
 
 const data = [
   {
@@ -25,6 +25,7 @@ const data = [
       </>
     ),
     serviceText: "Service",
+    link: "/service/03",
   },
   {
     modelPath: "/models/service-3.glb",
@@ -44,6 +45,7 @@ const data = [
       </>
     ),
     serviceText: "Service",
+    link: "/service/05",
   },
   {
     modelPath: "/models/service-2.glb",
@@ -52,9 +54,10 @@ const data = [
     descriptionText: "Manual testing\nTest automation\nSoftware QA\nTesting",
     detailedDescriptionText: <>・ソフトウェアのQAとテスト</>,
     serviceText: "Service",
+    link: "/service/09",
   },
 ];
-const Service: React.FC<ServiceProps> = ({}) => {
+const Service: React.FC<ServiceProps> = ({ }) => {
   const [ref, inView] = useInView({
     threshold: 0.8,
   });
@@ -63,9 +66,8 @@ const Service: React.FC<ServiceProps> = ({}) => {
     <div className="flex flex-col min-h-[300px] gap-[62px] self-stretch sm:gap-[31px]">
       <div
         ref={ref}
-        className={`flex flex-col items-start gap-5 ${
-          inView ? "opacity-100" : "opacity-0"
-        }`}
+        className={`flex flex-col items-start gap-5 ${inView ? "opacity-100" : "opacity-0"
+          }`}
       >
         <Heading
           size="headingxl"
