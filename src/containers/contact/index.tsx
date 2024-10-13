@@ -45,7 +45,7 @@ export default function ContactPage() {
                 <div className="flex  md:flex-col">
                   <RadioGroup
                     name="require"
-                    className="flex  flex-wrap gap-y-6 gap-x-8"
+                    className="flex  flex-wrap  md:flex-col gap-y-6 gap-x-8"
                   >
                     <Radio
                       value="system"
