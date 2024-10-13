@@ -8,8 +8,11 @@ interface Props {
 
 export default function Footer({ ...props }: Props) {
   return (
-    <footer {...props} className={`${props.className} flex flex-col mb-[60px]`}>
-      <div className="container-xs flex flex-col items-start gap-[0px] md:px-5 sm:gap-[30px]">
+    <footer
+      {...props}
+      className={`${props.className} flex flex-col w-full mb-[60px]`}
+    >
+      <div className=" flex max-w-[1200px] mx-auto w-full flex-col items-start gap-[0px] md:px-5 sm:gap-[30px]">
         <div className="flex items-start justify-between gap-5 self-stretch md:flex-col">
           <Img
             src="img_logomark_bg_1.png"

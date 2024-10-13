@@ -4,8 +4,8 @@ import React from "react";
 export default function Contact() {
   return (
     <div className="self-stretch">
-      <div className="flex justify-center bg-gradient py-[54px] md:py-5">
-        <div className="container-xs mb-1 flex justify-center md:px-5">
+      <div className="flex justify-center bg-gradient py-[54px] w-full">
+        <div className="max-w-[1200px] mx-auto w-full flex justify-center md:px-5">
           <div className="flex w-full items-center justify-between gap-5 md:flex-col">
             <div className="flex flex-1 flex-col items-start gap-3.5 md:self-stretch">
               <Heading

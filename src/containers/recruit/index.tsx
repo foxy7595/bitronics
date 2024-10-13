@@ -21,7 +21,7 @@ export default function RecruitPage() {
               >
                 Recruit
               </Heading>
-              <div className="h-px flex-1 bg-gray-900 md:self-stretch" />
+              <div className="h-px flex-1 bg-gray-900 " />
             </div>
             <Heading
               size="headinglg"

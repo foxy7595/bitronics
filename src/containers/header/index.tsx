@@ -164,21 +164,27 @@ const Header: React.FC = () => {
                   </Heading>
                 </div>
               </Link>
-              <div className="flex flex-wrap items-start gap-5">
-                <Heading
-                  size="headingxs"
-                  as="h2"
-                  className="self-center text-[32px] font-bold text-gray-900 md:text-[28px] sm:text-[20px]"
-                >
-                  採用情報
-                </Heading>
-                <Heading
-                  as="p"
-                  className="mt-3.5 font-urbanist text-[20px] font-medium tracking-[0.60px] text-indigo-100"
-                >
-                  Recruit
-                </Heading>
-              </div>
+              <Link
+                href="/recruit"
+                className="hover:opacity-70 transition-opacity duration-300"
+                onClick={handleClose}
+              >
+                <div className="flex flex-wrap items-start gap-5">
+                  <Heading
+                    size="headingxs"
+                    as="h2"
+                    className="self-center text-[32px] font-bold text-gray-900 md:text-[28px] sm:text-[20px]"
+                  >
+                    採用情報
+                  </Heading>
+                  <Heading
+                    as="p"
+                    className="mt-3.5 font-urbanist text-[20px] font-medium tracking-[0.60px] text-indigo-100"
+                  >
+                    Recruit
+                  </Heading>
+                </div>
+              </Link>
               <div className="flex flex-wrap items-center gap-5">
                 <Heading
                   size="headingxs"
