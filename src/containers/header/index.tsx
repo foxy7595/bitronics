@@ -20,7 +20,7 @@ const Header: React.FC = () => {
   };
   return (
     <div className={` ${isOpen ? "fixed w-screen" : "sticky"} top-0 z-50`}>
-      <div className="flex items-center relative z-50  w-full justify-between gap-5 bg-white-a700 self-stretch px-[30px]  py-4 sm:px-5 ">
+      <div className="flex items-center relative z-50  w-full justify-between gap-5 bg-white-a700 self-stretch px-[100px] md:px-[30px]  py-4 sm:px-5 ">
         <Link href="/">
           <Img
             src="img_logo.png"
@@ -50,16 +50,15 @@ const Header: React.FC = () => {
       {isOpen !== 0 && (
         <div className=" relative z-40">
           <div
-            className={`absolute  bg-white-a700 pt-[30px] h-[calc(100vh_-_80px)]  ${
-              isOpen == 2
-                ? " animate-hide-menu"
-                : isOpen == 1
+            className={`absolute  bg-white-a700 pt-[30px] h-[calc(100vh_-_80px)]  ${isOpen == 2
+              ? " animate-hide-menu"
+              : isOpen == 1
                 ? "animate-show-menu"
                 : ""
-            } overflow-x-hidden overflow-y-auto  left-0 right-0 top-0 m-auto flex flex-1 flex-col items-center gap-[50px] sm:gap-[26px] px-14 md:px-5`}
+              } overflow-x-hidden overflow-y-auto  left-0 right-0 top-0 m-auto flex flex-1 flex-col items-center gap-[50px] sm:gap-[26px] px-14 md:px-5`}
           >
             <div className="container-xs relative z-20  animate-show-menu-item flex flex-col gap-[52px] sm:gap-[26px]">
-              <div className="flex flex-col items-start gap-1">
+              <div className="flex flex-col hover:opacity-70 transition-opacity duration-300 items-start gap-1">
                 <Link href="/service" onClick={handleClose}>
                   {" "}
                   <div className="flex flex-wrap items-center gap-5 self-stretch">
@@ -78,7 +77,7 @@ const Header: React.FC = () => {
                     </Heading>
                   </div>
                 </Link>
-                <Link href="/service" onClick={handleClose}>
+                <Link href="/service" className="hover:opacity-70 transition-opacity duration-300" onClick={handleClose}>
                   <Heading
                     as="h3"
                     className="text-[20px] sm:text-[16px] font-medium text-gray-900"
@@ -94,7 +93,7 @@ const Header: React.FC = () => {
                   </Heading>
                 </Link>
               </div>
-              <Link href="/mission" onClick={handleClose}>
+              <Link href="/mission" className="hover:opacity-70 transition-opacity duration-300" onClick={handleClose}>
                 <div className="flex flex-wrap items-center gap-5">
                   <Heading
                     size="headingxs"
@@ -111,7 +110,7 @@ const Header: React.FC = () => {
                   </Heading>
                 </div>
               </Link>
-              <Link href="/works" onClick={handleClose}>
+              <Link href="/works" className="hover:opacity-70 transition-opacity duration-300" onClick={handleClose}>
                 <div className="flex flex-wrap items-start gap-5">
                   <Heading
                     size="headingxs"
@@ -131,7 +130,7 @@ const Header: React.FC = () => {
             </div>
 
             <div className="container-xs pb-5 relative z-20 animate-show-menu-item flex flex-col gap-[50px] sm:gap-[26px]">
-              <Link href="/about" onClick={handleClose}>
+              <Link href="/about" className="hover:opacity-70 transition-opacity duration-300" onClick={handleClose}>
                 <div className="flex flex-wrap items-start gap-5">
                   <Heading
                     size="headingxs"
