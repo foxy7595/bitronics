@@ -27,11 +27,11 @@ export default function Industry({
                 />
 
                 <div>
-                    <Heading as="h6" className="text-[18px] font-bold text-gray-900 sm:!text-[15px]">
+                    <Heading as="h6" className="!text-[18px] font-bold text-gray-900 sm:!text-[15px]">
                         {title}
                     </Heading>
                     <div className="flex justify-center self-stretch">
-                        <Heading size="headingmd" as="h6" className=" text-[16px] sm:!text-[15px] font-normal leading-[200%] text-gray-900">
+                        <Heading size="headingmd" as="h6" className=" !text-[16px] sm:!text-[15px] font-normal leading-[200%] text-gray-900">
                             {description}
                         </Heading>
                     </div>
