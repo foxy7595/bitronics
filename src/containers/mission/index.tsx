@@ -52,7 +52,7 @@ export default function MissionPage() {
         <MainContainer>
             <MissionHeader />
 
-            <div className="flex flex-col gap-[90px] mt-[80px] mx-[100px] sm:mx-6 md:mx-6 mb-8">
+            <div className="flex flex-col gap-[90px]  mt-[100px] sm:mt-8 mx-[100px] sm:mx-6 md:mx-6 mb-8">
                 <Suspense fallback={<div>Loading feed...</div>}>
                     {data.map((d, index) => (
                         <MissionStatement {...d} key={"misson" + index} className="" />

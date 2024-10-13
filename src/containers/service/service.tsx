@@ -34,8 +34,8 @@ export default function Service({
             <div className="flex w-[24%] flex-col items-start gap-[18px] md:w-full ">
                 <Heading
                     size="heading2xl"
-                    as="h1"
-                    className="font-urbanist not-italic text-[36px] font-bold leading-[48px] text-light_blue-a200 md:text-[34px] sm:text-[32px]"
+                    as="h11"
+                    className="font-urbanist not-italic text-[36px] text-wrap font-bold leading-[48px] text-light_blue-a200 md:text-[34px] sm:text-[32px]"
                 >
                     {mainHeading}
                 </Heading>

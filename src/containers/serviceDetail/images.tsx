@@ -20,7 +20,7 @@ const Images: React.FC<ImagesProps> = ({ images = [], grid = false }) => {
     if (images.length === 0) return null;
 
     return (
-        <div className={`${grid ? 'grid grid-cols-3 gap-[5vw] mx-[200px] lg:mx-[100px] md:mx-6 sm:mx-4' : 'flex lg:gap-[4vw] gap-[5vw] sm:gap-[3vw] mx-[100px] md:mx-6 sm:mx-4 '} flex-wrap     justify-center mt-[100px] `}>
+        <div className={`${grid ? 'grid grid-cols-3 gap-[5vw] mx-[200px] lg:mx-[100px] md:mx-6 sm:mx-4' : 'flex lg:gap-[4vw] gap-[5vw] sm:gap-[3vw] mx-[100px] md:mx-6 sm:mx-4 '} flex-wrap  sm:mt-8   justify-center mt-[100px] `}>
             {
                 images.map((image, index) => (
                     <div key={index} className='flex flex-col items-center gap-6 sm:gap-2 min-w-[150px] md:min-w-[120px]  sm:min-w-[100px] md:p-0 sm:p-0 p-4 rounded-lg' >

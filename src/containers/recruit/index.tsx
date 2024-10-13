@@ -10,7 +10,7 @@ export default function RecruitPage() {
   return (
     <MainContainer>
       <RecruitHeader />
-      <div className="flex flex-col mx-[100px] mt-[100px] sm:mx-6 md:mx-6 mb-8">
+      <div className="flex flex-col mx-[100px] mt-[100px] sm:mt-8 sm:mx-6 md:mx-6 mb-8">
         <div className="flex flex-col items-center justify-center self-stretch w-full">
           <div className="flex flex-col items-start gap-1 w-full">
             <div className="flex items-center gap-[30px] self-stretch w-full">
