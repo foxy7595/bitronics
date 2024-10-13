@@ -39,7 +39,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
           name={name}
           placeholder={placeholder}
           className={
-            "outline-none active:outline-none focus:outline-none !border-none active:border-none w-full " +
+            "outline-none active:outline-none font-notosanscjkjp focus:outline-none !border-none active:border-none w-full " +
             classNameInput
           }
           onChange={onChange}

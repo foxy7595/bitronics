@@ -23,68 +23,75 @@ export default function Footer({ ...props }: Props) {
           />
           <div className="flex w-[74%] items-start justify-between gap-5 self-center md:w-full  ">
             <div className="flex w-[54%] flex-col gap-[30px] md:w-full">
-              <div className="flex flex-col items-start gap-2.5">
+              <Link href="/service">
+                <div className="flex flex-col items-start gap-2.5">
+                  <div className="flex flex-wrap items-center gap-5 sm:flex-col sm:items-start sm:gap-2">
+                    <Heading
+                      as="h6"
+                      className="text-[18px] font-bold text-gray-900"
+                    >
+                      サービス
+                    </Heading>
+                    <Heading
+                      size="texts"
+                      as="p"
+                      className="font-urbanist text-[13px] font-medium tracking-[0.39px] text-indigo-100"
+                    >
+                      Service
+                    </Heading>
+                  </div>
+                  <Text
+                    as="p"
+                    className="text-[14px] font-medium text-gray-900 whitespace-nowrap"
+                  >
+                    <span className=" block sm:hidden md:block">
+                      システム開発事業 / 先端技術開発事業 / ソフトウェア品質保証
+                    </span>
+                    <span className=" hidden sm:block md:hidden">
+                      システム開発事業 <br /> 先端技術開発事業 <br />{" "}
+                      ソフトウェア品質保証
+                    </span>
+                  </Text>
+                </div>
+              </Link>
+              <Link href="/mission">
                 <div className="flex flex-wrap items-center gap-5 sm:flex-col sm:items-start sm:gap-2">
                   <Heading
                     as="h6"
                     className="text-[18px] font-bold text-gray-900"
                   >
-                    サービス
+                    企業理念
                   </Heading>
                   <Heading
                     size="texts"
                     as="p"
                     className="font-urbanist text-[13px] font-medium tracking-[0.39px] text-indigo-100"
                   >
-                    Service
+                    Misson
                   </Heading>
                 </div>
-                <Text
-                  as="p"
-                  className="text-[14px] font-medium text-gray-900 whitespace-nowrap"
-                >
-                  <span className=" block sm:hidden md:block">
-                    システム開発事業 / 先端技術開発事業 / ソフトウェア品質保証
-                  </span>
-                  <span className=" hidden sm:block md:hidden">
-                    システム開発事業 <br /> 先端技術開発事業 <br />{" "}
-                    ソフトウェア品質保証
-                  </span>
-                </Text>
-              </div>
-              <div className="flex flex-wrap items-center gap-5 sm:flex-col sm:items-start sm:gap-2">
-                <Heading
-                  as="h6"
-                  className="text-[18px] font-bold text-gray-900"
-                >
-                  企業理念
-                </Heading>
-                <Heading
-                  size="texts"
-                  as="p"
-                  className="font-urbanist text-[13px] font-medium tracking-[0.39px] text-indigo-100"
-                >
-                  Misson
-                </Heading>
-              </div>
-              <div className="flex flex-wrap items-center gap-5 sm:flex-col sm:items-start sm:gap-2">
-                <Heading
-                  as="h6"
-                  className="text-[18px] font-bold text-gray-900"
-                >
-                  制作実績
-                </Heading>
-                <Heading
-                  size="texts"
-                  as="p"
-                  className="font-urbanist text-[13px] font-medium tracking-[0.39px] text-indigo-100"
-                >
-                  Works
-                </Heading>
-              </div>
+              </Link>
+              <Link href="/work">
+                <div className="flex flex-wrap items-center gap-5 sm:flex-col sm:items-start sm:gap-2">
+                  <Heading
+                    as="h6"
+                    className="text-[18px] font-bold text-gray-900"
+                  >
+                    制作実績
+                  </Heading>
+                  <Heading
+                    size="texts"
+                    as="p"
+                    className="font-urbanist text-[13px] font-medium tracking-[0.39px] text-indigo-100"
+                  >
+                    Works
+                  </Heading>
+                </div>
+              </Link>
             </div>
             <div className="flex w-[34%] flex-col gap-[30px] self-center md:w-full sm:flex-col sm:items-start sm:gap-2">
-              <div className="flex flex-wrap items-center gap-5 sm:flex-col sm:items-start sm:gap-2">
+
+              <Link href="/about"> <div className="flex flex-wrap items-center gap-5 sm:flex-col sm:items-start sm:gap-2">
                 <Heading
                   as="h6"
                   className="text-[18px] font-bold text-gray-900"
@@ -99,53 +106,60 @@ export default function Footer({ ...props }: Props) {
                   About
                 </Heading>
               </div>
-              <div className="flex flex-wrap items-center gap-5 sm:flex-col sm:items-start sm:gap-2">
-                <Heading
-                  as="h6"
-                  className="text-[18px] font-bold text-gray-900"
-                >
-                  採用情報
-                </Heading>
-                <Heading
-                  size="texts"
-                  as="p"
-                  className="font-urbanist text-[13px] font-medium tracking-[0.39px] text-indigo-100 sm:flex-col sm:items-start sm:gap-2"
-                >
-                  Recruit
-                </Heading>
-              </div>
-              <div className="flex flex-wrap items-center gap-5 sm:flex-col sm:items-start sm:gap-2">
-                <Heading
-                  as="h6"
-                  className="text-[18px] font-bold text-gray-900"
-                >
-                  お問い合わせ
-                </Heading>
-                <Heading
-                  size="texts"
-                  as="p"
-                  className="font-urbanist text-[13px] font-medium tracking-[0.39px] text-indigo-100"
-                >
-                  Contact
-                </Heading>
-              </div>
-              <div className="flex  items-center gap-5 sm:flex-col sm:items-start sm:gap-2">
-                <Heading
-                  as="h6"
-                  className="text-[18px] font-bold text-gray-900 whitespace-nowrap"
-                >
-                  プライバシーポリシー
-                </Heading>
-                <Link href="Privacy" target="_blank" rel="noreferrer">
+              </Link>
+              <Link href="/recruit">
+                <div className="flex flex-wrap items-center gap-5 sm:flex-col sm:items-start sm:gap-2">
+                  <Heading
+                    as="h6"
+                    className="text-[18px] font-bold text-gray-900"
+                  >
+                    採用情報
+                  </Heading>
+                  <Heading
+                    size="texts"
+                    as="p"
+                    className="font-urbanist text-[13px] font-medium tracking-[0.39px] text-indigo-100 sm:flex-col sm:items-start sm:gap-2"
+                  >
+                    Recruit
+                  </Heading>
+                </div>
+              </Link>
+              <Link href="/contact">
+                <div className="flex flex-wrap items-center gap-5 sm:flex-col sm:items-start sm:gap-2">
+                  <Heading
+                    as="h6"
+                    className="text-[18px] font-bold text-gray-900"
+                  >
+                    お問い合わせ
+                  </Heading>
                   <Heading
                     size="texts"
                     as="p"
                     className="font-urbanist text-[13px] font-medium tracking-[0.39px] text-indigo-100"
                   >
-                    Privacy
+                    Contact
                   </Heading>
-                </Link>
-              </div>
+                </div>
+              </Link>
+              <Link href="/privacy">
+                <div className="flex  items-center gap-5 sm:flex-col sm:items-start sm:gap-2">
+                  <Heading
+                    as="h6"
+                    className="text-[18px] font-bold text-gray-900 whitespace-nowrap"
+                  >
+                    プライバシーポリシー
+                  </Heading>
+                  <Link href="Privacy" target="_blank" rel="noreferrer">
+                    <Heading
+                      size="texts"
+                      as="p"
+                      className="font-urbanist text-[13px] font-medium tracking-[0.39px] text-indigo-100"
+                    >
+                      Privacy
+                    </Heading>
+                  </Link>
+                </div>
+              </Link>
             </div>
           </div>
         </div>
@@ -157,6 +171,6 @@ export default function Footer({ ...props }: Props) {
           All rights reserved 2024 © Bitronics
         </Text>
       </div>
-    </footer>
+    </footer >
   );
 }

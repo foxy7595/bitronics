@@ -31,7 +31,7 @@ const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
     return (
       <textarea
         ref={ref}
-        className={`${className}`}
+        className={`${className} font-notosanscjkjp`}
         name={name}
         onChange={handleChange}
         placeholder={placeholder}
