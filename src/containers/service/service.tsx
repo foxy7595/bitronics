@@ -12,6 +12,7 @@ interface Props {
         name: string;
         description: string;
     }>;
+    id: string;
 
 
 }
@@ -26,11 +27,12 @@ export default function Service({
     ),
     subHeading = "システム開発事業",
     services = [],
-
+    id,
     ...props
 }: Props) {
     return (
-        <div {...props} className={`${props.className} flex justify-center items-start  md:flex-col md:gap-6`}>
+        <div {...props} className={`${props.className} flex justify-center relative items-start  md:flex-col md:gap-6`}>
+            <div id={id} className="absolute top-[-100px] left-0  w-[100px]"></div>
             <div className="flex w-[24%] flex-col items-start gap-[18px] md:w-full ">
                 <Heading
                     size="heading2xl"

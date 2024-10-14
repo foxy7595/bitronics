@@ -1,3 +1,5 @@
+"use client"
+
 import React from "react";
 import MainContainer from "@/components/Layout/MainContainer";
 
@@ -7,6 +9,13 @@ import Services from "./services";
 
 
 export default function ServicePage() {
+
+    const handleScrollToService = (id: string) => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
     return (
         <MainContainer>
             <ServiceHeader />
@@ -31,7 +40,7 @@ export default function ServicePage() {
                         </div>
                         <div className="mx-[210px] flex  justify-center md:mx-0 md:flex-col">
                             <div className="flex w-full max-w-[818px] min-w-[700px] justify-between sm:flex-col sm:gap-2">
-                                <div className="flex items-center gap-5 ">
+                                <div className="flex items-center gap-5  cursor-pointer" onClick={() => handleScrollToService("service-0")}>
                                     <Heading as="h4" className="text-[18px] font-bold text-gray-900 underline">
                                         システム開発事業
                                     </Heading>
@@ -39,7 +48,7 @@ export default function ServicePage() {
                                         <Img src="img_light_bulb.svg" width={6} height={8} />
                                     </Button>
                                 </div>
-                                <div className="flex  items-center gap-5 ">
+                                <div className="flex  items-center gap-5  cursor-pointer" onClick={() => handleScrollToService("service-1")}>
                                     <Heading as="h5" className="text-[18px] font-bold text-gray-900 underline">
                                         先端技術開発事業
                                     </Heading>
@@ -47,7 +56,7 @@ export default function ServicePage() {
                                         <Img src="img_light_bulb.svg" width={6} height={8} />
                                     </Button>
                                 </div>
-                                <div className="flex  items-center gap-5 ">
+                                <div className="flex  items-center gap-5  cursor-pointer" onClick={() => handleScrollToService("service-2")}>
                                     <Heading as="h6" className="text-[18px] font-bold text-gray-900 underline">
                                         ソフトウェア品質保証
                                     </Heading>

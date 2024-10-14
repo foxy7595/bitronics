@@ -91,6 +91,7 @@ export default function Services() {
       <div className="flex flex-col gap-[100px] self-stretch">
         {data.map((item, index) => (
           <Service key={index}
+            id={`service-${index}`}
             mainHeading={item.title}
             subHeading={item.subtitle}
             services={item.services}
