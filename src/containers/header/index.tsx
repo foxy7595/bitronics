@@ -119,7 +119,7 @@ const Header: React.FC = () => {
                 </div>
               </Link>
               <Link
-                href="/works"
+                href="/work"
                 className="hover:opacity-70 transition-opacity duration-300"
                 onClick={handleClose}
               >

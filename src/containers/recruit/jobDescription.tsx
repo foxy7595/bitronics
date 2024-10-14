@@ -1,6 +1,8 @@
 import { Heading, Button, Img } from "@/components";
 import React from "react";
 
+
+
 interface Props {
   className?: string;
   jobTitle?: React.ReactNode;
@@ -11,9 +13,11 @@ interface Props {
   prop2?: React.ReactNode;
   jobResponsibilities?: React.ReactNode;
   entryTitle?: React.ReactNode;
+  id?: string;
 }
 
 export default function JobDescription({
+  id,
   jobTitle = (
     <>
       PHP Laravel
@@ -81,10 +85,13 @@ export default function JobDescription({
   ...props
 }: Props) {
   return (
+
     <div
+
       {...props}
-      className={`${props.className} flex sm:flex-col md:flex-col md:gap-4 items-start`}
+      className={`${props.className} flex sm:flex-col relative md:flex-col  md:gap-4 items-start`}
     >
+      <div id={id} className="absolute top-[-100px] left-0 w-full h-full"></div>
       <Heading
         size="headingxl"
         as="h1"
@@ -140,8 +147,9 @@ export default function JobDescription({
           >
             {entryTitle}
           </Heading>
-          <Button className="flex h-[40px] w-[40px] items-center justify-center rounded-[20px] bg-gray-900 px-3">
-            <Img src="img_tdesign_swap_right.svg" width={16} height={4} />
+          <Button className="flex h-[40px] w-[40px] items-center justify-center rounded-[20px] group hover:bg-[#fff] hover:border-gray-900 hover:border hover:border-solid border-gray-900 bg-gray-900 px-3">
+            <Img src="img_tdesign_swap_right.svg" width={16} height={4} className="group-hover:hidden" />
+            <Img src="img_tdesign_swap_right_gray_900.svg" width={16} height={4} className="hidden group-hover:block" />
           </Button>
         </div>
       </div>

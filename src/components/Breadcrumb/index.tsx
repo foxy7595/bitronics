@@ -68,7 +68,7 @@ function Breadcrumb(props: BreadcrumbProps): JSX.Element {
 
   return (
     <BreadcrumbContext.Provider value={{ separator }}>
-      <nav aria-label="Breadcrumb" {...restProps}  >
+      <nav aria-label="Breadcrumb" {...restProps}   >
         <ol style={styles.list}>
           {React.Children.map(children, (child, index) => {
             const isCurrent = React.isValidElement(child) && (child.props.isCurrentPage ?? false);

@@ -46,14 +46,14 @@ const MissionHeader: React.FC = () => {
                         className="h-[10px] w-[10px]"
                     />
                 }
-                className=" mx-[100px] my-auto flex flex-1 -mt-10 items-center gap-2.5 sm:mx-6 md:mx-6"
+                className=" mx-[100px] my-auto flex flex-1 -mt-10  items-center gap-2.5 sm:mx-6 md:mx-6"
             >
                 <BreadcrumbItem>
-                    <BreadcrumbLink href="#" as={Link}>
+                    <BreadcrumbLink href="/" as={Link}>
                         <Heading
                             size="headingxs"
                             as="h1"
-                            className="font-notosanscjkjp text-[14px] font-bold !text-gray-100"
+                            className="font-notosanscjkjp text-[14px] relative z-40 font-bold !text-gray-100"
                         >
                             Home
                         </Heading>

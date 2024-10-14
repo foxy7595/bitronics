@@ -51,8 +51,8 @@ export default function RecruitPage() {
             <TechStack className="" />
           </div>
 
-          <JobDescription />
-          <JobDescription
+          <JobDescription id="job1" />
+          <JobDescription id="job2"
             jobTitle={
               <>
                 Java スクリプト
@@ -118,6 +118,7 @@ export default function RecruitPage() {
             entryTitle="Entry"
           />
           <JobDescription
+            id="job3"
             jobTitle={
               <>
                 Android 開発者
@@ -183,6 +184,7 @@ export default function RecruitPage() {
           />
 
           <JobDescription
+            id="job4"
             jobTitle={
               <>
                 iOS Swift <br />
@@ -235,6 +237,7 @@ export default function RecruitPage() {
           />
 
           <JobDescription
+            id="job5"
             jobTitle={
               <>
                 フラッター
@@ -299,6 +302,7 @@ export default function RecruitPage() {
           />
 
           <JobDescription
+            id="job6"
             jobTitle={
               <>
                 UI&UX
