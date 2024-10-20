@@ -37,11 +37,11 @@ export default function Service({
                 <Heading
                     size="heading2xl"
                     as="h11"
-                    className="font-urbanist not-italic text-[36px] text-wrap font-bold leading-[48px] text-light_blue-a200 md:text-[34px] sm:text-[32px]"
+                    className="font-urbanist not-italic !text-[36px] text-wrap font-bold leading-[48px] text-light_blue-a200 md:!text-[34px] sm:!text-[32px]"
                 >
                     {mainHeading}
                 </Heading>
-                <Heading size="headings" as="h6" className="text-[16px] font-bold text-gray-900">
+                <Heading size="headings" as="h6" className="!text-[16px] font-bold text-gray-900">
                     {subHeading}
                 </Heading>
             </div>
@@ -56,18 +56,18 @@ export default function Service({
                                 alt={service.name}
                                 className="h-[90px] w-[90px] md:w-full sm:w-[75px] scale-[1.3]"
                             />
-                            <div className="flex flex-1 flex-col items-start gap-5 md:self-stretch">
-                                <Heading size="headinglg" as="h5" className="text-[20px] font-bold text-gray-900 ">
+                            <div className="flex flex-1 flex-col items-start gap-5 sm:gap-3 md:self-stretch">
+                                <Heading size="headinglg" as="h5" className="!text-[20px] font-bold text-gray-900 ">
                                     {service.name}
                                 </Heading>
-                                <Heading as="p" className="w-full text-[16px] font-normal leading-[200%] text-gray-900">
+                                <Heading as="p" className="w-full !text-[16px] font-normal leading-[200%] text-gray-900">
                                     {service.description}
                                 </Heading>
                             </div>
                         </div>
                         <Link href={`/service/0${service.id}`} className="flex items-center justify-end gap-5">
 
-                            <Heading as="h6" className="text-[18px] font-bold text-gray-900 underline">
+                            <Heading as="h6" className="!text-[18px] font-bold text-gray-900 underline">
                                 View More
                             </Heading>
 

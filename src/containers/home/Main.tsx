@@ -135,25 +135,27 @@ const Main: React.FC = () => {
                   はデジタル領域の専門家です
                 </span>
               </Heading>
-              {inView ? (
+              <div className="relative">
+
+
+                {inView && (
+                  <Heading
+                    size="heading3xl"
+                    as="h6"
+                    binary
+                    className="font-urbanist   text-[90px] absolute z-20 font-semibold tracking-[2.70px] text-light_blue-a200 md:text-[48px] text-center sm:mb-3"
+                  >
+                    Digital Domain Specialist
+                  </Heading>
+                )}
                 <Heading
                   size="heading3xl"
                   as="h6"
-                  binary
-                  className="font-urbanist  text-[90px] relative z-20 font-semibold tracking-[2.70px] text-light_blue-a200 md:text-[48px] text-center sm:mb-3"
+                  className={`font-urbanist !text-transparent  text-[90px] relative z-20 font-semibold tracking-[2.70px]  md:text-[48px] text-center sm:mb-3`}
                 >
                   Digital Domain Specialist
                 </Heading>
-              ) : (
-                <Heading
-                  size="heading3xl"
-                  as="h6"
-                  className={`font-urbanist ${show ? "!text-transparent" : "text-light_blue-a200"
-                    }  text-[90px] relative z-20 font-semibold tracking-[2.70px]  md:text-[48px] text-center sm:mb-3`}
-                >
-                  Digital Domain Specialist
-                </Heading>
-              )}
+              </div>
             </div>
           </div>
         </div>
