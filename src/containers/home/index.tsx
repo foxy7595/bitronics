@@ -34,19 +34,19 @@ export default function HomePage() {
           <div className="text-blue-50  text-[150px] font-extrabold  font-urbanist tracking-[4.50px]">
             MISSION
           </div>
-          <div className="text-blue-50  text-[150px] sm:text-[120px] font-bold font-['Trirong'] not-italic tracking-[4.50px]">
+          <div className="text-blue-50  text-[150px] sm:!text-[120px] font-bold font-['Trirong'] not-italic tracking-[4.50px]">
             MISSION
           </div>
-          <div className="text-blue-50  text-[150px] sm:text-[120px]  font-extrabold font-urbanist tracking-[4.50px]">
+          <div className="text-blue-50  text-[150px] sm:!text-[120px]  font-extrabold font-urbanist tracking-[4.50px]">
             MISSION
           </div>
-          <div className="text-blue-50  text-[150px] sm:text-[120px]  font-extrabold font-urbanist tracking-[4.50px]">
+          <div className="text-blue-50  text-[150px] sm:!text-[120px]  font-extrabold font-urbanist tracking-[4.50px]">
             MISSION
           </div>
-          <div className="text-blue-50  text-[150px] sm:text-[120px]  font-bold font-['Trirong'] not-italic tracking-[4.50px]">
+          <div className="text-blue-50  text-[150px] sm:!text-[120px]  font-bold font-['Trirong'] not-italic tracking-[4.50px]">
             MISSION
           </div>
-          <div className="text-blue-50  text-[150px] sm:text-[120px]  font-extrabold font-urbanist tracking-[4.50px]">
+          <div className="text-blue-50  text-[150px] sm:!text-[120px]  font-extrabold font-urbanist tracking-[4.50px]">
             MISSION
           </div>
         </div>

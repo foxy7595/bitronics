@@ -13,7 +13,7 @@ const ContactHeader: React.FC = () => {
       <Heading
         size="heading4xl"
         as="h4"
-        className="  !text-blue-800  !font-medium sm:text-[120px] -mt-8 md:!text-[150px] !leading-[50px] animate-slide-left-10 font-urbanist  whitespace-nowrap"
+        className="  !text-blue-800  !font-medium sm:!text-[120px] -mt-8 md:!text-[150px] !leading-[50px] animate-slide-left-10 font-urbanist  whitespace-nowrap"
       >
         CONTACT <i className=" !font-trirong not-italic">CONTACT </i>
         CONTACT <i className=" !font-trirong not-italic">CONTACT </i>
