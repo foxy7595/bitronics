@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import MainContainer from "@/components/Layout/MainContainer";
 
 import ContactHeader from "./header";
@@ -11,6 +13,40 @@ import { TextArea } from "@/components/TextArea";
 import HeadingAnimation from "../headingAnimation";
 
 export default function ContactPage() {
+  const [require, setRequire] = useState<string>("");
+
+  const [contact, setContact] = useState<string>("");
+
+  const [company, setCompany] = useState<string>("");
+
+  const [firstName, setFirstName] = useState<string>("");
+
+  const [lastName, setLastName] = useState<string>("");
+
+  const [email, setEmail] = useState<string>("");
+
+  const [phone, setPhone] = useState<string>("");
+
+  const [agree, setAgree] = useState<boolean>(false);
+
+  const obSubmit = async () => {
+    const data = await fetch("/api/contact", {
+      method: "POST",
+      body: JSON.stringify({
+        require,
+        contact,
+        company,
+        firstName,
+        lastName,
+        email,
+        phone,
+        agree,
+      }),
+    }).then((res) => res.json());
+
+    console.log(data);
+  };
+
   return (
     <MainContainer>
       <ContactHeader />
@@ -53,6 +89,7 @@ export default function ContactPage() {
                   <RadioGroup
                     name="require"
                     className="flex  flex-wrap  md:flex-col gap-y-6 gap-x-8"
+                    onChange={setRequire}
                   >
                     <Radio
                       value="system"
@@ -107,6 +144,7 @@ export default function ContactPage() {
                 </Heading>
               </div>
               <TextArea
+                onChange={setContact}
                 name="frameeighty"
                 placeholder={`ご依頼・ご相談などお問い合わせ内容の詳細をご記入ください`}
                 className="min-h-[136px] !outline-none active:outline-none focus:outline-none !border-none active:border-none  bg-[#F3F7F8] p-2.5 !text-[16px] placeholder:text-gray-200 text-gray-900"
@@ -122,10 +160,11 @@ export default function ContactPage() {
                   会社名
                 </Heading>
                 <Input
-                  name="株式会社_bitronics"
+                  name="company"
                   placeholder={`株式会社 Bitronics`}
                   className="flex h-[44px] items-center justify-center self-stretch text-[16px] text-blue_gray-200"
                   classNameInput=" bg-[#F3F7F8] px-2.5 "
+                  onChange={(e) => setCompany(e.target.value)}
                 />
               </div>
               <div className="flex flex-col gap-5">
@@ -143,16 +182,18 @@ export default function ContactPage() {
                 </div>
                 <div className="flex gap-5 md:flex-col">
                   <Input
-                    name="山田"
+                    name="firstName"
                     placeholder={`山田`}
                     className="flex h-[44px] w-full items-center justify-center   text-[16px] text-blue_gray-200"
                     classNameInput="px-2.5 bg-[#F3F7F8]"
+                    onChange={(e) => setFirstName(e.target.value)}
                   />
                   <Input
-                    name="太郎"
+                    name="lastName"
                     placeholder={`太郎`}
                     className="flex h-[44px] w-full items-center justify-center  text-[16px] text-blue_gray-200"
                     classNameInput="px-2.5 bg-[#F3F7F8]"
+                    onChange={(e) => setLastName(e.target.value)}
                   />
                 </div>
               </div>
@@ -175,6 +216,7 @@ export default function ContactPage() {
                   placeholder={`example@bitronics.io`}
                   className="flex h-[44px] items-center justify-center  text-[16px] text-blue_gray-200"
                   classNameInput="px-2.5 bg-[#F3F7F8]"
+                  onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
               <div className="flex flex-col gap-5">
@@ -191,10 +233,11 @@ export default function ContactPage() {
                   </Heading>
                 </div>
                 <Input
-                  name="frameeightyfive"
+                  name="phone"
                   placeholder={`00-0000-0000`}
                   className="flex h-[44px] items-center justify-center text-[16px] text-blue_gray-200"
                   classNameInput="px-2.5 bg-[#F3F7F8]"
+                  onChange={(e) => setPhone(e.target.value)}
                 />
               </div>
               <CheckBox
@@ -202,10 +245,14 @@ export default function ContactPage() {
                 label="個人情報保護方針の内容に同意する"
                 id="Data"
                 className="flex gap-5 py-1.5 items-center text-[16px] text-gray-900"
+                onChange={(e: boolean) => setAgree(e)}
               />
             </div>
             <div className="flex justify-start  md:justify-center  w-full">
-              <Button className="flex h-[44px] hover:bg-gray-900 hover:text-[#fff]  transition-all duration-200 hover:border-gray-900 min-w-[300px] sm:w-full flex-row items-center justify-center rounded-[22px] border border-solid border-gray-900 px-[33px] text-center text-[16px] text-gray-900 sm:px-5">
+              <Button
+                onClick={obSubmit}
+                className="flex h-[44px] hover:bg-gray-900 hover:text-[#fff]  transition-all duration-200 hover:border-gray-900 min-w-[300px] sm:w-full flex-row items-center justify-center rounded-[22px] border border-solid border-gray-900 px-[33px] text-center text-[16px] text-gray-900 sm:px-5"
+              >
                 送信
               </Button>
             </div>

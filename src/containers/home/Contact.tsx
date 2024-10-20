@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Button, Img, Heading } from "../../components";
 import React from "react";
 
@@ -6,7 +7,7 @@ export default function Contact() {
     <div className="self-stretch">
       <div className="flex justify-center bg-gradient py-[54px] w-full">
         <div className="max-w-[1200px] mx-auto w-full flex justify-center md:px-5">
-          <div className="flex w-full items-center justify-between gap-5 md:flex-col">
+          <div className="flex w-full items-center justify-between gap-5 md:flex-col lg:px-5">
             <div className="flex flex-1 flex-col items-start gap-3.5 md:self-stretch">
               <Heading
                 size="headingxl"
@@ -27,7 +28,10 @@ export default function Contact() {
                 </>
               </Heading>
             </div>
-            <div className="flex items-center gap-[31px] self-end ">
+            <Link
+              href="/contact"
+              className="flex items-center gap-[31px] self-end "
+            >
               <Heading
                 size="headings"
                 as="h4"
@@ -42,7 +46,7 @@ export default function Contact() {
                   height={4}
                 />
               </Button>
-            </div>
+            </Link>
           </div>
         </div>
       </div>

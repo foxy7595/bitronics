@@ -10,6 +10,7 @@ type InputProps = Omit<
     prefix: React.ReactNode;
     suffix: React.ReactNode;
     classNameInput: string;
+    onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   }>;
 
 const Input = React.forwardRef<HTMLInputElement, InputProps>(

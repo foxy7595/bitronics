@@ -3,7 +3,6 @@ import MainContainer from "@/components/Layout/MainContainer";
 
 import WorksHeader from "./header";
 import WorksColumn from "./works";
-import { Heading } from "@/components";
 import HeadingAnimation from "../headingAnimation";
 
 export default function WorksPage() {

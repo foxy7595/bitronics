@@ -6,11 +6,14 @@ const variants = {
     "border-blue_gray-200 border border-solid checked:border-blue_gray-200 checked:border-[3px] checked:border-solid checked:bg-blue_gray-200 checked:focus:bg-blue_gray-200 checked:focus:border-blue_gray-200 checked:hover:bg-blue_gray-200 checked:hover:border-blue_gray-200",
 } as const;
 const sizes = {
-  xs: "h-[36px] w-[36px]",
+  xs: "h-[36px] w-[36px] sm:h-[28px] sm:w-[28px]",
 } as const;
 
 type CheckboxProps = Omit<
-  React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>,
+  React.DetailedHTMLProps<
+    React.InputHTMLAttributes<HTMLInputElement>,
+    HTMLInputElement
+  >,
   "size" | "prefix" | "type" | "onChange"
 > &
   Partial<{
@@ -35,7 +38,7 @@ const CheckBox = React.forwardRef<HTMLInputElement, CheckboxProps>(
       size = "xs",
       ...restProps
     },
-    ref,
+    ref
   ) => {
     const handleChange: React.ChangeEventHandler<HTMLInputElement> = (e) => {
       if (onChange) onChange(e?.target?.checked);
@@ -45,7 +48,9 @@ const CheckBox = React.forwardRef<HTMLInputElement, CheckboxProps>(
       <>
         <div className={className}>
           <input
-            className={` ${(size && sizes[size]) || ""} ${(variant && variants[variant]) || ""}`}
+            className={` ${(size && sizes[size]) || ""} ${
+              (variant && variants[variant]) || ""
+            }`}
             ref={ref}
             type="checkbox"
             name={name}
@@ -57,7 +62,7 @@ const CheckBox = React.forwardRef<HTMLInputElement, CheckboxProps>(
         </div>
       </>
     );
-  },
+  }
 );
 
 export { CheckBox };
