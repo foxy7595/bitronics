@@ -31,7 +31,6 @@ function Viewer3D({
     const currentScrollY = window.scrollY;
 
     if (modelPath === "/models/service-3.glb") {
-
       if (currentScrollY < 2700) {
         _rotate = -20;
       } else if (currentScrollY > 3700) {
@@ -52,8 +51,6 @@ function Viewer3D({
 
         onRotate(_rotate);
       }
-
-
     } else if (modelPath === "/models/service-2.glb") {
       if (currentScrollY < 3700) {
         _rotate = -20;
@@ -75,9 +72,7 @@ function Viewer3D({
 
         onRotate(_rotate);
       }
-    }
-    else if (modelPath === "/models/service-1.glb") {
-
+    } else if (modelPath === "/models/service-1.glb") {
       if (currentScrollY < 1600) {
         _rotate = -20;
       } else if (currentScrollY > 2600) {
@@ -99,8 +94,6 @@ function Viewer3D({
         onRotate(_rotate);
       }
     }
-
-
   };
 
   useEffect(() => {
@@ -184,8 +177,8 @@ function Viewer3D({
             modelPath === "/models/service-2.glb"
               ? 1.05
               : modelPath === "/models/service-3.glb"
-                ? 1
-                : 1,
+              ? 1
+              : 1,
             0
           ),
           Math.PI
@@ -288,12 +281,13 @@ function Viewer3D({
     <div className=" sm:h-[calc(100vw-32px)] md:h-[calc(100vw+100px)] md:w-full md:max-h-[620px] max-h-none sm:w-full">
       <div
         ref={containerRef}
-        className={`${modelPath === "/models/service-2.glb"
-          ? "ml-8 "
-          : modelPath === "/models/service-3.glb"
+        className={`${
+          modelPath === "/models/service-2.glb"
+            ? "ml-8 "
+            : modelPath === "/models/service-3.glb"
             ? "ml-[-40px] sm:ml-[-40px] pt-[90px] "
             : ""
-          }   transform origin-top-left`}
+        }   transform origin-top-left`}
         style={{
           width: `${720}px`,
           height: `${620}px`,

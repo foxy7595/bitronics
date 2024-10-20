@@ -8,13 +8,20 @@ import { Input } from "@/components/Input";
 import { Radio } from "@/components/Radio";
 import { RadioGroup } from "@/components/RadioGroup";
 import { TextArea } from "@/components/TextArea";
+import HeadingAnimation from "../headingAnimation";
 
 export default function ContactPage() {
   return (
     <MainContainer>
       <ContactHeader />
 
-      <div className="flex flex-col gap-[90px] mt-4 mx-[100px] sm:mx-6 md:mx-6 mb-8">
+      <div className=" mt-[100px] sm:mt-8 mx-[100px] sm:mx-6 md:mx-6 ">
+        <HeadingAnimation
+          missionTitle={"Contact"}
+          missionSubtitle="お問い合わせ"
+        />
+      </div>
+      <div className="flex flex-col gap-[90px] mt-6 mx-[100px] sm:mx-6 md:mx-6 mb-8">
         <div className="flex flex-col items-start gap-9 ">
           <Heading
             size="textlg"

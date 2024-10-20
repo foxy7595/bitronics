@@ -1,7 +1,8 @@
+"use client";
+
 import { Heading, Button, Img } from "@/components";
 import React from "react";
-
-
+import { useInView } from "react-hook-inview";
 
 interface Props {
   className?: string;
@@ -18,13 +19,7 @@ interface Props {
 
 export default function JobDescription({
   id,
-  jobTitle = (
-    <>
-      PHP Laravel
-      <br />
-      開発者
-    </>
-  ),
+  jobTitle = "PHP Laravel\n開発者",
   prop = "必須スキル",
   requiredSkills = "PHP, jQuery, JavaScript, JSON, GIT, Bootstrap, DOM, Docker, Nodejs, Laravel, ReactJS",
   prop1 = "求める人材",
@@ -84,21 +79,37 @@ export default function JobDescription({
   entryTitle = "Entry",
   ...props
 }: Props) {
+  const [ref, inView] = useInView({
+    threshold: 0.9,
+  });
+
   return (
-
     <div
-
       {...props}
       className={`${props.className} flex sm:flex-col relative md:flex-col  md:gap-4 items-start`}
     >
       <div id={id} className="absolute top-[-100px] left-0 w-full h-full"></div>
-      <Heading
-        size="headingxl"
-        as="h1"
-        className="w-[30%] text-[36px] font-bold leading-[53px] text-gray-900 md:w-full md:text-[34px] sm:text-[32px]"
-      >
-        {jobTitle}
-      </Heading>
+      <div className=" w-[30%] md:w-full relative ">
+        {inView && (
+          <Heading
+            size="headingxl"
+            as="pre"
+            binary
+            delay={0.5}
+            className="w-full text-[36px] absolute top-0 left-0 font-bold leading-[53px] text-gray-900  md:text-[34px] sm:text-[32px]"
+          >
+            {jobTitle}
+          </Heading>
+        )}
+
+        <Heading
+          size="headingxl"
+          as="pre"
+          className="w-full text-[36px] absolute top-0 left-0 font-bold leading-[53px] !text-transparent  md:text-[34px] sm:text-[32px]"
+        >
+          {jobTitle}
+        </Heading>
+      </div>
       <div className="flex flex-1 flex-col gap-5 self-center border border-solid border-blue_gray-200 p-[30px] md:self-stretch sm:p-5">
         <div className="flex flex-col gap-7">
           {prop && (
@@ -117,6 +128,7 @@ export default function JobDescription({
               )}
             </div>
           )}
+          <div ref={ref}></div>
           <div className="flex flex-col items-start gap-5">
             <Heading as="h6" className="text-[18px] font-bold text-gray-900">
               {prop1}
@@ -128,6 +140,7 @@ export default function JobDescription({
               {candidateDescription}
             </Heading>
           </div>
+
           <div className="flex flex-col items-start gap-5">
             <Heading as="h6" className="text-[18px] font-bold text-gray-900">
               {prop2}
@@ -148,8 +161,18 @@ export default function JobDescription({
             {entryTitle}
           </Heading>
           <Button className="flex h-[40px] w-[40px] items-center justify-center rounded-[20px] group hover:bg-[#fff] hover:border-gray-900 hover:border hover:border-solid border-gray-900 bg-gray-900 px-3">
-            <Img src="img_tdesign_swap_right.svg" width={16} height={4} className="group-hover:hidden" />
-            <Img src="img_tdesign_swap_right_gray_900.svg" width={16} height={4} className="hidden group-hover:block" />
+            <Img
+              src="img_tdesign_swap_right.svg"
+              width={16}
+              height={4}
+              className="group-hover:hidden"
+            />
+            <Img
+              src="img_tdesign_swap_right_gray_900.svg"
+              width={16}
+              height={4}
+              className="hidden group-hover:block"
+            />
           </Button>
         </div>
       </div>

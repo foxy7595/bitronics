@@ -5,6 +5,7 @@ import RecruitHeader from "./header";
 import { Heading } from "@/components";
 import TechStack from "./techstack";
 import JobDescription from "./jobDescription";
+import HeadingAnimation from "../headingAnimation";
 
 export default function RecruitPage() {
   return (
@@ -12,24 +13,12 @@ export default function RecruitPage() {
       <RecruitHeader />
       <div className="flex flex-col mx-[100px] mt-[100px] sm:mt-8 sm:mx-6 md:mx-6 mb-8">
         <div className="flex flex-col items-center justify-center self-stretch w-full">
-          <div className="flex flex-col items-start gap-1 w-full">
-            <div className="flex items-center gap-[30px] self-stretch w-full">
-              <Heading
-                size="heading2xl"
-                as="h2"
-                className="font-urbanist text-[64px] not-italic font-semibold tracking-[1.92px] text-gray-900 md:text-[48px]"
-              >
-                Recruit
-              </Heading>
-              <div className="h-px flex-1 bg-gray-900 " />
-            </div>
-            <Heading
-              size="headinglg"
-              as="h3"
-              className="text-[24px] font-bold text-gray-900 md:text-[22px]"
-            >
-              採用情報
-            </Heading>
+          <div className=" w-full">
+            <HeadingAnimation
+              missionTitle={"Recruit"}
+              missionSubtitle="採用情報"
+            />
+            <br />
           </div>
         </div>
         <div className="flex flex-col gap-[60px] sm:gap-[30px]">
@@ -52,16 +41,9 @@ export default function RecruitPage() {
           </div>
 
           <JobDescription id="job1" />
-          <JobDescription id="job2"
-            jobTitle={
-              <>
-                Java スクリプト
-                <br />
-                フルスタック
-                <br />
-                開発者
-              </>
-            }
+          <JobDescription
+            id="job2"
+            jobTitle={"Java スクリプト\nフルスタック\n開発者"}
             prop="必須スキル"
             requiredSkills="TypeScript, jQuery, JSON, GIT, Bootstrap, DOM, Docker, NodeJS, ReactJS, MongoDB"
             prop1="求める人材"
@@ -119,12 +101,7 @@ export default function RecruitPage() {
           />
           <JobDescription
             id="job3"
-            jobTitle={
-              <>
-                Android 開発者
-                <br /> - Kotlin
-              </>
-            }
+            jobTitle={"Android 開発者\n- Kotlin"}
             prop="必須スキル"
             requiredSkills="Android、Java、Kotlin、マルチスレッディング、デザインパターン、OOPS、モバイルアプリアーキテクチャ、SDK、モバイルアプリデザイン、Flutter、RDBMSの概念と経験"
             prop1="求める人材"
@@ -185,12 +162,7 @@ export default function RecruitPage() {
 
           <JobDescription
             id="job4"
-            jobTitle={
-              <>
-                iOS Swift <br />
-                開発者
-              </>
-            }
+            jobTitle={"iOS Swift \n開発者"}
             prop="必須スキル"
             requiredSkills="Swift、iOS、SQLite、Core Data、モバイルアプリケーション、アプリケーションプログラミング、ITサービス、XML、Webサービス"
             prop1="求める人材"
@@ -238,13 +210,7 @@ export default function RecruitPage() {
 
           <JobDescription
             id="job5"
-            jobTitle={
-              <>
-                フラッター
-                <br />
-                開発者
-              </>
-            }
+            jobTitle={"フラッター\n開発者"}
             prop="必須スキル"
             requiredSkills="GraphQL, Flutter, Flutter SDK, Firebase, Flutter Flow, Dark"
             prop1="求める人材"
@@ -303,13 +269,7 @@ export default function RecruitPage() {
 
           <JobDescription
             id="job6"
-            jobTitle={
-              <>
-                UI&UX
-                <br />
-                デザイナー
-              </>
-            }
+            jobTitle={"UI&UX\nデザイナー"}
             prop=""
             requiredSkills=""
             prop1="歓迎スキル"
