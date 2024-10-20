@@ -204,9 +204,11 @@ export default function ContactPage() {
                 className="flex gap-5 py-1.5 items-center text-[16px] text-gray-900"
               />
             </div>
-            <Button className="flex h-[44px] hover:bg-gray-900 hover:text-[#fff]  transition-all duration-200 hover:border-gray-900 min-w-[300px] flex-row items-center justify-center rounded-[22px] border border-solid border-gray-900 px-[33px] text-center text-[16px] text-gray-900 sm:px-5">
-              送信
-            </Button>
+            <div className="flex justify-start  md:justify-center  w-full">
+              <Button className="flex h-[44px] hover:bg-gray-900 hover:text-[#fff]  transition-all duration-200 hover:border-gray-900 min-w-[300px] sm:w-full flex-row items-center justify-center rounded-[22px] border border-solid border-gray-900 px-[33px] text-center text-[16px] text-gray-900 sm:px-5">
+                送信
+              </Button>
+            </div>
           </div>
         </div>
       </div>
