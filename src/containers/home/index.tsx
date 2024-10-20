@@ -1,3 +1,5 @@
+"use client";
+
 import FluidContainer from "@/components/Layout/FluidContainer";
 import { Img, Text } from "../../components";
 import Works from "./Works";
@@ -7,6 +9,20 @@ import Main from "./Main";
 import Service from "./Service";
 
 export default function HomePage() {
+
+  React.useEffect(() => {
+    // Ensure the component is mounted before scrolling
+    if (typeof window !== 'undefined') {
+      setTimeout(() => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      }, 300);
+    }
+  }, []);
+
+
   return (
     <MainContainer>
       <Main />

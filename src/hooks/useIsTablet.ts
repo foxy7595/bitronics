@@ -2,14 +2,12 @@ import { useState, useEffect } from "react";
 
 // Custom hook to detect mobile mode
 const useIsMobile = () => {
-  const [isMobile, setIsMobile] = useState(false);
-
+  const [isTablet, setIsTablet] = useState(false);
 
   useEffect(() => {
     // Function to update the state based on window size
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768); // Example: Mobile if width <= 768px
-
+      setIsTablet(window.innerWidth <= 1024); // Example: Tablet if width <= 1024px
     };
 
     // Initial check when the component mounts
@@ -22,7 +20,7 @@ const useIsMobile = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  return isMobile;
+  return isTablet;
 };
 
 export default useIsMobile;

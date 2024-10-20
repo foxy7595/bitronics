@@ -18,6 +18,20 @@ export default function ServicePage() {
     threshold: 0.9,
   });
 
+
+
+  React.useEffect(() => {
+    // Ensure the component is mounted before scrolling
+    if (typeof window !== 'undefined') {
+      setTimeout(() => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      }, 300);
+    }
+  }, []);
+
   return (
     <MainContainer>
       <AboutHeader />
@@ -70,7 +84,7 @@ export default function ServicePage() {
             Bitronicsの強みは、先進のテクノロジーと深い専門知識に基づくシステム開発です。
             <br />
             クライアント様の課題に挑戦し、柔軟性と効率性を兼ね備えたソリューションを提供します。
-            <br />
+            <br className="sm:hidden md:hidden" />
             <br />
             そして、私たちは単なるサービス提供者ではなく、共にプロジェクトを築くパートナーとしての役割を果たします。
             <br />

@@ -1,3 +1,6 @@
+"use client";
+
+
 import React from "react";
 import MainContainer from "@/components/Layout/MainContainer";
 
@@ -6,6 +9,20 @@ import WorksColumn from "./works";
 import HeadingAnimation from "../headingAnimation";
 
 export default function WorksPage() {
+
+
+  React.useEffect(() => {
+    // Ensure the component is mounted before scrolling
+    if (typeof window !== 'undefined') {
+      setTimeout(() => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      }, 300);
+    }
+  }, []);
+
   return (
     <MainContainer>
       <WorksHeader />

@@ -2,7 +2,9 @@ import useIsMobile from "@/hooks/useIsMobile";
 import { Text, Heading } from "../../components";
 import React from "react";
 import { useInView } from "react-hook-inview";
+import useIsTablet from "@/hooks/useIsTablet";
 export default function Profile() {
+  const isTablet = useIsTablet();
   const isMobile = useIsMobile();
   const [ref, inView] = useInView({
     threshold: 0.9,
@@ -11,7 +13,7 @@ export default function Profile() {
   return (
     <div className=" flex items-start justify-center  w-full md:flex-col">
       <div className="min-w-[200px]">
-        {inView || isMobile ? (
+        {inView || isMobile || isTablet ? (
           <Heading
             size="heading3xl"
             as="h2"

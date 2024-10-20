@@ -105,7 +105,7 @@ export default function JobDescription({
         <Heading
           size="headingxl"
           as="pre"
-          className="w-full !text-[36px] absolute top-0 left-0 font-bold leading-[53px] !text-transparent  md:!text-[34px] sm:!text-[32px]"
+          className="w-full !text-[36px]   font-bold leading-[53px] !text-transparent  md:!text-[34px] sm:!text-[32px]"
         >
           {jobTitle}
         </Heading>

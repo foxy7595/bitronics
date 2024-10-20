@@ -44,7 +44,7 @@ const Slide: React.FC<{ slidesPerView: number }> = ({ slidesPerView }) => {
           key={"about1" + index}
           src={"/images/" + d.modernequipped}
           alt={d.modernequipped}
-          className=" !w-[29%] sm:mr-2 mr-6 sm:!w-[80%] object-contain "
+          className=" !w-[29%] md:!w-[40%] md:mr-4 sm:mr-2 mr-6 sm:!w-[80%] object-contain "
         />
       ))}
     </Swiper>

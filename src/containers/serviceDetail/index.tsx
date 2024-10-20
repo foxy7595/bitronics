@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import MainContainer from "@/components/Layout/MainContainer";
 
@@ -16,6 +18,19 @@ export type ServicePageProps = {
 
 
 export default function ServicePage({ slug, data }: ServicePageProps) {
+
+    React.useEffect(() => {
+        // Ensure the component is mounted before scrolling
+        if (typeof window !== 'undefined') {
+            setTimeout(() => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            }, 300);
+        }
+    }, []);
+
     return (
         <MainContainer>
 

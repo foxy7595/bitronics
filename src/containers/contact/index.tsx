@@ -47,6 +47,19 @@ export default function ContactPage() {
     console.log(data);
   };
 
+
+  React.useEffect(() => {
+    // Ensure the component is mounted before scrolling
+    if (typeof window !== 'undefined') {
+      setTimeout(() => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      }, 300);
+    }
+  }, []);
+
   return (
     <MainContainer>
       <ContactHeader />

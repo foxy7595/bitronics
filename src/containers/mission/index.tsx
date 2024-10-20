@@ -1,4 +1,5 @@
-import FluidContainer from "@/components/Layout/FluidContainer";
+"use client";
+
 import React, { Suspense } from "react";
 import MainContainer from "@/components/Layout/MainContainer";
 
@@ -48,6 +49,20 @@ const data = [
 ];
 
 export default function MissionPage() {
+
+
+    React.useEffect(() => {
+        // Ensure the component is mounted before scrolling
+        if (typeof window !== 'undefined') {
+            setTimeout(() => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            }, 300);
+        }
+    }, []);
+
     return (
         <MainContainer>
             <MissionHeader />

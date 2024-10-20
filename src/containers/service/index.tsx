@@ -10,6 +10,19 @@ import Services from "./services";
 
 export default function ServicePage() {
 
+    React.useEffect(() => {
+        // Ensure the component is mounted before scrolling
+        if (typeof window !== 'undefined') {
+            setTimeout(() => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            }, 300);
+        }
+    }, []);
+
+
     const handleScrollToService = (id: string) => {
         const element = document.getElementById(id);
         if (element) {

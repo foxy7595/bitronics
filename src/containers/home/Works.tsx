@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Button, Img, Heading } from "../../components";
 import UserProfile from "../../components/UserProfile";
 import React, { Suspense } from "react";
@@ -72,7 +73,7 @@ export default function Works() {
             ))}
           </Suspense>
         </div>
-        <div className="flex items-center justify-end gap-[30px]">
+        <Link href="/work" className="flex items-center justify-end gap-[30px]">
           <Heading
             size="headings"
             as="h4"
@@ -83,7 +84,7 @@ export default function Works() {
           <Button className="flex h-[40px] w-[40px] items-center justify-center rounded-[20px] bg-gray-900 px-3">
             <Img src="img_tdesign_swap_right.svg" width={16} height={4} />
           </Button>
-        </div>
+        </Link>
       </div>
     </div>
   );
