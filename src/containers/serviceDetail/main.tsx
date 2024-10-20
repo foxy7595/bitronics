@@ -14,7 +14,7 @@ export default function Main({ data }: { data?: any }) {
             >
               {data?.title}
             </Heading>
-            <div className="h-px flex-1 bg-gray-900 min-w-[120px] " />
+            <div className="h-px flex-1 bg-gray-900 min-w-[110px] " />
           </div>
           <Heading
             size="headingxl"
