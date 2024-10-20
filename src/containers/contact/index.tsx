@@ -64,7 +64,7 @@ export default function ContactPage() {
     <MainContainer>
       <ContactHeader />
 
-      <div className=" mt-[100px] sm:mt-8 mx-[100px] sm:mx-6 md:mx-6 ">
+      <div className=" mt-[80px] sm:mt-8 mx-[100px] sm:mx-6 md:mx-6 ">
         <HeadingAnimation
           missionTitle={"Contact"}
           missionSubtitle="お問い合わせ"

@@ -28,7 +28,7 @@ export default function Footer({ ...props }: Props) {
                   <div className="flex flex-wrap items-center gap-5 sm:flex-col sm:items-start sm:gap-2">
                     <Heading
                       as="h6"
-                      className="text-[18px] font-bold text-gray-900"
+                      className="!text-[18px] font-bold text-gray-900"
                     >
                       サービス
                     </Heading>
@@ -42,7 +42,7 @@ export default function Footer({ ...props }: Props) {
                   </div>
                   <Text
                     as="p"
-                    className="text-[14px] font-medium text-gray-900 whitespace-nowrap"
+                    className="!text-[14px] font-medium text-gray-900 whitespace-nowrap"
                   >
                     <span className=" block sm:hidden md:block">
                       システム開発事業 / 先端技術開発事業 / ソフトウェア品質保証

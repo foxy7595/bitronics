@@ -12,14 +12,14 @@ export default function Contact() {
               <Heading
                 size="headingxl"
                 as="h2"
-                className="font-urbanist text-[36px] font-extrabold tracking-[1.08px] text-light_blue-a200 md:text-[34px] sm:text-[32px]"
+                className="font-urbanist !text-[36px] font-extrabold tracking-[1.08px] text-light_blue-a200 md:!text-[34px] sm:!text-[32px]"
               >
                 Contact
               </Heading>
               <Heading
                 size="headings"
                 as="h3"
-                className="text-[20px] font-bold leading-[200%] text-white-a700"
+                className="!text-[20px] sm:!text-[14px] font-bold leading-[200%] text-white-a700"
               >
                 <>
                   Bitronicsの専門サービスを体験してみませんか？

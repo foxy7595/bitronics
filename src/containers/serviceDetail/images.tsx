@@ -17,11 +17,10 @@ const Images: React.FC<ImagesProps> = ({ images = [], grid = false }) => {
 
   return (
     <div
-      className={`${
-        grid
-          ? "grid grid-cols-3 gap-[5vw] mx-[200px] lg:mx-[100px] md:mx-6 sm:!mx-4"
-          : "flex lg:gap-[4vw] gap-[5vw] sm:gap-[3vw] mx-[100px] md:mx-6 sm:mx-4 "
-      } flex-wrap  sm:mt-8   justify-center mt-[100px] `}
+      className={`${grid
+        ? "grid grid-cols-3 gap-[5vw] mx-[200px] lg:mx-[100px] md:mx-6 sm:!mx-4"
+        : "flex lg:gap-[4vw] gap-[5vw] sm:gap-[3vw] mx-[100px] md:mx-6 sm:mx-4 "
+        } flex-wrap  sm:mt-8   justify-center mt-[80px] `}
     >
       {images.map((image, index) => (
         <div

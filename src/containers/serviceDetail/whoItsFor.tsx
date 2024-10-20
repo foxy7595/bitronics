@@ -5,7 +5,7 @@ import Industry from "./industry";
 
 export default function WhoItsFor({ data }: { data?: any }) {
   return (
-    <div className="mt-[100px] mx-[100px] md:mx-6 sm:mx-4 sm:mt-8  flex justify-center self-stretch ">
+    <div className="mt-[80px] mx-[100px] md:mx-6 sm:mx-4 sm:mt-8  flex justify-center self-stretch ">
       <div className=" flex items-start justify-between gap-5 md:flex-col ">
         <Heading
           size="heading3xl"

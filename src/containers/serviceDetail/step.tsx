@@ -5,7 +5,7 @@ import StepColumn from "./stepColumn";
 
 export default function Step({ data }: { data?: any }) {
   return (
-    <div className="mt-[100px] mx-[100px] md:mx-6 sm:mx-4 sm:mt-8 flex ">
+    <div className="mt-[80px] mx-[100px] md:mx-6 sm:mx-4 sm:mt-8 flex ">
       <div className="flex items-start  w-full  justify-between gap-5 md:flex-col">
         <Heading
           size="heading3xl"
