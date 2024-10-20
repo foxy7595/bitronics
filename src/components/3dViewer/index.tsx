@@ -24,7 +24,7 @@ function Viewer3D({
   const controlsRef = useRef<OrbitControls | null>(null);
   const rendererRef = useRef<THREE.WebGLRenderer | null>(null);
 
-  let _rotate = -20;
+  let _rotate = -30;
   const handleScroll = () => {
     if (!cameraRef.current) return;
 
@@ -32,19 +32,19 @@ function Viewer3D({
 
     if (modelPath === "/models/service-3.glb") {
       if (currentScrollY < 2700) {
-        _rotate = -20;
+        _rotate = -30;
       } else if (currentScrollY > 3700) {
-        _rotate = 20;
+        _rotate = 30;
       } else {
         if (currentScrollY > (window as any)[modelPath]) {
           // Scrolling down
-          if (_rotate < 21) {
-            _rotate += 0.4;
+          if (_rotate < 31) {
+            _rotate += 0.7;
           }
         } else {
           // Scrolling up
-          if (_rotate > -20) {
-            _rotate -= 0.4;
+          if (_rotate > -30) {
+            _rotate -= 0.7;
           }
         }
         (window as any)[modelPath] = currentScrollY;
@@ -53,19 +53,19 @@ function Viewer3D({
       }
     } else if (modelPath === "/models/service-2.glb") {
       if (currentScrollY < 3700) {
-        _rotate = -20;
+        _rotate = -30;
       } else if (currentScrollY > 4700) {
-        _rotate = 20;
+        _rotate = 30;
       } else {
         if (currentScrollY > (window as any)[modelPath]) {
           // Scrolling down
-          if (_rotate < 21) {
-            _rotate += 0.4;
+          if (_rotate < 31) {
+            _rotate += 0.7;
           }
         } else {
           // Scrolling up
-          if (_rotate > -20) {
-            _rotate -= 0.4;
+          if (_rotate > -30) {
+            _rotate -= 0.7;
           }
         }
         (window as any)[modelPath] = currentScrollY;
@@ -74,19 +74,19 @@ function Viewer3D({
       }
     } else if (modelPath === "/models/service-1.glb") {
       if (currentScrollY < 1600) {
-        _rotate = -20;
+        _rotate = -30;
       } else if (currentScrollY > 2600) {
-        _rotate = 20;
+        _rotate = 30;
       } else {
         if (currentScrollY > (window as any)[modelPath]) {
           // Scrolling down
-          if (_rotate < 21) {
-            _rotate += 0.4;
+          if (_rotate < 31) {
+            _rotate += 0.7;
           }
         } else {
           // Scrolling up
-          if (_rotate > -20) {
-            _rotate -= 0.4;
+          if (_rotate > -30) {
+            _rotate -= 0.7;
           }
         }
         (window as any)[modelPath] = currentScrollY;
