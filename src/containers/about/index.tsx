@@ -47,9 +47,9 @@ export default function ServicePage() {
                   size="heading2xl"
                   as="pre"
                   binary
-                  className="!text-[36px] !font-bold !font-notosanscjkjp leading-[53px] not-italic text-gray-900 md:!text-[28px] sm:!text-[20px]"
+                  className="!text-[36px] !font-bold !font-notosanscjkjp sm:text-wrap leading-[53px] sm:leading-[34px] not-italic text-gray-900 md:!text-[28px] sm:!text-[20px]"
                 >
-                  {`Bitronicsはデジタルハイテクソリューションの\nリーディングカンパニーです`}
+                  {isMobile ? `Bitronicsはデジタル\nハイテクソリューションの\nリーディングカンパニーです` : `Bitronicsはデジタルハイテクソリューションの\nリーディングカンパニーです`}
                 </Heading>
               )}
             </div>

@@ -1,19 +1,21 @@
 import { useInView } from "react-hook-inview";
 import { Text, Heading } from "../../components";
 import React from "react";
+import useIsMobile from "@/hooks/useIsMobile";
 
 export default function Access() {
+  const isMobile = useIsMobile();
   const [ref, inView] = useInView({
     threshold: 0.8,
   });
   return (
     <div className="flex items-start justify-between  w-full md:flex-col">
       <div className="min-w-[200px]">
-        {inView ? (
+        {inView || isMobile ? (
           <Heading
             size="heading3xl"
             as="h2"
-            binary
+            binary={!isMobile}
             className="font-urbanist !text-[48px] font-semibold tracking-[1.44px] text-gray-900 md:!text-[44px] sm:!text-[38px] md:pb-5 "
           >
             Access

@@ -63,7 +63,7 @@ const Heading: React.FC<React.PropsWithChildren<HeadingProps>> = ({
             setText(textValue.slice(0, i));
             i++;
           }
-        }, 50);
+        }, textValue.length > 10 ? 50 : 80);
       }, delay || 0);
     } else if (textAnimate) {
       let i = 0;

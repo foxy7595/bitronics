@@ -1,9 +1,9 @@
 "use client";
 
-import useIsMobile from "@/hooks/useIsMobile";
+
 import React from "react";
 import Swiper from "react-id-swiper";
-import a from "swiper";
+
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -20,15 +20,15 @@ const data = [
 const Slide: React.FC<{ slidesPerView: number }> = ({ slidesPerView }) => {
 
   const params = {
-    // slidesPerView: "auto",
-    slidesPerView: slidesPerView,
+    slidesPerView: "auto",
+    // slidesPerView: slidesPerView,
     autoplay: {
       delay: 2500,
       disableOnInteraction: false,
     },
     speed: 1000,
     loop: true,
-    spaceBetween: 10,
+    // spaceBetween: 10,
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
@@ -44,7 +44,7 @@ const Slide: React.FC<{ slidesPerView: number }> = ({ slidesPerView }) => {
           key={"about1" + index}
           src={"/images/" + d.modernequipped}
           alt={d.modernequipped}
-        //   className="!h-[250px] !w-[30%] object-contain "
+          className=" !w-[29%] sm:mr-2 mr-6 sm:!w-[80%] object-contain "
         />
       ))}
     </Swiper>
