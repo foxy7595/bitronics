@@ -14,9 +14,13 @@ export default function Main({ data }: { data?: any }) {
             >
               {data?.title}
             </Heading>
-            <div className="h-px flex-1 bg-gray-900 " />
+            <div className="h-px flex-1 bg-gray-900 min-w-[150px] " />
           </div>
-          <Heading size="headingxl" as="h3" className="text-[24px] font-bold text-gray-900 md:text-[20px] sm:!text-[15px]">
+          <Heading
+            size="headingxl"
+            as="h3"
+            className="text-[24px] font-bold text-gray-900 md:text-[20px] sm:!text-[15px]"
+          >
             {data?.description}
           </Heading>
         </div>
@@ -28,7 +32,11 @@ export default function Main({ data }: { data?: any }) {
           alt="Teamprogrammer"
           className=" max-h-[700px] w-full object-cover"
         />
-        <Text size="textxl" as="p" className="w-[68%] text-[18px] font-normal leading-[200%] sm:text-[14px] text-gray-900 md:w-full">
+        <Text
+          size="textxl"
+          as="p"
+          className="w-[68%] text-[18px] font-normal leading-[200%] sm:text-[14px] text-gray-900 md:w-full"
+        >
           {data?.content}
         </Text>
       </div>
