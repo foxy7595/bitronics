@@ -96,7 +96,7 @@ export default function JobDescription({
             as="pre"
             binary
             delay={0.5}
-            className="w-full text-[36px] absolute top-0 left-0 font-bold leading-[53px] text-gray-900  md:text-[34px] sm:text-[32px]"
+            className="w-full !text-[36px] absolute top-0 left-0 font-bold leading-[53px] text-gray-900  md:!text-[34px] sm:!text-[32px]"
           >
             {jobTitle}
           </Heading>
@@ -105,7 +105,7 @@ export default function JobDescription({
         <Heading
           size="headingxl"
           as="pre"
-          className="w-full text-[36px] absolute top-0 left-0 font-bold leading-[53px] !text-transparent  md:text-[34px] sm:text-[32px]"
+          className="w-full !text-[36px] absolute top-0 left-0 font-bold leading-[53px] !text-transparent  md:!text-[34px] sm:!text-[32px]"
         >
           {jobTitle}
         </Heading>
@@ -114,14 +114,14 @@ export default function JobDescription({
         <div className="flex flex-col gap-7">
           {prop && (
             <div className="flex flex-col items-start gap-6">
-              <Heading as="h6" className="text-[18px] font-bold text-gray-900">
+              <Heading as="h6" className="!text-[18px] font-bold text-gray-900">
                 {prop}
               </Heading>
 
               {requiredSkills && (
                 <Heading
                   as="p"
-                  className="text-[16px] font-normal text-gray-900"
+                  className="!text-[16px] font-normal text-gray-900"
                 >
                   {requiredSkills}
                 </Heading>
@@ -130,24 +130,24 @@ export default function JobDescription({
           )}
           <div ref={ref}></div>
           <div className="flex flex-col items-start gap-5">
-            <Heading as="h6" className="text-[18px] font-bold text-gray-900">
+            <Heading as="h6" className="!text-[18px] font-bold text-gray-900">
               {prop1}
             </Heading>
             <Heading
               as="p"
-              className="w-full text-[16px] font-normal leading-[200%] text-gray-900"
+              className="w-full !text-[16px] font-normal leading-[200%] text-gray-900"
             >
               {candidateDescription}
             </Heading>
           </div>
 
           <div className="flex flex-col items-start gap-5">
-            <Heading as="h6" className="text-[18px] font-bold text-gray-900">
+            <Heading as="h6" className="!text-[18px] font-bold text-gray-900">
               {prop2}
             </Heading>
             <Heading
               as="p"
-              className="text-[16px] font-normal leading-[200%] text-gray-900"
+              className="!text-[16px] font-normal leading-[200%] text-gray-900"
             >
               {jobResponsibilities}
             </Heading>
@@ -156,7 +156,7 @@ export default function JobDescription({
         <div className="flex items-center justify-end gap-[21px]">
           <Heading
             as="h6"
-            className="text-[18px] font-bold text-gray-900 underline"
+            className="!text-[18px] font-bold text-gray-900 underline"
           >
             {entryTitle}
           </Heading>

@@ -24,7 +24,7 @@ export default function RecruitPage() {
         <div className="flex flex-col gap-[60px] sm:gap-[30px]">
           <Heading
             as="p"
-            className="text-[16px] font-normal leading-[200%] text-black-900"
+            className="!text-[16px] font-normal leading-[200%] text-black-900"
           >
             <>
               Bitronicsは、常に革新的で情熱的なメンバーを歓迎します。
@@ -330,7 +330,7 @@ export default function RecruitPage() {
           <Heading
             size="headingmd"
             as="h5"
-            className="mt-[50px] text-[20px] font-semibold leading-[200%] text-black-900"
+            className="mt-[50px] !text-[20px] font-semibold leading-[200%] text-black-900"
           >
             <>
               Bitronicsは、個々の能力を尊重し、多様性を重視する採用を行っております。

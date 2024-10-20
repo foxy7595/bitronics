@@ -104,7 +104,7 @@ export default function Services({
               as="h2"
               textAnimate
               delay={200}
-              className="absolute right-0 md:right-8 top-[20%] m-auto w-[4%] text-[32px] font-bold leading-[38px] text-gray-900  sm:leading-normal sm:text-[27px]"
+              className="absolute right-0 md:right-8 top-[20%] m-auto w-[4%] text-[32px] font-bold leading-[38px] text-gray-900  sm:leading-normal sm:!text-[27px]"
             >
               {headingText}
             </Heading>
@@ -116,7 +116,7 @@ export default function Services({
               as="pre"
               binary={true}
               delay={200}
-              className={` absolute   left-0 top-3 m-auto w-[68%] font-urbanist text-[90px] font-bold leading-[108px] sm:leading-[50px] md:leading-[74px] tracking-[2.70px] text-light_blue-a200 sm:w-[68%] md:text-[70px] sm:text-[40px]`}
+              className={` absolute  sm:text-wrap  left-0 ${props.modelPath === "/models/service-3.glb" ? "!-top-20 md:!top-2 sm:!top-3" : "top-3"}  m-auto w-[68%] font-urbanist !text-[90px] font-bold leading-[108px] sm:leading-[50px] md:leading-[74px] tracking-[2.70px] text-light_blue-a200 sm:w-[68%] md:!text-[70px] sm:!text-[40px]`}
             >
               {systemText}
             </Heading>
@@ -127,7 +127,7 @@ export default function Services({
               as="pre"
               binary={true}
               delay={200}
-              className="absolute bottom-0 !z-40 not-italic right-px m-auto   !font-trirong text-[48px] font-semibold  leading-[70px] tracking-[1.44px] text-light_blue-a200  sm:text-[16px] sm:scale-[0.8] transform origin-top-right  sm:leading-[50px] "
+              className="absolute -bottom-4 sm:-bottom-10 !z-40 not-italic right-px m-auto   !font-trirong !text-[48px] font-semibold  leading-[70px] tracking-[1.44px] text-light_blue-a200  sm:!text-[20px] sm:scale-[0.8] transform origin-top-right sm:text-right  sm:!leading-[40px] "
             >
               {descriptionText}
             </Heading>

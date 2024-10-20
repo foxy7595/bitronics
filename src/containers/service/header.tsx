@@ -53,7 +53,7 @@ const MissionHeader: React.FC = () => {
                         <Heading
                             size="headinglg"
                             as="h1"
-                            className="font-notosanscjkjp relative z-40 text-[14px] font-bold !text-gray-100"
+                            className="font-notosanscjkjp relative z-40 !text-[14px] font-bold !text-gray-100"
                         >
                             Home
                         </Heading>
@@ -61,7 +61,7 @@ const MissionHeader: React.FC = () => {
                 </BreadcrumbItem>
                 <BreadcrumbItem isCurrentPage>
                     <BreadcrumbLink href="#" as={Link}>
-                        <Heading size="headingxs" as="h2" className="font-notosanscjkjp text-[14px] font-bold text-gray-900">
+                        <Heading size="headingxs" as="h2" className="font-notosanscjkjp !text-[14px] font-bold text-gray-900">
                             Service
                         </Heading>
                     </BreadcrumbLink>

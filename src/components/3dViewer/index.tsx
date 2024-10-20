@@ -108,10 +108,12 @@ function Viewer3D({
 
     const scene = sceneRef.current;
 
+    const _height = containerRef.current.clientHeight
+
     // Create a perspective camera
     const camera = new THREE.PerspectiveCamera(
       75,
-      containerRef.current.clientWidth / containerRef.current.clientHeight,
+      containerRef.current.clientWidth / _height,
       1,
       800
     );
@@ -121,7 +123,7 @@ function Viewer3D({
     const renderer = new THREE.WebGLRenderer({ alpha: true });
     renderer.setSize(
       containerRef.current.clientWidth,
-      containerRef.current.clientHeight
+      _height
     );
     containerRef.current.appendChild(renderer.domElement);
     rendererRef.current = renderer;
@@ -140,6 +142,14 @@ function Viewer3D({
       modelPath,
       (gltf) => {
         const model = gltf.scene;
+        if (modelPath === "/models/service-2.glb") {
+          model.position.x = camera.position.x - 1;
+        }
+        else if (modelPath === "/models/service-3.glb") {
+          model.position.y = camera.position.y - 2;
+        }
+
+
         scene.add(model);
 
         // Add white color to the model
@@ -148,6 +158,8 @@ function Viewer3D({
         //     child.material.color.setHex(0xFFFFFF); // Set color to white
         //   }
         // });
+
+
 
         const controls = new OrbitControls(camera, renderer.domElement);
         controlsRef.current = controls;
@@ -165,6 +177,7 @@ function Viewer3D({
 
         camera.position.z = 8;
 
+
         // Scale the model based on the modelPath
         if (modelPath === "/models/service-3.glb") {
           model.scale.set(1.6, 1.6, 1.6);
@@ -177,16 +190,16 @@ function Viewer3D({
             modelPath === "/models/service-2.glb"
               ? 1.05
               : modelPath === "/models/service-3.glb"
-              ? 1
-              : 1,
+                ? 1
+                : 1,
             0
           ),
           Math.PI
         );
         camera.position.applyAxisAngle(
           new THREE.Vector3(
-            modelPath === "/models/service-2.glb" ? 0.6 : 1,
-            0,
+            modelPath === "/models/service-2.glb" ? 0.5 : 1,
+            modelPath === "/models/service-3.glb" ? 1 : 0,
             0
           ),
           Math.PI / 8
@@ -278,20 +291,19 @@ function Viewer3D({
   };
 
   return (
-    <div className=" sm:h-[calc(100vw-32px)] md:h-[calc(100vw+100px)] md:w-full md:max-h-[620px] max-h-none sm:w-full">
+    <div className=" sm:h-[calc(100vw-32px)] md:h-[calc(100vw+100px)] md:w-full md:max-h-[620px]  max-h-none sm:w-full">
       <div
         ref={containerRef}
-        className={`${
-          modelPath === "/models/service-2.glb"
-            ? "ml-8 "
-            : modelPath === "/models/service-3.glb"
-            ? "ml-[-40px] sm:ml-[-40px] pt-[90px] "
+        className={`${modelPath === "/models/service-2.glb"
+          ? "ml-0 "
+          : modelPath === "/models/service-3.glb"
+            ? "ml-[-170px] sm:ml-[-100px]  "
             : ""
-        }   transform origin-top-left`}
+          }   transform origin-top-left`}
         style={{
-          width: `${720}px`,
-          height: `${620}px`,
-          transform: `scale(${mobileRatio})`,
+          width: `${modelPath === "/models/service-3.glb" ? 900 : 720}px`,
+          height: `${modelPath === "/models/service-3.glb" ? 680 : 620}px`,
+          transform: `scale(${mobileRatio + 0.03})`,
         }}
       />
     </div>

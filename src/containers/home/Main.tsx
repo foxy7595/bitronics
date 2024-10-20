@@ -29,7 +29,7 @@ const Main: React.FC = () => {
                 as="h1"
                 textAnimate
                 delay={1600}
-                className="w-[36px] self-center text-[12px] font-bold  leading-[38px] absolute right-[220px] text-gray-900 md:px-5 "
+                className="w-[36px] self-center !text-[36px] sm:!text-[32px] md:!text-[34px] font-bold  leading-[38px] absolute right-[220px] text-gray-900 md:px-5 "
               >
                 ビジネスを進化させよう
               </Heading>
@@ -39,7 +39,7 @@ const Main: React.FC = () => {
                 textAnimate
                 as="h2"
                 delay={700}
-                className="w-[36px] text-[36px] font-bold leading-[42px] text-gray-900 md:px-5 md:text-[34px]  absolute right-[170px]  sm:text-[32px]"
+                className="w-[36px] !text-[36px] font-bold leading-[42px] text-gray-900 md:px-5 md:!text-[34px]  absolute right-[170px]  sm:!text-[32px]"
               >
                 システム開発で
               </Heading>
@@ -48,7 +48,7 @@ const Main: React.FC = () => {
                 as="h3"
                 textAnimate
                 delay={0}
-                className="w-[36px] text-[36px] font-bold leading-[42px] text-gray-900 md:px-5 md:text-[34px] absolute right-[120px]  sm:text-[32px]"
+                className="w-[36px] !text-[36px] font-bold leading-[42px] text-gray-900 md:px-5 md:!text-[34px] absolute right-[120px]  sm:!text-[32px]"
               >
                 革新的な
               </Heading>
@@ -122,7 +122,7 @@ const Main: React.FC = () => {
               <Heading
                 size="headingxl"
                 as="h5"
-                className="text-center text-[36px] font-bold  text-gray-900 md:text-[36px] sm:text-[20px] sm:scale-90 whitespace-nowrap"
+                className="text-center !text-[36px] font-bold  text-gray-900 md:!text-[36px] sm:!text-[20px] sm:scale-90 whitespace-nowrap"
               >
                 <span className="block sm:hidden md:hidden">
                   {" "}
@@ -143,7 +143,7 @@ const Main: React.FC = () => {
                     size="heading3xl"
                     as="h6"
                     binary
-                    className="font-urbanist   text-[90px] absolute z-20 font-semibold tracking-[2.70px] text-light_blue-a200 md:text-[48px] text-center sm:mb-3"
+                    className="font-urbanist   !text-[90px] absolute z-20 font-semibold tracking-[2.70px] text-light_blue-a200 md:!text-[48px] text-center sm:mb-3"
                   >
                     Digital Domain Specialist
                   </Heading>
@@ -151,7 +151,7 @@ const Main: React.FC = () => {
                 <Heading
                   size="heading3xl"
                   as="h6"
-                  className={`font-urbanist !text-transparent  text-[90px] relative z-20 font-semibold tracking-[2.70px]  md:text-[48px] text-center sm:mb-3`}
+                  className={`font-urbanist !text-transparent  !text-[90px] relative z-20 font-semibold tracking-[2.70px]  md:!text-[48px] text-center sm:mb-3`}
                 >
                   Digital Domain Specialist
                 </Heading>

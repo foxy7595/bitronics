@@ -35,7 +35,7 @@ export default function Footer({ ...props }: Props) {
                     <Heading
                       size="texts"
                       as="p"
-                      className="font-urbanist text-[13px] font-medium tracking-[0.39px] text-indigo-100"
+                      className="font-urbanist !text-[13px] font-medium tracking-[0.39px] text-indigo-100"
                     >
                       Service
                     </Heading>
@@ -58,14 +58,14 @@ export default function Footer({ ...props }: Props) {
                 <div className="flex flex-wrap items-center gap-5 sm:flex-col sm:items-start sm:gap-2">
                   <Heading
                     as="h6"
-                    className="text-[18px] font-bold text-gray-900"
+                    className="!text-[18px] font-bold text-gray-900"
                   >
                     企業理念
                   </Heading>
                   <Heading
                     size="texts"
                     as="p"
-                    className="font-urbanist text-[13px] font-medium tracking-[0.39px] text-indigo-100"
+                    className="font-urbanist !text-[13px] font-medium tracking-[0.39px] text-indigo-100"
                   >
                     Misson
                   </Heading>
@@ -75,14 +75,14 @@ export default function Footer({ ...props }: Props) {
                 <div className="flex flex-wrap items-center gap-5 sm:flex-col sm:items-start sm:gap-2">
                   <Heading
                     as="h6"
-                    className="text-[18px] font-bold text-gray-900"
+                    className="!text-[18px] font-bold text-gray-900"
                   >
                     制作実績
                   </Heading>
                   <Heading
                     size="texts"
                     as="p"
-                    className="font-urbanist text-[13px] font-medium tracking-[0.39px] text-indigo-100"
+                    className="font-urbanist !text-[13px] font-medium tracking-[0.39px] text-indigo-100"
                   >
                     Works
                   </Heading>
@@ -94,14 +94,14 @@ export default function Footer({ ...props }: Props) {
               <Link href="/about"> <div className="flex flex-wrap items-center gap-5 sm:flex-col sm:items-start sm:gap-2">
                 <Heading
                   as="h6"
-                  className="text-[18px] font-bold text-gray-900"
+                  className="!text-[18px] font-bold text-gray-900"
                 >
                   会社概要
                 </Heading>
                 <Heading
                   size="texts"
                   as="p"
-                  className="font-urbanist text-[13px] font-medium tracking-[0.39px] text-indigo-100"
+                  className="font-urbanist !text-[13px] font-medium tracking-[0.39px] text-indigo-100"
                 >
                   About
                 </Heading>
@@ -111,14 +111,14 @@ export default function Footer({ ...props }: Props) {
                 <div className="flex flex-wrap items-center gap-5 sm:flex-col sm:items-start sm:gap-2">
                   <Heading
                     as="h6"
-                    className="text-[18px] font-bold text-gray-900"
+                    className="!text-[18px] font-bold text-gray-900"
                   >
                     採用情報
                   </Heading>
                   <Heading
                     size="texts"
                     as="p"
-                    className="font-urbanist text-[13px] font-medium tracking-[0.39px] text-indigo-100 sm:flex-col sm:items-start sm:gap-2"
+                    className="font-urbanist !text-[13px] font-medium tracking-[0.39px] text-indigo-100 sm:flex-col sm:items-start sm:gap-2"
                   >
                     Recruit
                   </Heading>
@@ -128,14 +128,14 @@ export default function Footer({ ...props }: Props) {
                 <div className="flex flex-wrap items-center gap-5 sm:flex-col sm:items-start sm:gap-2">
                   <Heading
                     as="h6"
-                    className="text-[18px] font-bold text-gray-900"
+                    className="!text-[18px] font-bold text-gray-900"
                   >
                     お問い合わせ
                   </Heading>
                   <Heading
                     size="texts"
                     as="p"
-                    className="font-urbanist text-[13px] font-medium tracking-[0.39px] text-indigo-100"
+                    className="font-urbanist !text-[13px] font-medium tracking-[0.39px] text-indigo-100"
                   >
                     Contact
                   </Heading>
@@ -145,7 +145,7 @@ export default function Footer({ ...props }: Props) {
                 <div className="flex  items-center gap-5 sm:flex-col sm:items-start sm:gap-2">
                   <Heading
                     as="h6"
-                    className="text-[18px] font-bold text-gray-900 whitespace-nowrap"
+                    className="!text-[18px] font-bold text-gray-900 whitespace-nowrap"
                   >
                     プライバシーポリシー
                   </Heading>
@@ -153,7 +153,7 @@ export default function Footer({ ...props }: Props) {
                     <Heading
                       size="texts"
                       as="p"
-                      className="font-urbanist text-[13px] font-medium tracking-[0.39px] text-indigo-100"
+                      className="font-urbanist !text-[13px] font-medium tracking-[0.39px] text-indigo-100"
                     >
                       Privacy
                     </Heading>
@@ -166,7 +166,7 @@ export default function Footer({ ...props }: Props) {
         <Text
           size="textxs"
           as="p"
-          className="text-[12px] font-normal text-gray-900"
+          className="!text-[12px] font-normal text-gray-900"
         >
           All rights reserved 2024 © Bitronics
         </Text>

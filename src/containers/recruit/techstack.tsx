@@ -33,7 +33,7 @@ export default function TechStack({ ...props }: Props) {
         <div key={index} className="flex items-center cursor-pointer gap-5" onClick={() => handleScroll(item.id)}>
           <Heading
             as="h6"
-            className="text-[18px] font-medium text-gray-900 underline sm:text-[15px] whitespace-nowrap"
+            className="!text-[18px] font-medium text-gray-900 underline sm:!text-[15px] whitespace-nowrap"
           >
             <div dangerouslySetInnerHTML={{ __html: item.title }} />
           </Heading>

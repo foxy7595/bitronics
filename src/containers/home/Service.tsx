@@ -72,14 +72,14 @@ const Service: React.FC<ServiceProps> = ({ }) => {
         <Heading
           size="headingxl"
           as="h2"
-          className="font-urbanist !text-[#1565C0] text-[36px] font-extrabold tracking-[1.08px] text-blue-800 md:text-[34px] sm:text-[24px]"
+          className="font-urbanist !text-[#1565C0] !text-[36px] font-extrabold tracking-[1.08px] text-blue-800 md:!text-[34px] sm:!text-[24px]"
         >
           Service
         </Heading>
         <Heading
           size="headingmd"
           as="h3"
-          className="text-[24px] sm:text-[16px] font-bold text-gray-900 md:text-[22px]"
+          className="!text-[24px] sm:!text-[16px] font-bold text-gray-900 md:!text-[22px]"
         >
           ビジネスを加速するソリューション
         </Heading>
