@@ -175,6 +175,9 @@ function Viewer3D({
         controls.enableZoom = false;
         controls.enablePan = false;
 
+        // Disable user rotation
+        controls.enableRotate = false;
+
         camera.position.z = 8;
 
 
