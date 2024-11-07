@@ -10,6 +10,7 @@ import Access from "./access";
 import useIsMobile from "@/hooks/useIsMobile";
 import HeadingAnimation from "../headingAnimation";
 import { useInView } from "react-hook-inview";
+import SlideV2 from "./slidev2";
 
 export default function ServicePage() {
   const isMobile = useIsMobile();
@@ -95,7 +96,8 @@ export default function ServicePage() {
         </Heading>
 
         <div className="w-full relative overflow-hidden ">
-          {isMobile ? <Slide slidesPerView={1} /> : <Slide slidesPerView={3} />}
+          {/* {isMobile ? <Slide slidesPerView={1} /> : <Slide slidesPerView={3} />} */}
+          <SlideV2 />
         </div>
         <Profile />
         <Access />
