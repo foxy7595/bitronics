@@ -56,7 +56,7 @@ const MissionHeader: React.FC = () => {
             <Heading
               size="headingxs"
               as="h1"
-              className="font-notosanscjkjp text-[14px] relative z-40 font-bold !text-gray-100"
+              className="font-notosanscjkjp !text-[14px] relative z-40 font-bold !text-gray-100"
             >
               Home
             </Heading>
@@ -67,7 +67,7 @@ const MissionHeader: React.FC = () => {
             <Heading
               size="headingxs"
               as="h2"
-              className="font-notosanscjkjp text-[14px] font-bold text-gray-900"
+              className="font-notosanscjkjp !text-[14px] font-bold text-gray-900"
             >
               Works
             </Heading>

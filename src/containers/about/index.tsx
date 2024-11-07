@@ -18,15 +18,13 @@ export default function ServicePage() {
     threshold: 0.9,
   });
 
-
-
   React.useEffect(() => {
     // Ensure the component is mounted before scrolling
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       setTimeout(() => {
         window.scrollTo({
           top: 0,
-          behavior: 'smooth'
+          behavior: "smooth",
         });
       }, 300);
     }
@@ -63,7 +61,9 @@ export default function ServicePage() {
                   binary
                   className="!text-[36px] !font-bold !font-notosanscjkjp sm:text-wrap leading-[53px] sm:leading-[34px] not-italic text-gray-900 md:!text-[28px] sm:!text-[20px]"
                 >
-                  {isMobile ? `Bitronicsはデジタル\nハイテクソリューションの\nリーディングカンパニーです` : `Bitronicsはデジタルハイテクソリューションの\nリーディングカンパニーです`}
+                  {isMobile
+                    ? `Bitronicsはデジタル\nハイテクソリューションの\nリーディングカンパニーです`
+                    : `Bitronicsはデジタルハイテクソリューションの\nリーディングカンパニーです`}
                 </Heading>
               )}
             </div>
@@ -78,7 +78,7 @@ export default function ServicePage() {
         </div>
         <Heading
           as="p"
-          className="w-[68%] text-[16px] font-normal leading-[200%] text-black-900 md:w-full"
+          className="w-[68%] !text-[16px] font-normal leading-[200%] text-black-900 md:w-full"
         >
           <>
             Bitronicsの強みは、先進のテクノロジーと深い専門知識に基づくシステム開発です。

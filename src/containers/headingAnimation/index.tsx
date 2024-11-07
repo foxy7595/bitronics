@@ -31,7 +31,7 @@ const HeadingAnimation: React.FC<{
           <Heading
             size="headinglg"
             as="h4"
-            className="font-notosanscjkjp text-[24px] font-bold text-gray-900 md:text-[22px] -mt-3 opacity-0 animate-fade-in"
+            className="font-notosanscjkjp !text-[24px] font-bold text-gray-900 md:!text-[18px] sm:!text-[15px] -mt-3 opacity-0 animate-fade-in"
           >
             {missionSubtitle}
           </Heading>

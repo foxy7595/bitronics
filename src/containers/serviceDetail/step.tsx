@@ -2,7 +2,6 @@ import { Heading } from "../../components";
 import React, { Suspense } from "react";
 import StepColumn from "./stepColumn";
 
-
 export default function Step({ data }: { data?: any }) {
   return (
     <div className="mt-[80px] mx-[100px] md:mx-6 sm:mx-4 sm:mt-8 flex ">
@@ -17,7 +16,12 @@ export default function Step({ data }: { data?: any }) {
         <div className=" flex w-full  flex-col gap-[30px] self-center md:ml-0 sm:gap-3">
           <Suspense fallback={<div>Loading feed...</div>}>
             {data?.step.map((d: any, index: number) => (
-              <StepColumn {...d} key={"liststepone" + index} index={index + 1} />
+              <StepColumn
+                {...d}
+                key={"liststepone" + index}
+                index={index + 1}
+                isLast={index === data?.step.length - 1}
+              />
             ))}
           </Suspense>
         </div>

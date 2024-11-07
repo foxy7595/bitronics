@@ -50,12 +50,13 @@ const Header: React.FC = () => {
       {isOpen !== 0 && (
         <div className=" relative z-40">
           <div
-            className={`absolute  bg-white-a700 pt-[30px] h-[calc(100vh_-_80px)]  ${isOpen == 2
-              ? " animate-hide-menu"
-              : isOpen == 1
+            className={`absolute  bg-white-a700 pt-[30px] h-[calc(100vh_-_80px)]  ${
+              isOpen == 2
+                ? " animate-hide-menu"
+                : isOpen == 1
                 ? "animate-show-menu"
                 : ""
-              } overflow-x-hidden overflow-y-auto  left-0 right-0 top-0 m-auto flex flex-1 flex-col items-center gap-[50px] sm:gap-[26px] px-14 md:px-5`}
+            } overflow-x-hidden overflow-y-auto  left-0 right-0 top-0 m-auto flex flex-1 flex-col items-center gap-[50px] sm:gap-[26px] px-14 md:px-5`}
           >
             <div className="container-xs relative z-20  animate-show-menu-item flex flex-col gap-[52px] sm:gap-[26px]">
               <div className="flex flex-col hover:opacity-70 transition-opacity duration-300 items-start gap-1">
@@ -205,7 +206,11 @@ const Header: React.FC = () => {
                   </Heading>
                 </div>
               </Link>
-              <div className="flex flex-wrap items-center gap-5">
+              <Link
+                href="/privacy"
+                className="flex flex-wrap items-center gap-5"
+                onClick={handleClose}
+              >
                 <Heading
                   size="headingxs"
                   as="h2"
@@ -213,15 +218,15 @@ const Header: React.FC = () => {
                 >
                   プライバシーポリシー
                 </Heading>
-                <Link href="Privacy" target="_blank" rel="noreferrer">
+                <div>
                   <Heading
                     as="p"
                     className="font-urbanist text-[20px] font-medium tracking-[0.60px] text-indigo-100"
                   >
                     Privacy
                   </Heading>
-                </Link>
-              </div>
+                </div>
+              </Link>
             </div>
 
             <img

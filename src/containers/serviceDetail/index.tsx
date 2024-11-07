@@ -10,41 +10,34 @@ import Step from "./step";
 import Images from "./images";
 
 export type ServicePageProps = {
-    slug: string;
-    data?: any;
+  slug: string;
+  data?: any;
 };
 
-
-
-
 export default function ServicePage({ slug, data }: ServicePageProps) {
+  React.useEffect(() => {
+    // Ensure the component is mounted before scrolling
+    if (typeof window !== "undefined") {
+      setTimeout(() => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }, 300);
+    }
+  }, []);
 
-    React.useEffect(() => {
-        // Ensure the component is mounted before scrolling
-        if (typeof window !== 'undefined') {
-            setTimeout(() => {
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-            }, 300);
-        }
-    }, []);
+  return (
+    <MainContainer>
+      <ServiceHeader slug={slug} />
 
-    return (
-        <MainContainer>
+      <Main data={data} />
 
-            <ServiceHeader slug={slug} />
+      <Images images={data.images || []} grid={data.grid} />
 
-            <Main data={data} />
+      <WhoItsFor data={data} />
 
-            <Images images={data.images || []} grid={data.grid} />
-
-            <WhoItsFor data={data} />
-
-            <Step data={data} />
-
-
-        </MainContainer>
-    );
+      <Step data={data} />
+    </MainContainer>
+  );
 }

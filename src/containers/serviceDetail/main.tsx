@@ -19,7 +19,7 @@ export default function Main({ data }: { data?: any }) {
           <Heading
             size="headingxl"
             as="h3"
-            className="text-[24px] font-bold text-gray-900 md:text-[20px] sm:!text-[15px]"
+            className="text-[24px] font-bold text-gray-900 md:!text-[18px] sm:!text-[15px]"
           >
             {data?.description}
           </Heading>
