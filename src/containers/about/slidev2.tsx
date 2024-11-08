@@ -24,7 +24,7 @@ const data = [
 export default function SlideV2() {
   return (
     <div className=" overflow-hidden  w-full">
-      <div className="w-full  flex gap-4 animate-slide-left-10 sm:animate-slide-left-5">
+      <div className=" flex gap-4 animate-slide-left-10 sm:animate-slide-left-5">
         {data.map((d, index) => (
           <img
             key={"about1" + index}
