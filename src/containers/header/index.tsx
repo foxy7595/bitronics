@@ -78,25 +78,69 @@ const Header: React.FC = () => {
                     </Heading>
                   </div>
                 </Link>
-                <Link
-                  href="/service"
-                  className="hover:opacity-70 transition-opacity duration-300"
-                  onClick={handleClose}
-                >
+                <div>
                   <Heading
                     as="h3"
                     className="text-[20px] sm:text-[16px] font-medium text-gray-900"
                   >
-                    <span className="block sm:hidden">
-                      システム開発事業 / 先端技術開発事業 / ソフトウェア品質保証
-                    </span>
+                    <div className="flex sm:hidden gap-1">
+                      <Link
+                        href="/service/03"
+                        className="hover:opacity-70 transition-opacity duration-300"
+                        onClick={handleClose}
+                      >
+                        {" "}
+                        システム開発事業{" "}
+                      </Link>{" "}
+                      /{" "}
+                      <Link
+                        href="/service/05"
+                        className="hover:opacity-70 transition-opacity duration-300"
+                        onClick={handleClose}
+                      >
+                        {" "}
+                        先端技術開発事業{" "}
+                      </Link>{" "}
+                      /{" "}
+                      <Link
+                        href="/service/09"
+                        className="hover:opacity-70 transition-opacity duration-300"
+                        onClick={handleClose}
+                      >
+                        {" "}
+                        ソフトウェア品質保証{" "}
+                      </Link>
+                    </div>
                     <span className="hidden sm:block">
-                      システム開発事業 <br />
-                      先端技術開発事業 <br />
-                      ソフトウェア品質保証
+                      <Link
+                        href="/service/03"
+                        className="hover:opacity-70 transition-opacity duration-300"
+                        onClick={handleClose}
+                      >
+                        {" "}
+                        システム開発事業{" "}
+                      </Link>{" "}
+                      <br />
+                      <Link
+                        href="/service/05"
+                        className="hover:opacity-70 transition-opacity duration-300"
+                        onClick={handleClose}
+                      >
+                        {" "}
+                        先端技術開発事業{" "}
+                      </Link>{" "}
+                      <br />
+                      <Link
+                        href="/service/09"
+                        className="hover:opacity-70 transition-opacity duration-300"
+                        onClick={handleClose}
+                      >
+                        {" "}
+                        ソフトウェア品質保証{" "}
+                      </Link>
                     </span>
                   </Heading>
-                </Link>
+                </div>
               </div>
               <Link
                 href="/mission"

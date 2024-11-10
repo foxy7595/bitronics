@@ -44,12 +44,55 @@ export default function Footer({ ...props }: Props) {
                     as="p"
                     className="!text-[14px] font-medium text-gray-900 whitespace-nowrap"
                   >
-                    <span className=" block sm:hidden md:block">
-                      システム開発事業 / 先端技術開発事業 / ソフトウェア品質保証
+                    <span className=" flex sm:hidden md:flex gap-1">
+                      <Link
+                        href="/service/03"
+                        className="hover:opacity-70 transition-opacity duration-300"
+                      >
+                        {" "}
+                        システム開発事業{" "}
+                      </Link>{" "}
+                      /{" "}
+                      <Link
+                        href="/service/05"
+                        className="hover:opacity-70 transition-opacity duration-300"
+                      >
+                        {" "}
+                        先端技術開発事業{" "}
+                      </Link>{" "}
+                      /{" "}
+                      <Link
+                        href="/service/09"
+                        className="hover:opacity-70 transition-opacity duration-300"
+                      >
+                        {" "}
+                        ソフトウェア品質保証{" "}
+                      </Link>
                     </span>
                     <span className=" hidden sm:block md:hidden">
-                      システム開発事業 <br /> 先端技術開発事業 <br />{" "}
-                      ソフトウェア品質保証
+                      <Link
+                        href="/service/03"
+                        className="hover:opacity-70 transition-opacity duration-300"
+                      >
+                        {" "}
+                        システム開発事業{" "}
+                      </Link>{" "}
+                      <br />
+                      <Link
+                        href="/service/05"
+                        className="hover:opacity-70 transition-opacity duration-300"
+                      >
+                        {" "}
+                        先端技術開発事業{" "}
+                      </Link>{" "}
+                      <br />
+                      <Link
+                        href="/service/09"
+                        className="hover:opacity-70 transition-opacity duration-300"
+                      >
+                        {" "}
+                        ソフトウェア品質保証{" "}
+                      </Link>
                     </span>
                   </Text>
                 </div>
@@ -90,22 +133,23 @@ export default function Footer({ ...props }: Props) {
               </Link>
             </div>
             <div className="flex w-[34%] flex-col gap-[30px] self-center md:w-full sm:flex-col sm:items-start sm:gap-2">
-
-              <Link href="/about"> <div className="flex flex-wrap items-center gap-5 sm:flex-col sm:items-start sm:gap-2">
-                <Heading
-                  as="h6"
-                  className="!text-[18px] font-bold text-gray-900"
-                >
-                  会社概要
-                </Heading>
-                <Heading
-                  size="texts"
-                  as="p"
-                  className="font-urbanist !text-[13px] font-medium tracking-[0.39px] text-indigo-100"
-                >
-                  About
-                </Heading>
-              </div>
+              <Link href="/about">
+                {" "}
+                <div className="flex flex-wrap items-center gap-5 sm:flex-col sm:items-start sm:gap-2">
+                  <Heading
+                    as="h6"
+                    className="!text-[18px] font-bold text-gray-900"
+                  >
+                    会社概要
+                  </Heading>
+                  <Heading
+                    size="texts"
+                    as="p"
+                    className="font-urbanist !text-[13px] font-medium tracking-[0.39px] text-indigo-100"
+                  >
+                    About
+                  </Heading>
+                </div>
               </Link>
               <Link href="/recruit">
                 <div className="flex flex-wrap items-center gap-5 sm:flex-col sm:items-start sm:gap-2">
@@ -171,6 +215,6 @@ export default function Footer({ ...props }: Props) {
           All rights reserved 2024 © Bitronics
         </Text>
       </div>
-    </footer >
+    </footer>
   );
 }
