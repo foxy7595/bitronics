@@ -19,7 +19,7 @@ type CheckboxProps = Omit<
   Partial<{
     className: string;
     name: string;
-    label: string;
+    label: string | React.ReactNode;
     id: string;
     onChange: Function;
     variant: keyof typeof variants;

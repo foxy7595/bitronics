@@ -94,11 +94,13 @@ export default function ServicePage() {
             信頼と協力のもと、お客様のビジネスに価値を提供し続けることをお約束します。
           </>
         </Heading>
+      </div>
 
-        <div className="w-full relative overflow-hidden ">
-          {/* {isMobile ? <Slide slidesPerView={1} /> : <Slide slidesPerView={3} />} */}
-          <SlideV2 />
-        </div>
+      <div className="w-full relative overflow-hidden  my-[100px] md:my-[75px]  sm:my-[50px] ">
+        {/* {isMobile ? <Slide slidesPerView={1} /> : <Slide slidesPerView={3} />} */}
+        <SlideV2 />
+      </div>
+      <div className="px-[100px] flex flex-col items-end gap-[100px] md:gap-[75px] md:px-5 sm:gap-[50px]">
         <Profile />
         <Access />
       </div>

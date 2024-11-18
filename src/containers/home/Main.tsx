@@ -128,7 +128,7 @@ const Main: React.FC = () => {
                   {" "}
                   Bitronicsはデジタル領域の専門家です
                 </span>
-                <span className="hidden sm:block md:block text-center">
+                <span className="hidden sm:block md:block text-center text-[16px]">
                   {" "}
                   Bitronics
                   <br />
@@ -136,8 +136,6 @@ const Main: React.FC = () => {
                 </span>
               </Heading>
               <div className="relative">
-
-
                 {inView && (
                   <Heading
                     size="heading3xl"

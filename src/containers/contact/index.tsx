@@ -11,6 +11,7 @@ import { Radio } from "@/components/Radio";
 import { RadioGroup } from "@/components/RadioGroup";
 import { TextArea } from "@/components/TextArea";
 import HeadingAnimation from "../headingAnimation";
+import Link from "next/link";
 
 export default function ContactPage() {
   const [require, setRequire] = useState<string>("");
@@ -47,14 +48,13 @@ export default function ContactPage() {
     console.log(data);
   };
 
-
   React.useEffect(() => {
     // Ensure the component is mounted before scrolling
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       setTimeout(() => {
         window.scrollTo({
           top: 0,
-          behavior: 'smooth'
+          behavior: "smooth",
         });
       }, 300);
     }
@@ -160,7 +160,7 @@ export default function ContactPage() {
                 onChange={setContact}
                 name="frameeighty"
                 placeholder={`ご依頼・ご相談などお問い合わせ内容の詳細をご記入ください`}
-                className="min-h-[136px] !outline-none active:outline-none focus:outline-none !border-none active:border-none  bg-[#F3F7F8] p-2.5 !text-[16px] placeholder:text-gray-200 text-gray-900"
+                className="min-h-[136px] !outline-none  active:outline-none focus:outline-none !border-none active:border-none  bg-[#F3F7F8] p-2.5 !text-[16px]  text-gray-900"
               />
             </div>
             <div className="flex flex-col gap-[30px] self-stretch">
@@ -255,7 +255,19 @@ export default function ContactPage() {
               </div>
               <CheckBox
                 name="個人情報保護方針の内容に同意す"
-                label="個人情報保護方針の内容に同意する"
+                label={
+                  <span>
+                    <span
+                      className="underline cursor-pointer"
+                      onClick={() => {
+                        window.open("/privacy", "_blank");
+                      }}
+                    >
+                      個人情報保護方針
+                    </span>
+                    の内容に同意する
+                  </span>
+                }
                 id="Data"
                 className="flex gap-5 py-1.5 items-center text-[16px] text-gray-900"
                 onChange={(e: boolean) => setAgree(e)}
