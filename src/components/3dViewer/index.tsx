@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
+import { RoomEnvironment } from "three/examples/jsm/environments/RoomEnvironment.js";
 
 function Viewer3D({
   modelPath,
@@ -122,16 +123,25 @@ function Viewer3D({
     // Create a WebGL renderer
     const renderer = new THREE.WebGLRenderer({ alpha: true });
     renderer.setSize(containerRef.current.clientWidth, _height);
+    // renderer.toneMappingExposure = 1;
+    // renderer.toneMapping = THREE.ACESFilmicToneMapping;
+
     containerRef.current.appendChild(renderer.domElement);
     rendererRef.current = renderer;
 
     // Add lighting
-    const light = new THREE.DirectionalLight(0xffffff, 0.5);
+    const light = new THREE.DirectionalLight(0xffffff, 1);
     light.position.set(10, 10, 10);
     scene.add(light);
 
     const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
     scene.add(ambientLight);
+
+    const pmremGenerator = new THREE.PMREMGenerator(renderer);
+    scene.environment = pmremGenerator.fromScene(
+      new RoomEnvironment(),
+      0.04
+    ).texture;
 
     // Load GLTF model
     const loader = new GLTFLoader();
@@ -139,6 +149,7 @@ function Viewer3D({
       modelPath,
       (gltf) => {
         const model = gltf.scene;
+
         if (modelPath === "/models/service-2.glb") {
           model.position.x = camera.position.x - 1;
         } else if (modelPath === "/models/service-3.glb") {
