@@ -108,7 +108,7 @@ function Viewer3D({
 
     const scene = sceneRef.current;
 
-    const _height = containerRef.current.clientHeight
+    const _height = containerRef.current.clientHeight;
 
     // Create a perspective camera
     const camera = new THREE.PerspectiveCamera(
@@ -121,19 +121,16 @@ function Viewer3D({
 
     // Create a WebGL renderer
     const renderer = new THREE.WebGLRenderer({ alpha: true });
-    renderer.setSize(
-      containerRef.current.clientWidth,
-      _height
-    );
+    renderer.setSize(containerRef.current.clientWidth, _height);
     containerRef.current.appendChild(renderer.domElement);
     rendererRef.current = renderer;
 
     // Add lighting
-    const light = new THREE.DirectionalLight(0xffffff, 1);
+    const light = new THREE.DirectionalLight(0xffffff, 0.5);
     light.position.set(10, 10, 10);
     scene.add(light);
 
-    const ambientLight = new THREE.AmbientLight(0xffffff, 1);
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
     scene.add(ambientLight);
 
     // Load GLTF model
@@ -144,11 +141,9 @@ function Viewer3D({
         const model = gltf.scene;
         if (modelPath === "/models/service-2.glb") {
           model.position.x = camera.position.x - 1;
-        }
-        else if (modelPath === "/models/service-3.glb") {
+        } else if (modelPath === "/models/service-3.glb") {
           model.position.y = camera.position.y - 2;
         }
-
 
         scene.add(model);
 
@@ -158,8 +153,6 @@ function Viewer3D({
         //     child.material.color.setHex(0xFFFFFF); // Set color to white
         //   }
         // });
-
-
 
         const controls = new OrbitControls(camera, renderer.domElement);
         controlsRef.current = controls;
@@ -180,7 +173,6 @@ function Viewer3D({
 
         camera.position.z = 8;
 
-
         // Scale the model based on the modelPath
         if (modelPath === "/models/service-3.glb") {
           model.scale.set(1.6, 1.6, 1.6);
@@ -193,8 +185,8 @@ function Viewer3D({
             modelPath === "/models/service-2.glb"
               ? 1.05
               : modelPath === "/models/service-3.glb"
-                ? 1
-                : 1,
+              ? 1
+              : 1,
             0
           ),
           Math.PI
@@ -297,12 +289,13 @@ function Viewer3D({
     <div className=" sm:h-[calc(100vw-32px)] md:h-[calc(100vw+100px)] md:w-full md:max-h-[620px]  max-h-none sm:w-full">
       <div
         ref={containerRef}
-        className={`${modelPath === "/models/service-2.glb"
-          ? "ml-0 "
-          : modelPath === "/models/service-3.glb"
+        className={`${
+          modelPath === "/models/service-2.glb"
+            ? "ml-0 "
+            : modelPath === "/models/service-3.glb"
             ? "ml-[-170px] sm:ml-[-100px]  "
             : ""
-          }   transform origin-top-left`}
+        }   transform origin-top-left`}
         style={{
           width: `${modelPath === "/models/service-3.glb" ? 900 : 720}px`,
           height: `${modelPath === "/models/service-3.glb" ? 680 : 620}px`,
