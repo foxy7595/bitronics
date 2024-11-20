@@ -163,7 +163,7 @@ const Header: React.FC = () => {
                   </Heading>
                 </div>
               </Link>
-              <Link
+              {/* <Link
                 href="/work"
                 className="hover:opacity-70 transition-opacity duration-300"
                 onClick={handleClose}
@@ -183,7 +183,7 @@ const Header: React.FC = () => {
                     Works
                   </Heading>
                 </div>
-              </Link>
+              </Link> */}
             </div>
 
             <div className="container-xs pb-5 relative z-20 animate-show-menu-item flex flex-col gap-[50px] sm:gap-[26px]">
