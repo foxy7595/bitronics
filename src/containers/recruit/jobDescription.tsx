@@ -1,6 +1,7 @@
 "use client";
 
 import { Heading, Button, Img } from "@/components";
+import Link from "next/link";
 import React from "react";
 import { useInView } from "react-hook-inview";
 
@@ -158,7 +159,7 @@ export default function JobDescription({
             as="h6"
             className="!text-[18px] font-bold text-gray-900 underline"
           >
-            {entryTitle}
+            <Link href={`/contact`}>{entryTitle}</Link>
           </Heading>
           <Button className="flex h-[40px] w-[40px] items-center justify-center rounded-[20px] group hover:bg-[#fff] hover:border-gray-900 hover:border hover:border-solid border-gray-900 bg-gray-900 px-3">
             <Img
