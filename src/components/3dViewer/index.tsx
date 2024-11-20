@@ -115,22 +115,26 @@ function Viewer3D({
     const camera = new THREE.PerspectiveCamera(
       75,
       containerRef.current.clientWidth / _height,
-      1,
-      800
+      0.1,
+      5000
     );
     cameraRef.current = camera;
 
     // Create a WebGL renderer
-    const renderer = new THREE.WebGLRenderer({ alpha: true });
+    const renderer = new THREE.WebGLRenderer({
+      alpha: true,
+      antialias: true,
+      precision: "highp",
+    });
     renderer.setSize(containerRef.current.clientWidth, _height);
-    // renderer.toneMappingExposure = 1;
-    // renderer.toneMapping = THREE.ACESFilmicToneMapping;
+    renderer.toneMappingExposure = 1;
+    renderer.toneMapping = THREE.ACESFilmicToneMapping;
 
     containerRef.current.appendChild(renderer.domElement);
     rendererRef.current = renderer;
 
     // Add lighting
-    const light = new THREE.DirectionalLight(0xffffff, 1);
+    const light = new THREE.DirectionalLight(0xffffff, 0.5);
     light.position.set(10, 10, 10);
     scene.add(light);
 
@@ -138,10 +142,11 @@ function Viewer3D({
     scene.add(ambientLight);
 
     const pmremGenerator = new THREE.PMREMGenerator(renderer);
-    scene.environment = pmremGenerator.fromScene(
-      new RoomEnvironment(),
-      0.04
-    ).texture;
+    const texture = pmremGenerator.fromScene(new RoomEnvironment(), 1).texture;
+
+    texture.minFilter = THREE.LinearMipMapLinearFilter;
+    texture.magFilter = THREE.LinearFilter;
+    scene.environment = texture;
 
     // Load GLTF model
     const loader = new GLTFLoader();
