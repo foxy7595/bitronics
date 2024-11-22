@@ -151,7 +151,7 @@ export default function Footer({ ...props }: Props) {
                   </Heading>
                 </div>
               </Link>
-              <Link href="/recruit">
+              {/* <Link href="/recruit">
                 <div className="flex flex-wrap items-center gap-5 sm:flex-col sm:items-start sm:gap-2">
                   <Heading
                     as="h6"
@@ -167,7 +167,7 @@ export default function Footer({ ...props }: Props) {
                     Recruit
                   </Heading>
                 </div>
-              </Link>
+              </Link> */}
               <Link href="/contact">
                 <div className="flex flex-wrap items-center gap-5 sm:flex-col sm:items-start sm:gap-2">
                   <Heading

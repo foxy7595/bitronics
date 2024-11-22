@@ -208,7 +208,7 @@ const Header: React.FC = () => {
                   </Heading>
                 </div>
               </Link>
-              <Link
+              {/* <Link
                 href="/recruit"
                 className="hover:opacity-70 transition-opacity duration-300"
                 onClick={handleClose}
@@ -228,7 +228,7 @@ const Header: React.FC = () => {
                     Recruit
                   </Heading>
                 </div>
-              </Link>
+              </Link> */}
               <Link
                 href="/contact"
                 className="hover:opacity-70 transition-opacity duration-300"
