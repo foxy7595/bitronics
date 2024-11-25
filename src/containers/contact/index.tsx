@@ -160,7 +160,7 @@ export default function ContactPage() {
                 onChange={setContact}
                 name="frameeighty"
                 placeholder={`ご依頼・ご相談などお問い合わせ内容の詳細をご記入ください`}
-                className="min-h-[136px] !outline-none  active:outline-none focus:outline-none !border-none active:border-none  bg-[#F3F7F8] p-2.5 !text-[16px]  text-gray-900"
+                className="min-h-[136px] !outline-none  active:outline-none focus:outline-none !border-none active:border-none  bg-[#F3F7F8] p-2.5 !text-[16px] placeholder:!text-[16px]  text-gray-900"
               />
             </div>
             <div className="flex flex-col gap-[30px] self-stretch">
@@ -175,7 +175,7 @@ export default function ContactPage() {
                 <Input
                   name="company"
                   placeholder={`株式会社 Bitronics`}
-                  className="flex h-[44px] items-center justify-center self-stretch text-[16px] text-blue_gray-200"
+                  className="flex h-[44px] items-center justify-center self-stretch text-[16px] text-blue_gray-200 placeholder:!text-[16px]"
                   classNameInput=" bg-[#F3F7F8] px-2.5 "
                   onChange={(e) => setCompany(e.target.value)}
                 />
@@ -197,14 +197,14 @@ export default function ContactPage() {
                   <Input
                     name="firstName"
                     placeholder={`山田`}
-                    className="flex h-[44px] w-full items-center justify-center   text-[16px] text-blue_gray-200"
+                    className="flex h-[44px] w-full items-center justify-center   text-[16px] text-blue_gray-200 placeholder:!text-[16px]"
                     classNameInput="px-2.5 bg-[#F3F7F8]"
                     onChange={(e) => setFirstName(e.target.value)}
                   />
                   <Input
                     name="lastName"
                     placeholder={`太郎`}
-                    className="flex h-[44px] w-full items-center justify-center  text-[16px] text-blue_gray-200"
+                    className="flex h-[44px] w-full items-center justify-center  text-[16px] text-blue_gray-200 placeholder:!text-[16px]"
                     classNameInput="px-2.5 bg-[#F3F7F8]"
                     onChange={(e) => setLastName(e.target.value)}
                   />
@@ -227,7 +227,7 @@ export default function ContactPage() {
                   type="email"
                   name="email"
                   placeholder={`example@bitronics.io`}
-                  className="flex h-[44px] items-center justify-center  text-[16px] text-blue_gray-200"
+                  className="flex h-[44px] items-center justify-center  text-[16px] text-blue_gray-200 placeholder:!text-[16px]"
                   classNameInput="px-2.5 bg-[#F3F7F8]"
                   onChange={(e) => setEmail(e.target.value)}
                 />
@@ -248,7 +248,7 @@ export default function ContactPage() {
                 <Input
                   name="phone"
                   placeholder={`00-0000-0000`}
-                  className="flex h-[44px] items-center justify-center text-[16px] text-blue_gray-200"
+                  className="flex h-[44px] items-center justify-center text-[16px] text-blue_gray-200 placeholder:!text-[16px]"
                   classNameInput="px-2.5 bg-[#F3F7F8]"
                   onChange={(e) => setPhone(e.target.value)}
                 />

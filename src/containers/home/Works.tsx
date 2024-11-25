@@ -57,7 +57,7 @@ export default function Works() {
           <Heading
             size="headingmd"
             as="h3"
-            className="text-[24px] font-bold leading-[200%] text-gray-900 md:text-[22px]"
+            className="!text-[24px] font-bold leading-[200%] text-gray-900 md:!text-[22px] sm:!text-[16px]"
           >
             <>
               Bitronicsが先進テクノロジーで課題に挑み
