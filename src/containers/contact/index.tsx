@@ -160,7 +160,7 @@ export default function ContactPage() {
                 onChange={setContact}
                 name="frameeighty"
                 placeholder={`ご依頼・ご相談などお問い合わせ内容の詳細をご記入ください`}
-                className="min-h-[136px] !outline-none  active:outline-none focus:outline-none !border-none active:border-none  bg-[#F3F7F8] p-2.5 !text-[16px] placeholder:!text-[16px]  text-gray-900 placeholder:text-[#AABAC8]"
+                className="min-h-[136px] !outline-none  active:outline-none focus:outline-none !border-none active:border-none  bg-[#F3F7F8] p-2.5 !text-[16px] placeholder:!text-[16px]  text-gray-900 !placeholder:text-[#AABAC8]"
               />
             </div>
             <div className="flex flex-col gap-[30px] self-stretch">
