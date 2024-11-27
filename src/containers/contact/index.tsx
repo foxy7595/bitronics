@@ -160,7 +160,7 @@ export default function ContactPage() {
                 onChange={setContact}
                 name="frameeighty"
                 placeholder={`ご依頼・ご相談などお問い合わせ内容の詳細をご記入ください`}
-                className="min-h-[136px] !outline-none  active:outline-none focus:outline-none !border-none active:border-none  bg-[#F3F7F8] p-2.5 !text-[16px] placeholder:!text-[16px]  text-gray-900 !placeholder:text-[#AABAC8]"
+                className="min-h-[136px] !outline-none  active:outline-none focus:outline-none !border-none active:border-none  bg-[#F3F7F8] p-2.5 !text-[16px] placeholder:!text-[16px]  !text-gray-900 !placeholder:text-[#AABAC8]"
               />
             </div>
             <div className="flex flex-col gap-[30px] self-stretch">
@@ -168,7 +168,7 @@ export default function ContactPage() {
                 <Heading
                   size="headings"
                   as="h6"
-                  className="text-[16px] font-bold text-gray-900"
+                  className="text-[16px] font-bold !text-gray-900"
                 >
                   会社名
                 </Heading>
@@ -182,7 +182,7 @@ export default function ContactPage() {
               </div>
               <div className="flex flex-col gap-5">
                 <div className="flex items-center gap-5">
-                  <Button className="flex h-[26px] min-w-[44px] flex-row items-center justify-center bg-light_blue-a200 px-2.5 text-center text-[12px] text-gray-900">
+                  <Button className="flex h-[26px] min-w-[44px] flex-row items-center justify-center bg-light_blue-a200 px-2.5 text-center text-[12px] !text-gray-900">
                     必須
                   </Button>
                   <Heading
