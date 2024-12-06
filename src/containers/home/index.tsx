@@ -9,19 +9,17 @@ import Main from "./Main";
 import Service from "./Service";
 
 export default function HomePage() {
-
   React.useEffect(() => {
     // Ensure the component is mounted before scrolling
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       setTimeout(() => {
         window.scrollTo({
           top: 0,
-          behavior: 'smooth'
+          behavior: "smooth",
         });
       }, 300);
     }
   }, []);
-
 
   return (
     <MainContainer>
@@ -87,16 +85,16 @@ export default function HomePage() {
         </div>
       </div>
 
-      <div className="relative mt-[-2px] flex flex-col items-end self-stretch mb-8 ">
-        <Img
+      {/* <div className="relative mt-[-2px] flex flex-col items-end self-stretch mb-8 "> */}
+      {/* <Img
           src="img_vector_blue_800_632x316.png"
           width={316}
           height={632}
           alt="Vector"
           className="h-[632px]  w-[22%] sm:w-[40%] md:w-[30%] object-contain mr-[-52px]"
-        />
-        <Works />
-      </div>
+        /> */}
+      {/* <Works /> */}
+      {/* </div> */}
     </MainContainer>
   );
 }
