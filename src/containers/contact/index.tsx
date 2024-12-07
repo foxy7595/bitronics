@@ -14,6 +14,7 @@ import HeadingAnimation from "../headingAnimation";
 import { IoClose } from "react-icons/io5";
 
 import Modal from "react-modal";
+import { useRouter } from "next/navigation";
 
 const customStyles = {
   content: {
@@ -51,12 +52,25 @@ export default function ContactPage() {
 
   const [modalIsOpen, setIsOpen] = useState(false);
 
+  const router = useRouter();
+
   function openModal() {
     setIsOpen(true);
   }
 
   function closeModal() {
     setIsOpen(false);
+    setIsSubmit(false);
+    setRequire("");
+    setContact("");
+    setCompany("");
+    setFirstName("");
+    setLastName("");
+    setEmail("");
+    setPhone("");
+    setAgree(false);
+
+    router.push("/");
   }
 
   const onSubmit = async () => {
@@ -80,14 +94,6 @@ export default function ContactPage() {
       }),
     }).then((res) => res.json());
     openModal();
-    setIsSubmit(false);
-    setRequire("");
-    setContact("");
-    setCompany("");
-    setFirstName("");
-    setLastName("");
-    setEmail("");
-    setPhone("");
   };
 
   React.useEffect(() => {
