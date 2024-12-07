@@ -11,7 +11,24 @@ import { Radio } from "@/components/Radio";
 import { RadioGroup } from "@/components/RadioGroup";
 import { TextArea } from "@/components/TextArea";
 import HeadingAnimation from "../headingAnimation";
-import Link from "next/link";
+import { IoClose } from "react-icons/io5";
+
+import Modal from "react-modal";
+
+const customStyles = {
+  content: {
+    top: "35%",
+    left: "50%",
+    right: "auto",
+    bottom: "auto",
+    marginRight: "-50%",
+    transform: "translate(-50%, -50%)",
+    maxWidth: "450px",
+  },
+};
+
+// Make sure to bind modal to your appElement (https://reactcommunity.org/react-modal/accessibility/)
+Modal.setAppElement("#root");
 
 export default function ContactPage() {
   const [require, setRequire] = useState<string>("");
@@ -30,7 +47,25 @@ export default function ContactPage() {
 
   const [agree, setAgree] = useState<boolean>(false);
 
-  const obSubmit = async () => {
+  const [isSubmit, setIsSubmit] = useState<boolean>(false);
+
+  const [modalIsOpen, setIsOpen] = useState(false);
+
+  function openModal() {
+    setIsOpen(true);
+  }
+
+  function closeModal() {
+    setIsOpen(false);
+  }
+
+  const onSubmit = async () => {
+    setIsSubmit(true);
+
+    if (!require || !contact || !company || !email || !phone || !agree) {
+      return;
+    }
+
     const data = await fetch("/api/contact", {
       method: "POST",
       body: JSON.stringify({
@@ -44,8 +79,15 @@ export default function ContactPage() {
         agree,
       }),
     }).then((res) => res.json());
-
-    console.log(data);
+    openModal();
+    setIsSubmit(false);
+    setRequire("");
+    setContact("");
+    setCompany("");
+    setFirstName("");
+    setLastName("");
+    setEmail("");
+    setPhone("");
   };
 
   React.useEffect(() => {
@@ -63,6 +105,29 @@ export default function ContactPage() {
   return (
     <MainContainer>
       <ContactHeader />
+
+      <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        style={customStyles}
+        contentLabel="Example Modal"
+      >
+        <div className="relative">
+          {/* <button
+            onClick={closeModal}
+            className="absolute -top-6 -right-4 bg-red-500"
+          >
+            <IoClose size={24} />
+          </button> */}
+        </div>
+        <h2 className="text-[24px] font-bold text-gray-900 text-center">
+          お問い合わせいただき、誠にありがとうございます。
+        </h2>
+        <div className="text-[16px] font-normal mt-4 text-gray-900 text-center  ">
+          ご入力いただいた内容を確認し、担当者より折り返しご連絡させていただきます。
+          少々お待ちいただけますようお願い申し上げます。{" "}
+        </div>
+      </Modal>
 
       <div className=" mt-[80px] sm:mt-8 mx-[100px] sm:mx-6 md:mx-6 ">
         <HeadingAnimation
@@ -141,6 +206,11 @@ export default function ContactPage() {
                     />
                   </RadioGroup>
                 </div>
+                {isSubmit && require === "" && (
+                  <div className="text-[16px] text-red-500 italic">
+                    必須項目を選択してください
+                  </div>
+                )}
               </div>
             </div>
             <div className="flex flex-col gap-5 self-stretch">
@@ -162,6 +232,11 @@ export default function ContactPage() {
                 placeholder={`ご依頼・ご相談などお問い合わせ内容の詳細をご記入ください`}
                 className="min-h-[136px] !outline-none  active:outline-none focus:outline-none !border-none active:border-none  bg-[#F3F7F8] p-2.5 !text-[16px] placeholder:!text-[16px]  !text-gray-900 !placeholder:text-[#AABAC8]"
               />
+              {isSubmit && contact === "" && (
+                <div className="text-[16px] text-red-500 italic">
+                  必須項目を入力してください
+                </div>
+              )}
             </div>
             <div className="flex flex-col gap-[30px] self-stretch">
               <div className="flex flex-col items-start gap-5">
@@ -179,6 +254,11 @@ export default function ContactPage() {
                   classNameInput=" bg-[#F3F7F8] px-2.5 "
                   onChange={(e) => setCompany(e.target.value)}
                 />
+                {isSubmit && company === "" && (
+                  <div className="text-[16px] text-red-500 italic">
+                    必須項目を入力してください
+                  </div>
+                )}
               </div>
               <div className="flex flex-col gap-5">
                 <div className="flex items-center gap-5">
@@ -231,6 +311,11 @@ export default function ContactPage() {
                   classNameInput="px-2.5 bg-[#F3F7F8]"
                   onChange={(e) => setEmail(e.target.value)}
                 />
+                {isSubmit && email === "" && (
+                  <div className="text-[16px] text-red-500 italic">
+                    必須項目を入力してください
+                  </div>
+                )}
               </div>
               <div className="flex flex-col gap-5">
                 <div className="flex items-center gap-5">
@@ -252,6 +337,11 @@ export default function ContactPage() {
                   classNameInput="px-2.5 bg-[#F3F7F8]"
                   onChange={(e) => setPhone(e.target.value)}
                 />
+                {isSubmit && phone === "" && (
+                  <div className="text-[16px] text-red-500 italic">
+                    必須項目を入力してください
+                  </div>
+                )}
               </div>
               <CheckBox
                 name="個人情報保護方針の内容に同意す"
@@ -275,8 +365,13 @@ export default function ContactPage() {
             </div>
             <div className="flex justify-start  md:justify-center  w-full">
               <Button
-                onClick={obSubmit}
-                className="flex h-[44px] hover:bg-gray-900 hover:text-[#fff]  transition-all duration-200 hover:border-gray-900 min-w-[300px] sm:w-full flex-row items-center justify-center rounded-[22px] border border-solid border-gray-900 px-[33px] text-center text-[16px] text-gray-900 sm:px-5"
+                onClick={onSubmit}
+                disabled={!agree}
+                className={`flex h-[44px] ${
+                  agree
+                    ? "hover:bg-gray-900 hover:text-[#fff]"
+                    : "!bg-gray-300 !text-gray-500 !border-none"
+                }  transition-all duration-200 hover:border-gray-900 min-w-[300px] sm:w-full flex-row items-center justify-center rounded-[22px] border border-solid border-gray-900 px-[33px] text-center text-[16px] text-gray-900 sm:px-5`}
               >
                 送信
               </Button>

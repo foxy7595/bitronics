@@ -13,7 +13,7 @@ function RootLayout({ children }: { children: ReactNode }) {
         <link rel="manifest" href="/manifest.json" />
         <link rel="icon" href="/favicon.ico" />
       </head>
-      <body>{children}</body>
+      <body id="root">{children}</body>
     </html>
   );
 }
