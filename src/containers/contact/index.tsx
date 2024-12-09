@@ -395,7 +395,7 @@ export default function ContactPage() {
                 onClick={onSubmit}
                 disabled={!(agree && verify)}
                 className={`flex h-[44px] ${
-                  agree
+                  agree && verify
                     ? "hover:bg-gray-900 hover:text-[#fff]"
                     : "!bg-gray-300 !text-gray-500 !border-none"
                 }  transition-all duration-200 hover:border-gray-900 min-w-[300px] sm:w-full flex-row items-center justify-center rounded-[22px] border border-solid border-gray-900 px-[33px] text-center text-[16px] text-gray-900 sm:px-5`}
