@@ -330,7 +330,7 @@ function Viewer3D({
             ? "ml-0 "
             : modelPath === "/models/service-3.glb"
             ? "ml-[-170px] sm:ml-[-100px]  "
-            : "ml-[-13px]"
+            : "ml-[0px]"
         }   transform origin-top-left`}
         style={{
           width: `${modelPath === "/models/service-3.glb" ? 900 : 720}px`,

@@ -11,7 +11,7 @@ import { Radio } from "@/components/Radio";
 import { RadioGroup } from "@/components/RadioGroup";
 import { TextArea } from "@/components/TextArea";
 import HeadingAnimation from "../headingAnimation";
-import { IoClose } from "react-icons/io5";
+import ReCAPTCHA from "react-google-recaptcha";
 
 import Modal from "react-modal";
 import { useRouter } from "next/navigation";
@@ -107,6 +107,10 @@ export default function ContactPage() {
       }, 300);
     }
   }, []);
+
+  const onChange = (value: string) => {
+    console.log(value);
+  };
 
   return (
     <MainContainer>
@@ -369,6 +373,10 @@ export default function ContactPage() {
                 onChange={(e: boolean) => setAgree(e)}
               />
             </div>
+            <ReCAPTCHA
+              sitekey="6LcS3ZYqAAAAAGDxcP942uw4Uq4a-hvRFJrnZs0V"
+              onChange={(token) => console.log(token)}
+            />
             <div className="flex justify-start  md:justify-center  w-full">
               <Button
                 onClick={onSubmit}
