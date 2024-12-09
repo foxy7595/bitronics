@@ -383,8 +383,9 @@ export default function ContactPage() {
             </div>
             {isLoading && (
               <ReCAPTCHA
-                sitekey="6LcW5JYqAAAAAI9ddglc2UBGH6Jg8uneMbYUAcwX"
+                sitekey="6Ldw5ZYqAAAAACkpctRH2t7emUEb5Zm_HSgBIbM6"
                 onChange={(token) => {
+                  console.log(token);
                   setVerify(true);
                 }}
               />
@@ -392,7 +393,7 @@ export default function ContactPage() {
             <div className="flex justify-start  md:justify-center  w-full">
               <Button
                 onClick={onSubmit}
-                disabled={!agree || !verify}
+                disabled={!(agree && verify)}
                 className={`flex h-[44px] ${
                   agree
                     ? "hover:bg-gray-900 hover:text-[#fff]"
