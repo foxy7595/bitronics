@@ -48,9 +48,13 @@ export default function ContactPage() {
 
   const [agree, setAgree] = useState<boolean>(false);
 
+  const [verify, setVerify] = useState<boolean>(false);
+
   const [isSubmit, setIsSubmit] = useState<boolean>(false);
 
   const [modalIsOpen, setIsOpen] = useState(false);
+
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const router = useRouter();
 
@@ -105,6 +109,10 @@ export default function ContactPage() {
           behavior: "smooth",
         });
       }, 300);
+
+      setTimeout(() => {
+        setIsLoading(true);
+      }, 1500);
     }
   }, []);
 
@@ -373,14 +381,18 @@ export default function ContactPage() {
                 onChange={(e: boolean) => setAgree(e)}
               />
             </div>
-            <ReCAPTCHA
-              sitekey="6LcS3ZYqAAAAAGDxcP942uw4Uq4a-hvRFJrnZs0V"
-              onChange={(token) => console.log(token)}
-            />
+            {isLoading && (
+              <ReCAPTCHA
+                sitekey="6LcW5JYqAAAAAI9ddglc2UBGH6Jg8uneMbYUAcwX"
+                onChange={(token) => {
+                  setVerify(true);
+                }}
+              />
+            )}
             <div className="flex justify-start  md:justify-center  w-full">
               <Button
                 onClick={onSubmit}
-                disabled={!agree}
+                disabled={!agree || !verify}
                 className={`flex h-[44px] ${
                   agree
                     ? "hover:bg-gray-900 hover:text-[#fff]"
