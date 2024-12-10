@@ -163,33 +163,6 @@ function Viewer3D({
 
         scene.add(model);
 
-        function removeMaterialById(object: any, materialId: any) {
-          object.traverse((child: any) => {
-            if (child.isMesh && child.material) {
-              console.log(child.material?.id);
-
-              if (Array.isArray(child.material)) {
-                // For meshes with multiple materials
-                child.material = child.material.filter(
-                  (mat: any) => mat.id !== materialId
-                );
-                // Ensure geometry updates correctly
-                if (child.material.length === 0) {
-                  child.visible = false; // Hide if no materials remain
-                }
-              } else if (child.material.id === materialId) {
-                // For single material meshes
-                child.material.dispose(); // Clean up memory
-                child.material = null; // Remove the material
-                child.visible = false; // Optionally hide the mesh
-              }
-            }
-          });
-        }
-
-        if (modelPath === "/models/service-1.glb")
-          removeMaterialById(model, 200);
-
         const controls = new OrbitControls(camera, renderer.domElement);
         controlsRef.current = controls;
 
